@@ -63,3 +63,72 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans);
 }
+
+/* Playful, low-cost motion primitives — animal-care themed accents used
+   across the marketing site. All respect prefers-reduced-motion below. */
+
+@keyframes float-drift {
+  0%, 100% { transform: translate(0, 0) rotate(var(--paw-rotate, 0deg)); }
+  50% { transform: translate(var(--paw-drift-x, 10px), var(--paw-drift-y, -14px)) rotate(calc(var(--paw-rotate, 0deg) + 8deg)); }
+}
+
+@keyframes paw-pop {
+  0% { opacity: 0; transform: scale(0.6) rotate(-10deg); }
+  60% { opacity: 1; transform: scale(1.08) rotate(4deg); }
+  100% { opacity: 1; transform: scale(1) rotate(0); }
+}
+
+@keyframes reveal-up {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes gentle-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+.floating-paw {
+  animation: float-drift var(--paw-duration, 7s) ease-in-out infinite;
+  animation-delay: var(--paw-delay, 0s);
+}
+
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal-on-scroll.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+  animation: reveal-up 0.6s ease-out;
+}
+
+.wiggle-on-hover {
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.group:hover .wiggle-on-hover {
+  transform: rotate(-8deg) scale(1.12);
+}
+
+.cta-bounce:hover {
+  animation: gentle-bounce 0.6s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .floating-paw,
+  .reveal-on-scroll,
+  .cta-bounce:hover,
+  .group:hover .wiggle-on-hover {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
+
+  .reveal-on-scroll {
+    opacity: 1;
+    transform: none;
+  }
+}
