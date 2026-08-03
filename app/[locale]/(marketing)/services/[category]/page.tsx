@@ -1,19 +1,22 @@
-import Link from "next/link";
 import { notFound } from "next/navigation";
+import { Link } from "@/lib/i18n/navigation";
 import type { Metadata } from "next";
 import { Clock } from "lucide-react";
 import { getCategory, serviceCategories } from "@/lib/data/services";
 import { CategoryIcon } from "@/components/category-icon";
 import { Breadcrumbs } from "@/components/breadcrumbs";
+import { routing } from "@/lib/i18n/routing";
 
 export function generateStaticParams() {
-  return serviceCategories.map((c) => ({ category: c.slug }));
+  return routing.locales.flatMap((locale) =>
+    serviceCategories.map((c) => ({ locale, category: c.slug }))
+  );
 }
 
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ category: string }>;
+  params: Promise<{ category: string; locale: string }>;
 }): Promise<Metadata> {
   const { category } = await params;
   const cat = getCategory(category);
@@ -38,7 +41,7 @@ function formatDuration(minutes: number) {
 export default async function ServiceCategoryPage({
   params,
 }: {
-  params: Promise<{ category: string }>;
+  params: Promise<{ category: string; locale: string }>;
 }) {
   const { category } = await params;
   const cat = getCategory(category);

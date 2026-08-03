@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "@/lib/i18n/navigation";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { serviceCategories } from "@/lib/data/services";
 import { heroSlides, infoCards } from "@/lib/data/gallery";

@@ -1,7 +1,6 @@
 "use client";
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { Link, usePathname } from "@/lib/i18n/navigation";
 import { LayoutDashboard, PawPrint, CalendarDays, Gift, CreditCard, ArrowLeft } from "lucide-react";
 import { site } from "@/lib/site";
 

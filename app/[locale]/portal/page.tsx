@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Link from "next/link";
+import { Link } from "@/lib/i18n/navigation";
 import { ArrowRight, CalendarDays, Gift, PawPrint } from "lucide-react";
 import { useLoyalty } from "@/hooks/use-loyalty";
 import { usePets } from "@/hooks/use-pets";

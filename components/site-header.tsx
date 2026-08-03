@@ -1,7 +1,6 @@
 "use client";
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { Link, usePathname } from "@/lib/i18n/navigation";
 import { useState } from "react";
 import { Menu, PawPrint, Stethoscope, HeartHandshake, Info, Mail, X, type LucideIcon } from "lucide-react";
 import { nav, site } from "@/lib/site";

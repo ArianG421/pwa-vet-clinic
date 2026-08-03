@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "@/lib/i18n/navigation";
 import type { Metadata } from "next";
 import { Check } from "lucide-react";
 import { planTiers } from "@/lib/data/plans";

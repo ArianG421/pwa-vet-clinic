@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "@/lib/i18n/navigation";
 import { MapPin, Phone, Mail } from "lucide-react";
 import { nav, site } from "@/lib/site";
 
