@@ -5,7 +5,17 @@ import { isSupabaseConfigured } from "@/lib/supabase/config";
 import { createClient } from "@/lib/supabase/server";
 
 export default async function PortalLayout({ children }: { children: React.ReactNode }) {
-  const user = isSupabaseConfigured ? (await (await createClient()).auth.getUser()).data.user : null;
+  let user = null;
+  let role: string | null = null;
+
+  if (isSupabaseConfigured) {
+    const supabase = await createClient();
+    user = (await supabase.auth.getUser()).data.user;
+    if (user) {
+      const { data: profile } = await supabase.from("profiles").select("role").eq("id", user.id).single();
+      role = profile?.role ?? null;
+    }
+  }
 
   return (
     <>
@@ -20,6 +30,15 @@ export default async function PortalLayout({ children }: { children: React.React
         {user && (
           <span className="flex items-center gap-3">
             <span className="text-ink-muted">{user.email}</span>
+            {role && (
+              <span
+                className={`rounded-full px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wide ${
+                  role === "staff" ? "bg-ink text-white" : "bg-brand-100 text-brand-700"
+                }`}
+              >
+                {role}
+              </span>
+            )}
             <SignOutButton />
           </span>
         )}
