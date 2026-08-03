@@ -14,8 +14,8 @@ export default async function PortalLayout({ children }: { children: React.React
         <span className="inline-flex items-center gap-1.5">
           <Info className="h-3.5 w-3.5" />
           {user
-            ? "Preview build — signed in for real, but pets/appointments/rewards still show demo data."
-            : "Preview build — showing demo data. Sign in isn't connected to a live backend yet."}
+            ? "Live demo — pets, appointments, and membership are real. Rewards points sync once staff can mark visits complete."
+            : "Preview build — sign in to manage real pets, appointments, and membership."}
         </span>
         {user && (
           <span className="flex items-center gap-3">
