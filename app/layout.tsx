@@ -3,6 +3,8 @@ import "@fontsource-variable/figtree";
 import "./globals.css";
 import { site } from "@/lib/site";
 import { RegisterServiceWorker } from "@/components/register-sw";
+import { PawClickEffect } from "@/components/paw-click-effect";
+import { ScrollToTop } from "@/components/scroll-to-top";
 
 export const metadata: Metadata = {
   title: {
@@ -32,7 +34,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className="h-full antialiased">
       <body className="min-h-full flex flex-col bg-background text-foreground">
+        <a href="#main-content" className="skip-link">
+          Skip to main content
+        </a>
         {children}
+        <ScrollToTop />
+        <PawClickEffect />
         <RegisterServiceWorker />
       </body>
     </html>

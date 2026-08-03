@@ -1,9 +1,10 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { ArrowLeft, Clock } from "lucide-react";
+import { Clock } from "lucide-react";
 import { getCategory, serviceCategories } from "@/lib/data/services";
 import { CategoryIcon } from "@/components/category-icon";
+import { Breadcrumbs } from "@/components/breadcrumbs";
 
 export function generateStaticParams() {
   return serviceCategories.map((c) => ({ category: c.slug }));
@@ -45,9 +46,7 @@ export default async function ServiceCategoryPage({
 
   return (
     <div className="mx-auto max-w-4xl px-4 py-14 sm:px-6">
-      <Link href="/services" className="inline-flex items-center gap-1.5 text-sm font-medium text-ink-muted hover:text-brand-700">
-        <ArrowLeft className="h-4 w-4" /> All services
-      </Link>
+      <Breadcrumbs items={[{ label: "Services", href: "/services" }, { label: cat.name }]} />
 
       <div className="mt-4 flex items-start gap-4">
         <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-brand-50 text-brand-700">
