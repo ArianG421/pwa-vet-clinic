@@ -69,7 +69,12 @@ export async function POST(request: Request) {
     },
     body: JSON.stringify({
       from: RESEND_FROM,
-      to: toName ? `${toName} <${to}>` : to,
+      // Deliberately a bare address, not `Name <email>` — confirmed live
+      // that Resend's sandbox "own address" check does a plain string
+      // match against `to` and rejects it as soon as a display name is
+      // combined in, even one with no special characters. The recipient
+      // name still has a home (to_name, logged separately below).
+      to,
       subject,
       text: emailBody,
     }),
