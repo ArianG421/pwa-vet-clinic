@@ -64,9 +64,9 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
 
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
         <RevealOnScroll className="text-center">
-          <p className="text-sm font-semibold uppercase tracking-wide text-brand-700">{t("whyWillowbrook.eyebrow")}</p>
+          <p className="text-sm font-semibold uppercase tracking-wide text-brand-700">{t("whySection.eyebrow")}</p>
           <h2 className="mt-2 text-2xl font-semibold text-ink sm:text-3xl">
-            {t("whyWillowbrook.heading")}
+            {t("whySection.heading")}
           </h2>
         </RevealOnScroll>
         <RevealOnScroll delayMs={100} className="mx-auto mt-8 max-w-2xl">

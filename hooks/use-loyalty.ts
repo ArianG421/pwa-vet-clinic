@@ -4,7 +4,7 @@ import { useCallback, useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
 import { getSeedTransactions, type LoyaltyTransaction } from "@/lib/data/loyalty";
 
-const STORAGE_KEY = "willowbrook-loyalty-demo-v1";
+const STORAGE_KEY = "oresundsvet-loyalty-demo-v1";
 
 export function useLoyalty() {
   const t = useTranslations("portal.rewards");

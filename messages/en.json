@@ -18,7 +18,7 @@
   },
   "site": {
     "tagline": "Compassionate, modern care for every member of the family.",
-    "description": "Willowbrook Veterinary Clinic offers preventive care, surgery, dental, diagnostics, and emergency services for dogs, cats, and small pets — with online booking and a member portal.",
+    "description": "Öresunds Veterinärklinik offers preventive care, surgery, dental, diagnostics, and emergency services for dogs, cats, and small pets — with online booking and a member portal.",
     "hours": [
       {
         "label": "Monday – Friday",
@@ -72,8 +72,8 @@
         "detail": "For existing clients"
       }
     },
-    "whyWillowbrook": {
-      "eyebrow": "Why Willowbrook",
+    "whySection": {
+      "eyebrow": "Why Öresunds",
       "heading": "A few reasons pet parents stick around"
     },
     "categories": {
@@ -427,7 +427,7 @@
     },
     "rewards": {
       "eyebrow": "Rewards",
-      "title": "Willowbrook Rewards",
+      "title": "Öresunds Rewards",
       "subtitle": "Every visit earns points automatically. Redeem them for discounts or free services — no punch card required.",
       "resetDemo": "Reset demo data",
       "loadingLabel": "Fetching your rewards…",
@@ -578,18 +578,18 @@
       "templates": {
         "we-miss-you": {
           "label": "We miss you",
-          "subject": "We miss you at Willowbrook!",
-          "body": "Hi {{name}},\n\nIt's been a little while since your last visit, and we wanted to check in. Your pet's wellness is always our priority, and we'd love to see you both again soon.\n\nAs a thank-you for being a valued member of the Willowbrook family, here's 15% off your next visit — just mention this email when you book.\n\nWarmly,\nThe Willowbrook Veterinary Clinic Team"
+          "subject": "We miss you at Öresunds!",
+          "body": "Hi {{name}},\n\nIt's been a little while since your last visit, and we wanted to check in. Your pet's wellness is always our priority, and we'd love to see you both again soon.\n\nAs a thank-you for being a valued member of the Öresunds family, here's 15% off your next visit — just mention this email when you book.\n\nWarmly,\nThe Öresunds Veterinärklinik Team"
         },
         "seasonal-checkup": {
           "label": "Seasonal check-up",
           "subject": "Time for a seasonal check-up?",
-          "body": "Hi {{name}},\n\nRegular check-ups help catch small issues before they become big ones. We have appointments available this week if you'd like to bring your pet in for a quick wellness visit.\n\nReply to this email or call us to schedule.\n\nWarmly,\nThe Willowbrook Veterinary Clinic Team"
+          "body": "Hi {{name}},\n\nRegular check-ups help catch small issues before they become big ones. We have appointments available this week if you'd like to bring your pet in for a quick wellness visit.\n\nReply to this email or call us to schedule.\n\nWarmly,\nThe Öresunds Veterinärklinik Team"
         },
         "member-offer": {
           "label": "Membership offer",
           "subject": "A membership offer just for you",
-          "body": "Hi {{name}},\n\nWe'd love to have you join our membership program — routine care, priority booking, and predictable monthly pricing, all in one plan.\n\nSign up this month and we'll waive the first month's fee.\n\nWarmly,\nThe Willowbrook Veterinary Clinic Team"
+          "body": "Hi {{name}},\n\nWe'd love to have you join our membership program — routine care, priority booking, and predictable monthly pricing, all in one plan.\n\nSign up this month and we'll waive the first month's fee.\n\nWarmly,\nThe Öresunds Veterinärklinik Team"
         }
       }
     }

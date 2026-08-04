@@ -1,4 +1,4 @@
-const KEY = "willowbrook-remember-me";
+const KEY = "oresundsvet-remember-me";
 
 // Supabase's SDK always writes its own long-lived session cookie regardless
 // of what maxAge we configure (confirmed in @supabase/ssr's storage code —

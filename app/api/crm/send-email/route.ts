@@ -15,7 +15,7 @@ const sendEmailSchema = z.object({
 // Sandbox default — Resend only lets an unverified domain send from this
 // address, and only deliver to the account's own email. Once a real domain
 // is verified in Resend, set RESEND_FROM_EMAIL to override.
-const RESEND_FROM = process.env.RESEND_FROM_EMAIL ?? "Willowbrook Vet <onboarding@resend.dev>";
+const RESEND_FROM = process.env.RESEND_FROM_EMAIL ?? "Öresunds Vet <onboarding@resend.dev>";
 
 export async function POST(request: Request) {
   if (!isSupabaseConfigured) {

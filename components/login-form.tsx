@@ -4,10 +4,11 @@ import { useState, type FormEvent } from "react";
 import { useSearchParams } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { Link } from "@/lib/i18n/navigation";
-import { Mail, PawPrint, Loader2, CheckCircle2, AlertTriangle, KeyRound } from "lucide-react";
+import { Mail, Loader2, CheckCircle2, AlertTriangle, KeyRound } from "lucide-react";
 import { createClient } from "@/lib/supabase/client";
 import { isSupabaseConfigured } from "@/lib/supabase/config";
 import { setRememberMe as persistRememberMe } from "@/lib/supabase/remember";
+import { site } from "@/lib/site";
 
 type Status = "idle" | "sending" | "sent" | "error";
 
@@ -82,10 +83,8 @@ export function LoginForm() {
 
   return (
     <div className="mx-auto flex min-h-[calc(100vh-0px)] max-w-md flex-col justify-center px-4 py-16 sm:px-6">
-      <Link href="/" className="mx-auto flex items-center gap-2 font-semibold text-ink">
-        <span className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-white">
-          <PawPrint className="h-5 w-5" />
-        </span>
+      <Link href="/" aria-label={site.shortName} className="mx-auto flex items-center gap-2 font-semibold text-ink">
+        <img src="/images/logo-mark.png" alt="" width={40} height={40} className="h-10 w-10" />
       </Link>
 
       <div className="mt-8 rounded-3xl border border-black/5 bg-surface p-8 shadow-sm">

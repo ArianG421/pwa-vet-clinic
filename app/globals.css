@@ -1,33 +1,40 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f7f5f0;
-  --foreground: #1c2321;
+  --background: #f4f8fa;
+  --foreground: #15191b;
 
-  --color-brand-50: #effaf6;
-  --color-brand-100: #d7f2e8;
-  --color-brand-200: #b0e4d3;
-  --color-brand-300: #7fd0b8;
-  --color-brand-400: #4bb59b;
-  --color-brand-500: #2b9781;
-  --color-brand-600: #1f7a69;
-  --color-brand-700: #1c6256;
-  --color-brand-800: #1a4e46;
-  --color-brand-900: #17403a;
+  /* Brand blue matches Öresunds Veterinärklinik's real site exactly at
+     600 (#34b7ea, measured from their live CTA/section color) — every
+     other step is a generated tint/shade around that anchor. */
+  --color-brand-50: #eaf8fd;
+  --color-brand-100: #cdeffa;
+  --color-brand-200: #9adcf0;
+  --color-brand-300: #6cc7e6;
+  --color-brand-400: #4ec2e9;
+  --color-brand-500: #3dbbe7;
+  --color-brand-600: #34b7ea;
+  --color-brand-700: #1a8fb8;
+  --color-brand-800: #146c8b;
+  --color-brand-900: #0f4f66;
 
-  --color-accent-50: #fff6ed;
-  --color-accent-100: #ffe9d3;
-  --color-accent-200: #ffcfa1;
-  --color-accent-300: #ffab60;
-  --color-accent-400: #ff8a33;
-  --color-accent-500: #f96f14;
-  --color-accent-600: #e2540a;
-  --color-accent-700: #bb3f0b;
+  /* Their real site has no second hue (just blue/black/white) — this warm
+     gold is a deliberate addition for CTA contrast, since this product
+     uses an accent color functionally (buttons on many backgrounds) more
+     than their block-color-section design needed one. */
+  --color-accent-50: #fdf8ec;
+  --color-accent-100: #faedc7;
+  --color-accent-200: #f5d98a;
+  --color-accent-300: #eec14f;
+  --color-accent-400: #e0a828;
+  --color-accent-500: #c98d16;
+  --color-accent-600: #a86f0f;
+  --color-accent-700: #83560f;
 
   --color-surface: #ffffff;
-  --color-surface-muted: #f0ede4;
-  --color-ink: #1c2321;
-  --color-ink-muted: #5b6560;
+  --color-surface-muted: #eef3f5;
+  --color-ink: #15191b;
+  --color-ink-muted: #55605f;
 }
 
 @theme inline {

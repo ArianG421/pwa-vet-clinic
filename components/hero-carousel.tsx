@@ -4,6 +4,7 @@ import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useCarousel } from "@/hooks/use-carousel";
 import type { HeroSlide } from "@/lib/data/gallery";
+import { site } from "@/lib/site";
 
 export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
   const { index, go, next, prev, pause, resume, onTouchStart, onTouchEnd } = useCarousel(slides.length, {
@@ -25,7 +26,7 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
       }}
       role="region"
       aria-roledescription="carousel"
-      aria-label="Photos of pets and care at Willowbrook Veterinary Clinic"
+      aria-label={`Photos of pets and care at ${site.name}`}
     >
       {slides.map((slide, i) => (
         <div

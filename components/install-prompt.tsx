@@ -2,10 +2,10 @@
 
 import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
-import { Download, MoreVertical, PawPrint, Share, X } from "lucide-react";
+import { Download, MoreVertical, Share, X } from "lucide-react";
 import { site } from "@/lib/site";
 
-const DISMISS_KEY = "willowbrook-install-dismissed";
+const DISMISS_KEY = "oresundsvet-install-dismissed";
 
 type BeforeInstallPromptEvent = Event & {
   prompt: () => Promise<void>;
@@ -106,9 +106,7 @@ export function InstallPrompt() {
       className="fixed inset-x-0 bottom-0 z-50 flex justify-center px-4 pb-4 sm:justify-start sm:pl-6"
     >
       <div className="flex w-full max-w-sm items-start gap-3 rounded-2xl border border-black/5 bg-surface p-4 shadow-2xl shadow-black/20">
-        <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-600 text-white">
-          <PawPrint className="h-5 w-5" />
-        </span>
+        <img src="/images/logo-mark.png" alt="" width={40} height={40} className="h-10 w-10 shrink-0" />
 
         <div className="min-w-0 flex-1">
           {justInstalled ? (

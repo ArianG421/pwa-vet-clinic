@@ -4,6 +4,7 @@ import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useCarousel } from "@/hooks/use-carousel";
 import type { InfoCard } from "@/lib/data/gallery";
+import { site } from "@/lib/site";
 
 export function InfoPager({ cards }: { cards: InfoCard[] }) {
   const { index, go, next, prev, pause, resume, onTouchStart, onTouchEnd } = useCarousel(cards.length, {
@@ -26,7 +27,7 @@ export function InfoPager({ cards }: { cards: InfoCard[] }) {
       }}
       role="region"
       aria-roledescription="carousel"
-      aria-label="Reasons to choose Willowbrook Veterinary Clinic"
+      aria-label={`Reasons to choose ${site.name}`}
     >
       <div className="flex flex-col items-center gap-6 rounded-3xl border border-black/5 bg-surface p-6 shadow-sm transition-all duration-300 sm:flex-row sm:p-8">
         <div className="relative h-40 w-full shrink-0 overflow-hidden rounded-2xl sm:h-36 sm:w-36">

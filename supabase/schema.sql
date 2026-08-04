@@ -1,4 +1,4 @@
--- Willowbrook Veterinary Clinic — core schema
+-- Öresunds Veterinärklinik — core schema
 -- Run this in the Supabase SQL Editor (Project → SQL Editor → New query) once,
 -- before rls.sql and seed.sql.
 

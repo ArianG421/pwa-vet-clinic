@@ -18,7 +18,7 @@
   },
   "site": {
     "tagline": "Omtänksam, modern vård för alla i familjen.",
-    "description": "Willowbrook Veterinärklinik erbjuder förebyggande vård, kirurgi, tandvård, diagnostik och akutvård för hundar, katter och smådjur — med onlinebokning och en medlemsportal.",
+    "description": "Öresunds Veterinärklinik erbjuder förebyggande vård, kirurgi, tandvård, diagnostik och akutvård för hundar, katter och smådjur — med onlinebokning och en medlemsportal.",
     "hours": [
       {
         "label": "Måndag–fredag",
@@ -72,8 +72,8 @@
         "detail": "För befintliga kunder"
       }
     },
-    "whyWillowbrook": {
-      "eyebrow": "Varför Willowbrook",
+    "whySection": {
+      "eyebrow": "Varför Öresunds",
       "heading": "Några anledningar till att djurägare stannar kvar"
     },
     "categories": {
@@ -427,7 +427,7 @@
     },
     "rewards": {
       "eyebrow": "Förmåner",
-      "title": "Willowbrook Rewards",
+      "title": "Öresunds Rewards",
       "subtitle": "Varje besök ger poäng automatiskt. Lös in dem mot rabatter eller gratistjänster — inget stämpelkort behövs.",
       "resetDemo": "Återställ demodata",
       "loadingLabel": "Hämtar dina förmåner…",
@@ -578,18 +578,18 @@
       "templates": {
         "we-miss-you": {
           "label": "Vi saknar dig",
-          "subject": "Vi saknar dig på Willowbrook!",
-          "body": "Hej {{name}},\n\nDet har gått ett tag sedan ditt senaste besök, och vi ville höra av oss. Ditt husdjurs välmående är alltid vår prioritet, och vi skulle gärna se er igen snart.\n\nSom ett tack för att du är en uppskattad medlem i Willowbrook-familjen får du 15% rabatt på ditt nästa besök — nämn bara det här mejlet när du bokar.\n\nVarma hälsningar,\nTeamet på Willowbrook Veterinärklinik"
+          "subject": "Vi saknar dig på Öresunds!",
+          "body": "Hej {{name}},\n\nDet har gått ett tag sedan ditt senaste besök, och vi ville höra av oss. Ditt husdjurs välmående är alltid vår prioritet, och vi skulle gärna se er igen snart.\n\nSom ett tack för att du är en uppskattad medlem i Öresunds-familjen får du 15% rabatt på ditt nästa besök — nämn bara det här mejlet när du bokar.\n\nVarma hälsningar,\nTeamet på Öresunds Veterinärklinik"
         },
         "seasonal-checkup": {
           "label": "Säsongskontroll",
           "subject": "Dags för en säsongskontroll?",
-          "body": "Hej {{name}},\n\nRegelbundna kontroller hjälper oss att upptäcka små problem innan de blir stora. Vi har lediga tider den här veckan om du vill komma in med ditt husdjur för en snabb hälsokontroll.\n\nSvara på det här mejlet eller ring oss för att boka.\n\nVarma hälsningar,\nTeamet på Willowbrook Veterinärklinik"
+          "body": "Hej {{name}},\n\nRegelbundna kontroller hjälper oss att upptäcka små problem innan de blir stora. Vi har lediga tider den här veckan om du vill komma in med ditt husdjur för en snabb hälsokontroll.\n\nSvara på det här mejlet eller ring oss för att boka.\n\nVarma hälsningar,\nTeamet på Öresunds Veterinärklinik"
         },
         "member-offer": {
           "label": "Medlemserbjudande",
           "subject": "Ett medlemserbjudande bara för dig",
-          "body": "Hej {{name}},\n\nVi skulle gärna se dig som medlem i vårt medlemsprogram — rutinvård, prioriterad bokning och förutsägbara månadspriser, allt i ett paket.\n\nAnmäl dig den här månaden så bjuder vi på första månadens avgift.\n\nVarma hälsningar,\nTeamet på Willowbrook Veterinärklinik"
+          "body": "Hej {{name}},\n\nVi skulle gärna se dig som medlem i vårt medlemsprogram — rutinvård, prioriterad bokning och förutsägbara månadspriser, allt i ett paket.\n\nAnmäl dig den här månaden så bjuder vi på första månadens avgift.\n\nVarma hälsningar,\nTeamet på Öresunds Veterinärklinik"
         }
       }
     }

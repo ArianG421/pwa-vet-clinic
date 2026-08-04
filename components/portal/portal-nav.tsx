@@ -22,9 +22,7 @@ export function PortalNav() {
     <header className="sticky top-0 z-50 border-b border-black/5 bg-surface/90 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
         <Link href="/portal" className="flex items-center gap-2 font-semibold text-ink">
-          <span className="flex h-9 w-9 items-center justify-center rounded-full bg-brand-600 text-white">
-            <PawPrint className="h-5 w-5" />
-          </span>
+          <img src="/images/logo-mark.png" alt="" width={36} height={36} className="h-9 w-9" />
           <span className="text-base sm:text-lg">{site.shortName} {t("portalSuffix")}</span>
         </Link>
 
