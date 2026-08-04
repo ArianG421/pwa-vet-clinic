@@ -12,6 +12,7 @@
     "notNow": "Not now",
     "dismissAria": "Dismiss",
     "iosBody": "Tap the Share icon, then \"Add to Home Screen\".",
+    "firefoxBody": "Tap the menu icon (⋮), then \"Install\" or \"Add to Home screen\".",
     "installedTitle": "Installed!",
     "installedBody": "Find it on your home screen from now on."
   },

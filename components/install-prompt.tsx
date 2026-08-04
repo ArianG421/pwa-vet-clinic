@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
-import { Download, PawPrint, Share, X } from "lucide-react";
+import { Download, MoreVertical, PawPrint, Share, X } from "lucide-react";
 import { site } from "@/lib/site";
 
 const DISMISS_KEY = "willowbrook-install-dismissed";
@@ -17,17 +17,27 @@ function isIOS() {
   return /iphone|ipad|ipod/i.test(navigator.userAgent) && !("MSStream" in window);
 }
 
+// Firefox (desktop and Android) never fires `beforeinstallprompt` — it has
+// no programmatic install API, so it needs the same manual-instructions
+// treatment as iOS Safari instead of waiting for an event that won't come.
+function isFirefox() {
+  if (typeof navigator === "undefined") return false;
+  return /firefox|fxios/i.test(navigator.userAgent);
+}
+
 function isStandalone() {
   if (typeof window === "undefined") return false;
   const nav = navigator as Navigator & { standalone?: boolean };
   return window.matchMedia("(display-mode: standalone)").matches || nav.standalone === true;
 }
 
+type ManualInstructions = "ios" | "firefox" | null;
+
 export function InstallPrompt() {
   const t = useTranslations("install");
   const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
   const [visible, setVisible] = useState(false);
-  const [ios, setIos] = useState(false);
+  const [manual, setManual] = useState<ManualInstructions>(null);
   const [justInstalled, setJustInstalled] = useState(false);
 
   useEffect(() => {
@@ -35,7 +45,16 @@ export function InstallPrompt() {
     if (window.localStorage.getItem(DISMISS_KEY) === "1") return;
 
     if (isIOS()) {
-      setIos(true);
+      setManual("ios");
+      setVisible(true);
+      return;
+    }
+
+    // Neither Firefox for Android nor desktop Firefox support
+    // `beforeinstallprompt`, so fall straight to manual instructions instead
+    // of showing nothing while waiting for an event that will never fire.
+    if (isFirefox()) {
+      setManual("firefox");
       setVisible(true);
       return;
     }
@@ -100,11 +119,17 @@ export function InstallPrompt() {
           ) : (
             <>
               <p className="text-sm font-semibold text-ink">{t("title", { shortName: site.shortName })}</p>
-              <p className="mt-0.5 text-xs text-ink-muted">{ios ? t("iosBody") : t("body")}</p>
+              <p className="mt-0.5 text-xs text-ink-muted">
+                {manual === "ios" ? t("iosBody") : manual === "firefox" ? t("firefoxBody") : t("body")}
+              </p>
               <div className="mt-3 flex items-center gap-3">
-                {ios ? (
+                {manual === "ios" ? (
                   <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-brand-700">
                     <Share className="h-3.5 w-3.5" />
+                  </span>
+                ) : manual === "firefox" ? (
+                  <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-brand-700">
+                    <MoreVertical className="h-3.5 w-3.5" />
                   </span>
                 ) : (
                   <button

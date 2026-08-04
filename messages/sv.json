@@ -12,6 +12,7 @@
     "notNow": "Inte nu",
     "dismissAria": "Stäng",
     "iosBody": "Tryck på delningsikonen och sedan \"Lägg till på hemskärmen\".",
+    "firefoxBody": "Tryck på menyikonen (⋮) och välj sedan \"Installera\" eller \"Lägg till på hemskärmen\".",
     "installedTitle": "Installerad!",
     "installedBody": "Du hittar den på din hemskärm från och med nu."
   },
