@@ -45,7 +45,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Link
-                href="/portal/appointments"
+                href="/book"
                 className="cta-bounce inline-flex items-center justify-center gap-2 rounded-full bg-accent-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-accent-900/20 transition-colors hover:bg-accent-600"
               >
                 {t("bookAppointment")} <ArrowRight className="h-4 w-4" />

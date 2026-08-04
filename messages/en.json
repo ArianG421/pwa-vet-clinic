@@ -276,6 +276,20 @@
       "successBody": "We'll get back to you within one business day."
     }
   },
+  "book": {
+    "eyebrow": "Book online",
+    "title": "Book your visit",
+    "body": "Pick a time that works for you using our clinic's live booking system below — no account needed. Want to also track your pet's visit history and earn rewards? Create a free account instead.",
+    "accountPitchTitle": "Prefer more than just booking?",
+    "accountPitchBody": "Free portal accounts also unlock rewards points, appointment history, and faster rebooking.",
+    "createAccount": "Create free account",
+    "embed": {
+      "iframeTitle": "Online booking",
+      "placeholderTitle": "Live booking connects here",
+      "placeholderBody": "In production this embeds the clinic's real Provet Cloud booking widget directly — live availability, zero manual re-entry for staff. This demo isn't connected to a real Provet Cloud account yet.",
+      "placeholderBadge": "Powered by Provet Cloud (not connected in this demo)"
+    }
+  },
   "breadcrumbs": {
     "home": "Home"
   },

@@ -89,7 +89,7 @@ export default async function ServiceCategoryPage({
           <p className="mt-1 text-sm text-brand-100">{t("priorityNote")}</p>
         </div>
         <Link
-          href="/portal/appointments"
+          href="/book"
           className="shrink-0 rounded-full bg-accent-500 px-5 py-2.5 text-sm font-semibold text-white hover:bg-accent-600"
         >
           {t("bookAppointment")}

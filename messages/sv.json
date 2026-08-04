@@ -276,6 +276,20 @@
       "successBody": "Vi återkommer inom en arbetsdag."
     }
   },
+  "book": {
+    "eyebrow": "Boka online",
+    "title": "Boka din tid",
+    "body": "Välj en tid som passar dig med vårt kliniksystem nedan — inget konto krävs. Vill du också följa ditt husdjurs besökshistorik och samla poäng? Skapa ett gratis konto istället.",
+    "accountPitchTitle": "Vill du ha mer än bara bokning?",
+    "accountPitchBody": "Gratis portalkonton låser upp poäng, besökshistorik och snabbare ombokning.",
+    "createAccount": "Skapa gratis konto",
+    "embed": {
+      "iframeTitle": "Onlinebokning",
+      "placeholderTitle": "Live-bokning kopplas in här",
+      "placeholderBody": "I skarp drift visas klinikens riktiga Provet Cloud-bokningswidget direkt här — live-tillgänglighet, ingen manuell dubbelregistrering för personalen. Den här demon är inte kopplad till ett riktigt Provet Cloud-konto än.",
+      "placeholderBadge": "Drivs av Provet Cloud (ej ansluten i denna demo)"
+    }
+  },
   "breadcrumbs": {
     "home": "Hem"
   },

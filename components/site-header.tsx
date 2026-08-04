@@ -64,7 +64,7 @@ export function SiteHeader() {
             {t("clientLogin")}
           </Link>
           <Link
-            href="/portal/appointments"
+            href="/book"
             className="cta-bounce rounded-full bg-accent-500 px-4 py-2 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-accent-600"
           >
             {t("bookVisit")}
@@ -114,7 +114,7 @@ export function SiteHeader() {
               {t("clientLogin")}
             </Link>
             <Link
-              href="/portal/appointments"
+              href="/book"
               className="mt-1 rounded-full bg-accent-500 px-4 py-2.5 text-center text-sm font-semibold text-white"
               onClick={() => setOpen(false)}
             >
