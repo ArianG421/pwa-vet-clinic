@@ -309,6 +309,7 @@
       "previewBuild": "Preview build — sign in to manage real pets, appointments, and membership.",
       "roleClient": "client",
       "roleStaff": "staff",
+      "openCrm": "Staff CRM",
       "signOut": "Sign out"
     },
     "dashboard": {

@@ -1,5 +1,6 @@
-import { Info } from "lucide-react";
+import { Info, LayoutDashboard } from "lucide-react";
 import { getTranslations } from "next-intl/server";
+import { Link } from "@/lib/i18n/navigation";
 import { PortalNav } from "@/components/portal/portal-nav";
 import { SignOutButton } from "@/components/sign-out-button";
 import { isSupabaseConfigured } from "@/lib/supabase/config";
@@ -39,6 +40,14 @@ export default async function PortalLayout({ children }: { children: React.React
               >
                 {role === "staff" ? t("roleStaff") : t("roleClient")}
               </span>
+            )}
+            {role === "staff" && (
+              <Link
+                href="/crm"
+                className="flex items-center gap-1.5 text-xs font-semibold text-brand-700 hover:text-brand-800"
+              >
+                <LayoutDashboard className="h-3.5 w-3.5" /> {t("openCrm")}
+              </Link>
             )}
             <SignOutButton />
           </span>

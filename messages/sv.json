@@ -309,6 +309,7 @@
       "previewBuild": "Förhandsversion — logga in för att hantera riktiga husdjur, bokningar och medlemskap.",
       "roleClient": "kund",
       "roleStaff": "personal",
+      "openCrm": "Personal-CRM",
       "signOut": "Logga ut"
     },
     "dashboard": {
