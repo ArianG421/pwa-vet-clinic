@@ -1,24 +1,43 @@
 import { Link } from "@/lib/i18n/navigation";
 import type { Metadata } from "next";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Check } from "lucide-react";
-import { planTiers } from "@/lib/data/plans";
+import { getPlanTiers } from "@/lib/data/plans";
+import { routing } from "@/lib/i18n/routing";
 
-export const metadata: Metadata = {
-  title: "Membership Plans",
-  description: "Simple monthly membership plans that make preventive pet care more affordable.",
-};
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
 
-export default function PricingPage() {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "pricing" });
+  return { title: t("eyebrow"), description: t("body") };
+}
+
+export default async function PricingPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations("pricing");
+  const tPlans = await getTranslations("plans");
+  const planTiers = getPlanTiers(
+    (key) => tPlans(key),
+    (key) => tPlans.raw(key) as unknown as string[]
+  );
+
   return (
     <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
       <div className="mx-auto max-w-2xl text-center">
-        <p className="text-sm font-semibold uppercase tracking-wide text-brand-700">Membership</p>
+        <p className="text-sm font-semibold uppercase tracking-wide text-brand-700">{t("eyebrow")}</p>
         <h1 className="mt-2 text-3xl font-semibold text-ink sm:text-4xl">
-          Preventive care shouldn't be a surprise expense
+          {t("title")}
         </h1>
         <p className="mt-4 text-ink-muted">
-          Pick a monthly plan and spread the cost of routine care across the year. Cancel or
-          switch plans anytime from your member portal.
+          {t("body")}
         </p>
       </div>
 
@@ -34,14 +53,14 @@ export default function PricingPage() {
           >
             {plan.highlighted && (
               <span className="mb-3 inline-flex w-fit items-center rounded-full bg-accent-500 px-3 py-1 text-xs font-semibold text-white">
-                Most popular
+                {t("mostPopular")}
               </span>
             )}
             <p className={`text-lg font-semibold ${plan.highlighted ? "text-white" : "text-ink"}`}>{plan.name}</p>
             <p className={`mt-1 text-sm ${plan.highlighted ? "text-brand-100" : "text-ink-muted"}`}>{plan.tagline}</p>
             <p className="mt-5">
               <span className="text-4xl font-bold">${plan.priceMonthly}</span>
-              <span className={`text-sm ${plan.highlighted ? "text-brand-100" : "text-ink-muted"}`}> /month</span>
+              <span className={`text-sm ${plan.highlighted ? "text-brand-100" : "text-ink-muted"}`}> {t("perMonth")}</span>
             </p>
             <ul className="mt-6 flex-1 space-y-3 text-sm">
               {plan.features.map((f) => (
@@ -59,15 +78,14 @@ export default function PricingPage() {
                   : "bg-brand-700 text-white hover:bg-brand-800"
               }`}
             >
-              Choose {plan.name}
+              {t("choosePlan", { name: plan.name })}
             </Link>
           </div>
         ))}
       </div>
 
       <p className="mx-auto mt-10 max-w-2xl text-center text-xs text-ink-muted">
-        This is a demo pricing page — checkout is simulated and no real payment is processed.
-        Final plans and pricing will be confirmed with the clinic before launch.
+        {t("demoDisclaimer")}
       </p>
     </div>
   );

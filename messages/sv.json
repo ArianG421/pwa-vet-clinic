@@ -1,5 +1,324 @@
 {
   "common": {
-    "loading": "Läser in…"
+    "loading": "Läser in…",
+    "skipToContent": "Hoppa till huvudinnehållet",
+    "backToSite": "Tillbaka till webbplatsen"
+  },
+  "site": {
+    "tagline": "Omtänksam, modern vård för alla i familjen.",
+    "description": "Willowbrook Veterinärklinik erbjuder förebyggande vård, kirurgi, tandvård, diagnostik och akutvård för hundar, katter och smådjur — med onlinebokning och en medlemsportal.",
+    "hours": [
+      { "label": "Måndag–fredag", "value": "08:00–18:00" },
+      { "label": "Lördag", "value": "09:00–14:00" },
+      { "label": "Söndag", "value": "Stängt (jourlinje aktiv)" }
+    ]
+  },
+  "nav": {
+    "services": "Tjänster",
+    "pricing": "Medlemskap",
+    "about": "Om oss",
+    "contact": "Kontakt",
+    "clientLogin": "Kundinloggning",
+    "bookVisit": "Boka besök",
+    "toggleMenu": "Visa/dölj meny"
+  },
+  "footer": {
+    "explore": "Utforska",
+    "hours": "Öppettider",
+    "contact": "Kontakt",
+    "demoNotice": "© {year} {siteName}. Demoversion — inte en riktig klinik."
+  },
+  "home": {
+    "badge": "Boka online nu, dygnet runt",
+    "heroBody": "Från hälsokontroller till akutvård kombinerar {siteName} modern medicin med en medlemsportal som samlar alla besök, journaler och påminnelser på ett ställe.",
+    "bookAppointment": "Boka en tid",
+    "exploreServices": "Utforska tjänster",
+    "features": {
+      "sameWeek": { "label": "Tider samma vecka", "detail": "Prioriterad bokning för medlemmar" },
+      "inHouse": { "label": "Diagnostik på plats", "detail": "Svar inom en timme" },
+      "memberPlans": { "label": "Medlemskap", "detail": "3 nivåer, avsluta när som helst" },
+      "triageLine": { "label": "Jourlinje dygnet runt", "detail": "För befintliga kunder" }
+    },
+    "whyWillowbrook": {
+      "eyebrow": "Varför Willowbrook",
+      "heading": "Några anledningar till att djurägare stannar kvar"
+    },
+    "categories": {
+      "heading": "Vård, organiserad efter kategori",
+      "body": "Allt från rutinmässig hälsovård till avancerad ortopedisk kirurgi, under ett och samma tak.",
+      "viewAll": "Visa alla"
+    },
+    "portalPitch": {
+      "heading": "En kundportal som faktiskt sparar dig ett telefonsamtal",
+      "body": "Installera {shortName} på din hemskärm och sköt allt från mobilen — utan att behöva ladda ner en app.",
+      "bullets": [
+        "Boka, boka om eller avboka tider med några klick",
+        "Samla varje husdjurs profil, vaccinationshistorik och anteckningar på ett ställe",
+        "Hantera ditt medlemskap och se din faktureringshistorik",
+        "Skicka meddelanden till kliniken och få påminnelser om besök"
+      ],
+      "createAccount": "Skapa ditt konto",
+      "memberPlansTitle": "Medlemskap",
+      "memberPlansBody": "Enkel prissättning, avsluta när som helst.",
+      "comparePlans": "Jämför nivåer"
+    },
+    "hero": {
+      "slides": {
+        "vetExamDachshund": {
+          "alt": "En veterinär undersöker varsamt en tax på ett undersökningsbord",
+          "eyebrow": "Grundliga undersökningar utan stress",
+          "title": "Varje besök får en fullständig kontroll",
+          "body": "Inget stressigt tempo, inga gissningar — bara en veterinär som tar sig tid att undersöka noga."
+        },
+        "puppiesTugOfWar": {
+          "alt": "Tre valpar leker dragkamp med en pinne utomhus",
+          "eyebrow": "Hjärtevärmande, varje gång",
+          "title": "Glada, friska och lite vilda",
+          "body": "Förebyggande vård idag betyder mer lek och dragkamp imorgon."
+        },
+        "vetInjectionDog": {
+          "alt": "En veterinär ger en liten hund en spruta",
+          "eyebrow": "Stressfri hantering",
+          "title": "Vaccination, utan drama",
+          "body": "Skonsamma tekniker håller lugnet även hos de mest nervösa patienterna."
+        },
+        "whiteCatBlueEyes": {
+          "alt": "Närbild på en fluffig vit katt med blå ögon",
+          "eyebrow": "Katter är välkomna, i lugn och ro",
+          "title": "Ett eget, tystare utrymme just för katter",
+          "body": "Inga skällande väntrum — bara ett lugnare besök från dörr till dörr."
+        },
+        "beaglePuppyBall": {
+          "alt": "En beaglevalp leker med en boll i gräset",
+          "eyebrow": "Priser som inte biter",
+          "title": "Medlemskap från $19/månad",
+          "body": "Fördela kostnaden för rutinvård över året — avsluta när som helst."
+        },
+        "goldenRetrieverBokeh": {
+          "alt": "En golden retriever i mjukt utomhusljus",
+          "eyebrow": "För varje skede i livet",
+          "title": "Från första vaccinet till guldåren",
+          "body": "Vård som växer och anpassar sig efter ditt husdjur, i varje ålder."
+        },
+        "orangeTabbyFace": {
+          "alt": "Närbild på en orange tabbykatts ansikte",
+          "eyebrow": "Diagnostik på plats",
+          "title": "Svar inom en timme, de flesta dagar",
+          "body": "Blodprover och bilddiagnostik på plats innebär mindre väntan och mindre oro."
+        },
+        "labPuppiesContainer": {
+          "alt": "Gula labradorvalpar i en grön låda",
+          "eyebrow": "Tider samma vecka",
+          "title": "Medlemmar slipper vänta",
+          "body": "Prioriterad bokning innebär mindre tid i telefonkö, mer tid tillsammans."
+        }
+      }
+    },
+    "infoPager": {
+      "heading": "Några anledningar till att djurägare stannar kvar",
+      "cards": {
+        "labPuppiesContainer": {
+          "alt": "Gula labradorvalpar",
+          "title": "Prissatt för sinnesro",
+          "body": "Medlemskap från $19/månad — inga överraskande räkningar för det ditt husdjur behöver varje år."
+        },
+        "vetExamTable": {
+          "alt": "En veterinär undersöker en hund på ett undersökningsbord",
+          "title": "Tider samma vecka",
+          "body": "Medlemmar får prioriterad bokning, så en kontroll inte betyder två veckors väntan."
+        },
+        "orangeTabbyFace": {
+          "alt": "En orange tabbykatts ansikte",
+          "title": "Diagnostik på plats",
+          "body": "Blodprover och bilddiagnostik inom en timme, de flesta dagar — svar medan du väntar."
+        },
+        "rabbitGrassField": {
+          "alt": "En kanin som sitter i en gräsmatta",
+          "title": "Älskade som familj",
+          "body": "Från den första viftningen till den tystaste spinningen — varje patient får den vård vi själva skulle vilja ge våra egna husdjur."
+        },
+        "whiteCatBlueEyes": {
+          "alt": "En fluffig vit katt med blå ögon",
+          "title": "Trygghet dygnet runt",
+          "body": "För oron över en haltande hund eller en katt som inte äter väntar inte på kontorstid."
+        }
+      }
+    }
+  },
+  "servicesPage": {
+    "eyebrow": "Tjänster",
+    "title": "Komplett veterinärvård, organiserad så den är lätt att hitta",
+    "body": "Varje kategori nedan länkar till behandlingarna vi erbjuder, ungefärliga priser och beräknad besökstid — så du vet vad du kan förvänta dig innan du bokar.",
+    "treatmentsCount": "{count} behandlingar"
+  },
+  "serviceCategory": {
+    "servicesCrumb": "Tjänster",
+    "readyToBook": "Redo att boka {category}?",
+    "priorityNote": "Medlemmar får prioriterad bokning, tider samma vecka.",
+    "bookAppointment": "Boka en tid",
+    "pricingDisclaimer": "Priserna som visas är ett typiskt intervall i demosyfte och kan variera beroende på ditt husdjurs storlek, tillstånd och behov av narkos eller medicinering.",
+    "durationHr": "~{hours} tim",
+    "durationMin": "~{minutes} min",
+    "priceIncluded": "Ingår"
+  },
+  "pricing": {
+    "eyebrow": "Medlemskap",
+    "title": "Förebyggande vård ska inte vara en överraskande utgift",
+    "body": "Välj en månadsnivå och fördela kostnaden för rutinvård över hela året. Avsluta eller byt nivå när som helst från din medlemsportal.",
+    "mostPopular": "Mest populär",
+    "perMonth": "/månad",
+    "choosePlan": "Välj {name}",
+    "demoDisclaimer": "Det här är en demosida för priser — betalningen är simulerad och ingen riktig betalning genomförs. Slutgiltiga nivåer och priser bestäms tillsammans med kliniken före lansering."
+  },
+  "about": {
+    "eyebrow": "Om oss",
+    "title": "Byggd på omtanke, backad av modern medicin",
+    "intro": "{siteName} öppnade med ett enkelt mål: ge varje husdjur den lugna, grundliga vård vi själva skulle vilja ge våra egna djur — och ge ägare ett modernt sätt att hålla koll på den.",
+    "facilityHeading": "Vår klinik",
+    "facilityBody": "Vår klinik är utformad för att minska stressen för oroliga patienter — med separata väntrum för hundar och katter, tysta undersökningsrum och utrustning som gör att det mesta av diagnostiken sker på plats, så att ditt husdjur inte behöver vänta dagar på svar.",
+    "facilityHighlights": {
+      "dogCatAreas": { "title": "Separata väntrum för hundar och katter", "detail": "Lugnare besök för varje patient, med artspecifika undersökningsrum." },
+      "labImaging": { "title": "Laboratorium och bilddiagnostik på plats", "detail": "Digital röntgen, ultraljud och blodprovssvar samma timme, på plats." },
+      "anaesthesia": { "title": "Modern narkosövervakning", "detail": "Kontinuerlig övervakning vid varje sedering eller kirurgiskt ingrepp." },
+      "fearFree": { "title": "Stressfria hanteringstekniker", "detail": "Personal utbildad i skonsam hantering av oroliga eller reaktiva husdjur." }
+    },
+    "teamHeading": "Möt teamet",
+    "teamBody": "Ett litet, erfaret team som känner era husdjur vid namn — inte bara som ett journalnummer.",
+    "team": {
+      "members": {
+        "elena-cross": { "name": "Elena Cross, leg. veterinär", "role": "Grundare & chefsveterinär", "bio": "15 års erfarenhet av smådjurspraktik med fokus på mjukdelskirurgi och ortopedi." },
+        "marcus-ahn": { "name": "Marcus Ahn, leg. veterinär", "role": "Biträdande veterinär", "bio": "Särskilt intresse för invärtesmedicin, endoskopi och hälsovård för äldre husdjur." },
+        "priya-nandakumar": { "name": "Priya Nandakumar, leg. djursjukskötare", "role": "Ansvarig djursjukskötare", "bio": "Driver diagnostiklabbet och samordnar narkos och övervakning vid operationer." },
+        "jonas-weber": { "name": "Jonas Weber", "role": "Kundansvarig", "bio": "Din första kontakt för bokningar, medlemsfrågor och förberedelser inför besök." }
+      }
+    }
+  },
+  "contact": {
+    "eyebrow": "Kontakt",
+    "title": "Vi hjälper gärna till",
+    "body": "Frågor om en behandling, ditt medlemskap eller ditt husdjurs journal? Hör av dig nedan, eller ring oss direkt under klinikens öppettider.",
+    "phone": "Telefon",
+    "email": "E-post",
+    "address": "Adress",
+    "getDirections": "Vägbeskrivning →",
+    "hours": "Öppettider",
+    "sendMessage": "Skicka ett meddelande",
+    "respondNote": "Vi svarar vanligtvis inom en arbetsdag.",
+    "form": {
+      "name": "Ditt namn",
+      "email": "E-post",
+      "message": "Meddelande",
+      "send": "Skicka meddelande",
+      "errorFillAll": "Fyll i alla fält.",
+      "errorGeneric": "Något gick fel när meddelandet skulle skickas. Försök igen eller ring oss.",
+      "successTitle": "Meddelandet har skickats",
+      "successBody": "Vi återkommer inom en arbetsdag."
+    }
+  },
+  "breadcrumbs": {
+    "home": "Hem"
+  },
+  "services": {
+    "categories": {
+      "surgery": {
+        "name": "Kirurgi & ingrepp",
+        "summary": "Från rutinmässig kastrering till komplex mjukdelskirurgi.",
+        "description": "Vår operationsavdelning är utrustad för allt från rutinmässiga steriliseringar till komplex mjukdels- och akutkirurgi, med fullständig undersökning inför narkos och dedikerad eftervårdsövervakning för varje patient.",
+        "services": {
+          "spay-neuter": { "name": "Kastrering/sterilisering", "description": "Rutinmässig sterilisering med blodprover inför narkos och smärtlindringsplan att ta med hem." },
+          "soft-tissue-surgery": { "name": "Mjukdelskirurgi", "description": "Borttagning av tumörer, sårvård och bukingrepp." },
+          "post-op-care-plan": { "name": "Eftervårdsplan", "description": "Kontroll av suturer, genomgång av smärtlindring och återhämtningsövervakning." }
+        }
+      },
+      "preventive-care": {
+        "name": "Grundvård & förebyggande vård",
+        "summary": "Vaccinationer, hälsokontroller och kontroller för valpar och kattungar.",
+        "description": "Grunden för ett långt, friskt liv — grund- och tilläggsvaccin, hälsokontroller, parasitskydd, id-märkning och hälsointyg för resa eller rasregistrering.",
+        "services": {
+          "wellness-exam": { "name": "Hälsokontroll", "description": "Fullständig kontroll från nos till svans hos en legitimerad veterinär." },
+          "vaccination-package": { "name": "Vaccinationspaket", "description": "Grund- och tilläggsvaccin anpassade efter ålder och risk." },
+          "puppy-kitten-starter-visit": { "name": "Startbesök för valp & kattunge", "description": "Förstabesökskontroll, avmaskning och planering av vaccinationsschema." },
+          "microchipping-id": { "name": "Id-märkning", "description": "Permanent id-chip med registrering." }
+        }
+      },
+      "dental": {
+        "name": "Tandvård",
+        "summary": "Tandstensborttagning, tandröntgen och extraktioner.",
+        "description": "Tandsjukdom drabbar de flesta husdjur redan vid tre års ålder. Vi erbjuder ultraljudsrengöring och polering, fullständig tandröntgen och extraktioner under övervakad narkos.",
+        "services": {
+          "dental-cleaning-polish": { "name": "Tandrengöring & polering", "description": "Ultraljudsrengöring och polering under narkos." },
+          "dental-x-rays": { "name": "Tandröntgen", "description": "Fullständig röntgen för att upptäcka sjukdom under tandköttet." },
+          "tooth-extraction": { "name": "Tandutdragning", "description": "Enkla till kirurgiska extraktioner med smärtlindring." }
+        }
+      },
+      "diagnostics": {
+        "name": "Laboratorium & diagnostik",
+        "summary": "Blodprover, urinprov och snabbtester på plats.",
+        "description": "Vårt eget laboratorium levererar de flesta blod- och urinprovssvar inom en timme, så behandlingsbeslut inte behöver vänta på ett bud.",
+        "services": {
+          "bloodwork-panel": { "name": "Blodprovspanel", "description": "Fullständig blodstatus och kemipanel, svar på plats." },
+          "urinalysis": { "name": "Urinprov", "description": "Screening för njur-, blås- och ämnesomsättningsproblem." },
+          "rapid-test-panels": { "name": "Snabbtester", "description": "Parvo, hjärtmask, fästingburna sjukdomar och FeLV/FIV-screening." }
+        }
+      },
+      "imaging": {
+        "name": "Bilddiagnostik",
+        "summary": "Digital röntgen och ultraljud på plats.",
+        "description": "Digital röntgen- och ultraljudsutrustning på plats ger snabbare, tydligare svar vid skador, nedsvalda föremål och invärtesmedicinska fall — utan väntan på remiss.",
+        "services": {
+          "digital-radiography": { "name": "Digital röntgen", "description": "Högupplöst röntgenbildtagning med svar samma dag." },
+          "abdominal-ultrasound": { "name": "Bukultraljud", "description": "Skonsam bilddiagnostik av organ och mjukvävnad." }
+        }
+      },
+      "orthopedics": {
+        "name": "Ortopedi",
+        "summary": "Korsbandsskador, frakturbehandling och ryggvård.",
+        "description": "Från främre korsbandsskador till frakturstabilisering och ryggfall — vår ortopedtjänst kombinerar kirurgisk kompetens med en strukturerad rehabplan.",
+        "services": {
+          "orthopedic-consultation": { "name": "Ortopedisk konsultation", "description": "Hältundersökning med remissplan för bilddiagnostik." },
+          "cruciate-acl-repair": { "name": "Korsbandsoperation", "description": "Kirurgisk stabilisering vid skador på främre korsbandet." },
+          "fracture-repair": { "name": "Frakturbehandling", "description": "Stabilisering och fixering vid frakturer." }
+        }
+      },
+      "endoscopy": {
+        "name": "Endoskopi",
+        "summary": "Minimalinvasiv undersökning vid nedsvalda föremål med mera.",
+        "description": "Bronkoskopi och gastroskopi låter oss undersöka kronisk hosta, sväljsvårigheter eller ett misstänkt främmande föremål utan öppen kirurgi i många fall.",
+        "services": {
+          "gastroscopy": { "name": "Gastroskopi", "description": "Kameraledd undersökning av matstrupe och magsäck." },
+          "bronchoscopy": { "name": "Bronkoskopi", "description": "Undersökning av luftvägarna vid kronisk hosta eller andningsproblem." },
+          "foreign-body-retrieval": { "name": "Borttagning av främmande föremål", "description": "Icke-kirurgisk borttagning av nedsvalda föremål där det är möjligt." }
+        }
+      },
+      "emergency": {
+        "name": "Akutvård",
+        "summary": "Akut stabilisering och brådskande behandling.",
+        "description": "Olyckor väntar inte på en bokad tid. Vi prioriterar akuta fall för stabilisering och behandling samma dag, med en jourlinje för befintliga kunder.",
+        "services": {
+          "emergency-exam": { "name": "Akutundersökning", "description": "Prioriterad triage och stabiliseringsundersökning." },
+          "overnight-monitoring": { "name": "Nattlig övervakning", "description": "Inläggning med kontinuerlig övervakning." },
+          "after-hours-consultation": { "name": "Jourrådgivning", "description": "Telefonrådgivning för befintliga kunder." }
+        }
+      }
+    }
+  },
+  "plans": {
+    "tiers": {
+      "essential": {
+        "name": "Grundläggande",
+        "tagline": "För friska husdjur som bara behöver grunderna täckta.",
+        "features": ["1 hälsokontroll per år", "10% rabatt på vaccinationer", "Prioriterad bokning för medlemmar", "Påminnelser om besök via e-post"]
+      },
+      "wellness": {
+        "name": "Hälsa Plus",
+        "tagline": "Vår mest populära nivå för löpande förebyggande vård.",
+        "features": ["2 hälsokontroller per år", "20% rabatt på vaccinationer & tandrengöring", "Kostnadsfri årlig blodprovspanel", "Prioriterad bokning + tider samma vecka", "Jourlinje dygnet runt"]
+      },
+      "complete": {
+        "name": "Komplett Vård",
+        "tagline": "Heltäckande skydd för äldre husdjur eller hushåll med flera djur.",
+        "features": ["Obegränsat antal hälsokontroller", "30% rabatt på kirurgi, tandvård & bilddiagnostik", "Kostnadsfri årlig blodprovspanel + urinprov", "Personlig vårdkoordinator", "Jourlinje dygnet runt", "Berättigad till rabatt för flera husdjur"]
+      }
+    }
   }
 }

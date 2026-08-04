@@ -1,11 +1,13 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import { useTranslations } from "next-intl";
 import { Loader2, CheckCircle2 } from "lucide-react";
 
 type Status = "idle" | "submitting" | "success" | "error";
 
 export function ContactForm() {
+  const t = useTranslations("contact.form");
   const [status, setStatus] = useState<Status>("idle");
   const [error, setError] = useState<string | null>(null);
 
@@ -20,7 +22,7 @@ export function ContactForm() {
     const message = String(data.get("message") ?? "").trim();
 
     if (!name || !email || !message) {
-      setError("Please fill in every field.");
+      setError(t("errorFillAll"));
       return;
     }
 
@@ -36,7 +38,7 @@ export function ContactForm() {
       form.reset();
     } catch {
       setStatus("error");
-      setError("Something went wrong sending your message. Please try again or call us.");
+      setError(t("errorGeneric"));
     }
   }
 
@@ -44,8 +46,8 @@ export function ContactForm() {
     return (
       <div className="flex flex-col items-center gap-3 rounded-2xl border border-brand-200 bg-brand-50 p-8 text-center">
         <CheckCircle2 className="h-8 w-8 text-brand-600" />
-        <p className="font-semibold text-ink">Message sent</p>
-        <p className="text-sm text-ink-muted">We'll get back to you within one business day.</p>
+        <p className="font-semibold text-ink">{t("successTitle")}</p>
+        <p className="text-sm text-ink-muted">{t("successBody")}</p>
       </div>
     );
   }
@@ -53,7 +55,7 @@ export function ContactForm() {
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
       <div>
-        <label htmlFor="name" className="text-sm font-medium text-ink">Your name</label>
+        <label htmlFor="name" className="text-sm font-medium text-ink">{t("name")}</label>
         <input
           id="name"
           name="name"
@@ -63,7 +65,7 @@ export function ContactForm() {
         />
       </div>
       <div>
-        <label htmlFor="email" className="text-sm font-medium text-ink">Email</label>
+        <label htmlFor="email" className="text-sm font-medium text-ink">{t("email")}</label>
         <input
           id="email"
           name="email"
@@ -73,7 +75,7 @@ export function ContactForm() {
         />
       </div>
       <div>
-        <label htmlFor="message" className="text-sm font-medium text-ink">Message</label>
+        <label htmlFor="message" className="text-sm font-medium text-ink">{t("message")}</label>
         <textarea
           id="message"
           name="message"
@@ -89,7 +91,7 @@ export function ContactForm() {
         className="inline-flex items-center gap-2 rounded-full bg-brand-700 px-6 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-800 disabled:opacity-60"
       >
         {status === "submitting" && <Loader2 className="h-4 w-4 animate-spin" />}
-        Send message
+        {t("send")}
       </button>
     </form>
   );

@@ -1,11 +1,15 @@
 import type { MetadataRoute } from "next";
 import { site } from "@/lib/site";
+import enMessages from "../messages/en.json";
 
+// The manifest is fetched once at install time regardless of which locale
+// the user installs from, so it isn't locale-aware — English description
+// is the reasonable default here.
 export default function manifest(): MetadataRoute.Manifest {
   return {
     name: site.name,
     short_name: site.shortName,
-    description: site.description,
+    description: enMessages.site.description,
     start_url: "/",
     scope: "/",
     display: "standalone",

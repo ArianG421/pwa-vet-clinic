@@ -1,51 +1,26 @@
-export type PlanTier = {
+// Facts only — translatable text lives in messages/{locale}.json under
+// "plans.tiers.<slug>". See getPlanTiers().
+
+export type PlanTierFact = {
   slug: string;
-  name: string;
   priceMonthly: number;
-  tagline: string;
-  features: string[];
   highlighted?: boolean;
+  featureCount: number;
 };
 
-export const planTiers: PlanTier[] = [
-  {
-    slug: "essential",
-    name: "Essential",
-    priceMonthly: 19,
-    tagline: "For healthy pets that just need the basics covered.",
-    features: [
-      "1 wellness exam per year",
-      "10% off vaccinations",
-      "Member-only booking priority",
-      "Email appointment reminders",
-    ],
-  },
-  {
-    slug: "wellness",
-    name: "Wellness Plus",
-    priceMonthly: 39,
-    tagline: "Our most popular plan for ongoing preventive care.",
-    highlighted: true,
-    features: [
-      "2 wellness exams per year",
-      "20% off vaccinations & dental cleanings",
-      "Free annual bloodwork panel",
-      "Priority booking + same-week appointments",
-      "24/7 after-hours triage line",
-    ],
-  },
-  {
-    slug: "complete",
-    name: "Complete Care",
-    priceMonthly: 69,
-    tagline: "Comprehensive coverage for senior pets or multi-pet households.",
-    features: [
-      "Unlimited wellness exams",
-      "30% off surgery, dental & imaging",
-      "Free annual bloodwork + urinalysis",
-      "Dedicated care coordinator",
-      "24/7 after-hours triage line",
-      "Multi-pet discount eligible",
-    ],
-  },
+export const planTierFacts: PlanTierFact[] = [
+  { slug: "essential", priceMonthly: 19, featureCount: 4 },
+  { slug: "wellness", priceMonthly: 39, highlighted: true, featureCount: 5 },
+  { slug: "complete", priceMonthly: 69, featureCount: 6 },
 ];
+
+export type PlanTier = PlanTierFact & { name: string; tagline: string; features: string[] };
+
+export function getPlanTiers(t: (key: string) => string, tRaw: (key: string) => string[]): PlanTier[] {
+  return planTierFacts.map((tier) => ({
+    ...tier,
+    name: t(`tiers.${tier.slug}.name`),
+    tagline: t(`tiers.${tier.slug}.tagline`),
+    features: tRaw(`tiers.${tier.slug}.features`),
+  }));
+}

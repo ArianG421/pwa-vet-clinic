@@ -1,5 +1,324 @@
 {
   "common": {
-    "loading": "Loading…"
+    "loading": "Loading…",
+    "skipToContent": "Skip to main content",
+    "backToSite": "Back to site"
+  },
+  "site": {
+    "tagline": "Compassionate, modern care for every member of the family.",
+    "description": "Willowbrook Veterinary Clinic offers preventive care, surgery, dental, diagnostics, and emergency services for dogs, cats, and small pets — with online booking and a member portal.",
+    "hours": [
+      { "label": "Monday – Friday", "value": "8:00 AM – 6:00 PM" },
+      { "label": "Saturday", "value": "9:00 AM – 2:00 PM" },
+      { "label": "Sunday", "value": "Closed (Emergency line active)" }
+    ]
+  },
+  "nav": {
+    "services": "Services",
+    "pricing": "Membership",
+    "about": "About",
+    "contact": "Contact",
+    "clientLogin": "Client Login",
+    "bookVisit": "Book a visit",
+    "toggleMenu": "Toggle menu"
+  },
+  "footer": {
+    "explore": "Explore",
+    "hours": "Hours",
+    "contact": "Contact",
+    "demoNotice": "© {year} {siteName}. Demo build — not a real clinic."
+  },
+  "home": {
+    "badge": "Now booking online, 24/7",
+    "heroBody": "From wellness checks to emergency care, {siteName} pairs modern medicine with a member portal that keeps every appointment, pet record, and reminder in one place.",
+    "bookAppointment": "Book an appointment",
+    "exploreServices": "Explore services",
+    "features": {
+      "sameWeek": { "label": "Same-week appointments", "detail": "Priority booking for members" },
+      "inHouse": { "label": "In-house diagnostics", "detail": "Results in under an hour" },
+      "memberPlans": { "label": "Member plans", "detail": "3 tiers, cancel anytime" },
+      "triageLine": { "label": "24/7 triage line", "detail": "For existing clients" }
+    },
+    "whyWillowbrook": {
+      "eyebrow": "Why Willowbrook",
+      "heading": "A few reasons pet parents stick around"
+    },
+    "categories": {
+      "heading": "Care, organized by category",
+      "body": "Everything from routine wellness to advanced orthopedic surgery, under one roof.",
+      "viewAll": "View all"
+    },
+    "portalPitch": {
+      "heading": "A client portal that actually saves you a phone call",
+      "body": "Install {shortName} to your home screen and manage everything from your phone — no app store required.",
+      "bullets": [
+        "Book, reschedule, or cancel appointments in a few taps",
+        "Keep every pet's profile, vaccine history, and notes in one place",
+        "Manage your membership plan and view billing history",
+        "Message the clinic and get appointment reminders"
+      ],
+      "createAccount": "Create your account",
+      "memberPlansTitle": "Member plans",
+      "memberPlansBody": "Simple pricing, cancel anytime.",
+      "comparePlans": "Compare plans"
+    },
+    "hero": {
+      "slides": {
+        "vetExamDachshund": {
+          "alt": "A veterinarian gently examining a dachshund on an exam table",
+          "eyebrow": "Thorough, unhurried exams",
+          "title": "Every visit gets a full nose-to-tail check",
+          "body": "No rushing, no guessing — just a vet who takes the time to look closely."
+        },
+        "puppiesTugOfWar": {
+          "alt": "Three puppies playing tug-of-war with a stick outdoors",
+          "eyebrow": "Endearing, every time",
+          "title": "Happy, healthy, and a little bit wild",
+          "body": "Preventive care today means more zoomies and tug-of-war tomorrow."
+        },
+        "vetInjectionDog": {
+          "alt": "A veterinarian giving a small dog an injection",
+          "eyebrow": "Fear-free handling",
+          "title": "Vaccinations, without the drama",
+          "body": "Low-stress techniques keep even the most nervous patients calm."
+        },
+        "whiteCatBlueEyes": {
+          "alt": "A close-up of a fluffy white cat with blue eyes",
+          "eyebrow": "Cats welcome, calmly",
+          "title": "A separate, quieter space just for cats",
+          "body": "No barking waiting rooms — just a calmer visit from door to door."
+        },
+        "beaglePuppyBall": {
+          "alt": "A beagle puppy playing with a ball in the grass",
+          "eyebrow": "Prices that don't bite",
+          "title": "Membership plans start at $19/month",
+          "body": "Spread the cost of routine care across the year — cancel any time."
+        },
+        "goldenRetrieverBokeh": {
+          "alt": "A golden retriever in soft outdoor light",
+          "eyebrow": "For every stage of life",
+          "title": "From first vaccine to golden years",
+          "body": "Care that grows and adjusts with your pet, at every age."
+        },
+        "orangeTabbyFace": {
+          "alt": "Close-up of an orange tabby cat's face",
+          "eyebrow": "In-house diagnostics",
+          "title": "Answers in under an hour, most days",
+          "body": "On-site bloodwork and imaging mean less waiting and less worrying."
+        },
+        "labPuppiesContainer": {
+          "alt": "Yellow labrador puppies in a green container",
+          "eyebrow": "Same-week appointments",
+          "title": "Members skip the wait",
+          "body": "Priority booking means less time on hold, more time together."
+        }
+      }
+    },
+    "infoPager": {
+      "heading": "A few reasons pet parents stick around",
+      "cards": {
+        "labPuppiesContainer": {
+          "alt": "Yellow labrador puppies",
+          "title": "Priced for peace of mind",
+          "body": "Membership plans start at just $19/month — no surprise bills for the basics your pet needs every year."
+        },
+        "vetExamTable": {
+          "alt": "A veterinarian examining a dog on an exam table",
+          "title": "Same-week appointments",
+          "body": "Members get priority booking, so a check-up doesn't mean a two-week wait."
+        },
+        "orangeTabbyFace": {
+          "alt": "An orange tabby cat's face",
+          "title": "In-house diagnostics",
+          "body": "Bloodwork and imaging results in under an hour, most days — answers while you wait."
+        },
+        "rabbitGrassField": {
+          "alt": "A rabbit sitting in a grass field",
+          "title": "Loved like family",
+          "body": "From the first wag to the quietest purr, every patient gets the care we'd want for our own pets."
+        },
+        "whiteCatBlueEyes": {
+          "alt": "A fluffy white cat with blue eyes",
+          "title": "24/7 peace of mind",
+          "body": "Because worry about a limping dog or an off-food cat doesn't wait for office hours."
+        }
+      }
+    }
+  },
+  "servicesPage": {
+    "eyebrow": "Services",
+    "title": "Complete veterinary care, organized so it's easy to find",
+    "body": "Every category below links to the treatments we offer, typical pricing, and estimated visit length — so you know what to expect before you book.",
+    "treatmentsCount": "{count} treatments"
+  },
+  "serviceCategory": {
+    "servicesCrumb": "Services",
+    "readyToBook": "Ready to book {category}?",
+    "priorityNote": "Members get priority, same-week appointments.",
+    "bookAppointment": "Book an appointment",
+    "pricingDisclaimer": "Pricing shown is a typical range for demo purposes and may vary based on your pet's size, condition, and required anaesthesia or medication.",
+    "durationHr": "~{hours} hr",
+    "durationMin": "~{minutes} min",
+    "priceIncluded": "Included"
+  },
+  "pricing": {
+    "eyebrow": "Membership",
+    "title": "Preventive care shouldn't be a surprise expense",
+    "body": "Pick a monthly plan and spread the cost of routine care across the year. Cancel or switch plans anytime from your member portal.",
+    "mostPopular": "Most popular",
+    "perMonth": "/month",
+    "choosePlan": "Choose {name}",
+    "demoDisclaimer": "This is a demo pricing page — checkout is simulated and no real payment is processed. Final plans and pricing will be confirmed with the clinic before launch."
+  },
+  "about": {
+    "eyebrow": "About us",
+    "title": "Built around compassion, backed by modern medicine",
+    "intro": "{siteName} opened with a simple goal: give every pet the kind of unhurried, thorough care we'd want for our own animals — and give owners a modern way to stay on top of it.",
+    "facilityHeading": "Our facility",
+    "facilityBody": "Our clinic was designed around reducing stress for anxious patients — from separate waiting areas for dogs and cats to quiet exam rooms and equipment that keeps most diagnostics in-house, so your pet isn't waiting days for answers.",
+    "facilityHighlights": {
+      "dogCatAreas": { "title": "Separate dog & cat waiting areas", "detail": "Lower-stress visits for every patient, with species-specific exam rooms." },
+      "labImaging": { "title": "In-house lab & imaging", "detail": "Digital X-ray, ultrasound, and same-hour bloodwork on site." },
+      "anaesthesia": { "title": "Modern anaesthesia monitoring", "detail": "Continuous monitoring for every sedated or surgical procedure." },
+      "fearFree": { "title": "Fear-free handling techniques", "detail": "Staff trained in low-stress handling for anxious or reactive pets." }
+    },
+    "teamHeading": "Meet the team",
+    "teamBody": "A small, experienced team that knows your pets by name — not just by chart number.",
+    "team": {
+      "members": {
+        "elena-cross": { "name": "Dr. Elena Cross, DVM", "role": "Founder & Lead Veterinarian", "bio": "15 years in small-animal practice with a focus on soft-tissue surgery and orthopedics." },
+        "marcus-ahn": { "name": "Dr. Marcus Ahn, DVM", "role": "Associate Veterinarian", "bio": "Special interest in internal medicine, endoscopy, and senior pet wellness." },
+        "priya-nandakumar": { "name": "Priya Nandakumar, RVT", "role": "Lead Veterinary Technician", "bio": "Runs the diagnostics lab and coordinates surgical anaesthesia and monitoring." },
+        "jonas-weber": { "name": "Jonas Weber", "role": "Client Care Coordinator", "bio": "Your first call for bookings, membership questions, and pre-visit prep." }
+      }
+    }
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "We're happy to help",
+    "body": "Questions about a treatment, your membership, or your pet's records? Reach out below, or call us directly during clinic hours.",
+    "phone": "Phone",
+    "email": "Email",
+    "address": "Address",
+    "getDirections": "Get directions →",
+    "hours": "Hours",
+    "sendMessage": "Send us a message",
+    "respondNote": "We typically respond within one business day.",
+    "form": {
+      "name": "Your name",
+      "email": "Email",
+      "message": "Message",
+      "send": "Send message",
+      "errorFillAll": "Please fill in every field.",
+      "errorGeneric": "Something went wrong sending your message. Please try again or call us.",
+      "successTitle": "Message sent",
+      "successBody": "We'll get back to you within one business day."
+    }
+  },
+  "breadcrumbs": {
+    "home": "Home"
+  },
+  "services": {
+    "categories": {
+      "surgery": {
+        "name": "Surgery & Procedures",
+        "summary": "From routine spays to complex soft-tissue surgery.",
+        "description": "Our surgical suite is equipped for everything from routine sterilizations to complex soft-tissue and emergency procedures, with full pre-anaesthetic screening and dedicated post-op monitoring for every patient.",
+        "services": {
+          "spay-neuter": { "name": "Spay / Neuter", "description": "Routine sterilization with pre-anaesthetic bloodwork and take-home pain plan." },
+          "soft-tissue-surgery": { "name": "Soft-Tissue Surgery", "description": "Mass removals, wound repair, and abdominal procedures." },
+          "post-op-care-plan": { "name": "Post-Op Care Plan", "description": "Suture check, pain management review, and recovery monitoring." }
+        }
+      },
+      "preventive-care": {
+        "name": "Primary & Preventive Care",
+        "summary": "Vaccinations, wellness exams, and puppy & kitten checks.",
+        "description": "The foundation of a long, healthy life — core and lifestyle vaccinations, wellness exams, parasite prevention, microchipping, and health certificates for travel or breed registration.",
+        "services": {
+          "wellness-exam": { "name": "Wellness Exam", "description": "Full nose-to-tail check-up with a licensed veterinarian." },
+          "vaccination-package": { "name": "Vaccination Package", "description": "Core + lifestyle vaccines tailored to age and risk." },
+          "puppy-kitten-starter-visit": { "name": "Puppy & Kitten Starter Visit", "description": "First-visit exam, deworming, and vaccine schedule planning." },
+          "microchipping-id": { "name": "Microchipping & ID", "description": "Permanent ID chip with registry enrollment." }
+        }
+      },
+      "dental": {
+        "name": "Dental Services",
+        "summary": "Tartar removal, dental X-rays, and extractions.",
+        "description": "Dental disease affects most pets by age three. We offer ultrasonic scaling and polishing, full-mouth dental radiographs, and extractions under monitored anaesthesia.",
+        "services": {
+          "dental-cleaning-polish": { "name": "Dental Cleaning & Polish", "description": "Ultrasonic scaling and polishing under anaesthesia." },
+          "dental-x-rays": { "name": "Dental X-Rays", "description": "Full-mouth radiographs to catch disease below the gumline." },
+          "tooth-extraction": { "name": "Tooth Extraction", "description": "Simple to surgical extractions with pain management." }
+        }
+      },
+      "diagnostics": {
+        "name": "Laboratory & Diagnostics",
+        "summary": "In-house bloodwork, urinalysis, and rapid test panels.",
+        "description": "Our in-house lab returns most bloodwork and urinalysis results within the hour, so treatment decisions don't wait on a courier.",
+        "services": {
+          "bloodwork-panel": { "name": "Bloodwork Panel", "description": "Complete blood count and chemistry panel, in-house results." },
+          "urinalysis": { "name": "Urinalysis", "description": "Screening for kidney, bladder, and metabolic issues." },
+          "rapid-test-panels": { "name": "Rapid Test Panels", "description": "Parvo, heartworm, tick-borne disease, and FeLV/FIV screening." }
+        }
+      },
+      "imaging": {
+        "name": "Imaging",
+        "summary": "Digital radiography and ultrasound on site.",
+        "description": "Digital X-ray and ultrasound equipment on site means faster, clearer answers for injuries, swallowed objects, and internal medicine cases — no referral wait.",
+        "services": {
+          "digital-radiography": { "name": "Digital Radiography", "description": "High-resolution X-ray imaging with same-day read." },
+          "abdominal-ultrasound": { "name": "Abdominal Ultrasound", "description": "Non-invasive imaging for organs and soft tissue." }
+        }
+      },
+      "orthopedics": {
+        "name": "Orthopedics",
+        "summary": "ACL injuries, fracture repair, and spinal care.",
+        "description": "From cranial cruciate ligament injuries to fracture stabilization and spinal cases, our orthopedic service pairs surgical expertise with a structured rehab plan.",
+        "services": {
+          "orthopedic-consultation": { "name": "Orthopedic Consultation", "description": "Lameness exam with imaging referral plan." },
+          "cruciate-acl-repair": { "name": "Cruciate (ACL) Repair", "description": "Surgical stabilization for cranial cruciate ligament injuries." },
+          "fracture-repair": { "name": "Fracture Repair", "description": "Stabilization and fixation for fractures." }
+        }
+      },
+      "endoscopy": {
+        "name": "Endoscopy",
+        "summary": "Minimally invasive scoping for scopes & swallowed objects.",
+        "description": "Bronchoscopy and gastroscopy let us investigate chronic coughing, swallowing difficulty, or a suspected foreign body without open surgery in many cases.",
+        "services": {
+          "gastroscopy": { "name": "Gastroscopy", "description": "Camera-guided exam of the oesophagus and stomach." },
+          "bronchoscopy": { "name": "Bronchoscopy", "description": "Airway scoping for chronic cough or breathing issues." },
+          "foreign-body-retrieval": { "name": "Foreign Body Retrieval", "description": "Non-surgical removal of swallowed objects where possible." }
+        }
+      },
+      "emergency": {
+        "name": "Emergency Care",
+        "summary": "Acute stabilization and urgent treatment.",
+        "description": "Accidents don't wait for an appointment. We prioritize acute cases for same-day stabilization and treatment, with an after-hours line for existing clients.",
+        "services": {
+          "emergency-exam": { "name": "Emergency Exam", "description": "Priority triage and stabilization exam." },
+          "overnight-monitoring": { "name": "Overnight Monitoring", "description": "Hospitalization with continuous monitoring." },
+          "after-hours-consultation": { "name": "After-Hours Consultation", "description": "Phone triage line for existing clients." }
+        }
+      }
+    }
+  },
+  "plans": {
+    "tiers": {
+      "essential": {
+        "name": "Essential",
+        "tagline": "For healthy pets that just need the basics covered.",
+        "features": ["1 wellness exam per year", "10% off vaccinations", "Member-only booking priority", "Email appointment reminders"]
+      },
+      "wellness": {
+        "name": "Wellness Plus",
+        "tagline": "Our most popular plan for ongoing preventive care.",
+        "features": ["2 wellness exams per year", "20% off vaccinations & dental cleanings", "Free annual bloodwork panel", "Priority booking + same-week appointments", "24/7 after-hours triage line"]
+      },
+      "complete": {
+        "name": "Complete Care",
+        "tagline": "Comprehensive coverage for senior pets or multi-pet households.",
+        "features": ["Unlimited wellness exams", "30% off surgery, dental & imaging", "Free annual bloodwork + urinalysis", "Dedicated care coordinator", "24/7 after-hours triage line", "Multi-pet discount eligible"]
+      }
+    }
   }
 }

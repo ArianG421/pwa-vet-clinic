@@ -1,28 +1,20 @@
-export type TeamMember = {
-  name: string;
-  role: string;
-  bio: string;
-};
+// Names aren't translated; role/bio live in messages/{locale}.json under
+// "about.team.members" as a raw array aligned by index with this one.
 
-export const team: TeamMember[] = [
-  {
-    name: "Dr. Elena Cross, DVM",
-    role: "Founder & Lead Veterinarian",
-    bio: "15 years in small-animal practice with a focus on soft-tissue surgery and orthopedics.",
-  },
-  {
-    name: "Dr. Marcus Ahn, DVM",
-    role: "Associate Veterinarian",
-    bio: "Special interest in internal medicine, endoscopy, and senior pet wellness.",
-  },
-  {
-    name: "Priya Nandakumar, RVT",
-    role: "Lead Veterinary Technician",
-    bio: "Runs the diagnostics lab and coordinates surgical anaesthesia and monitoring.",
-  },
-  {
-    name: "Jonas Weber",
-    role: "Client Care Coordinator",
-    bio: "Your first call for bookings, membership questions, and pre-visit prep.",
-  },
-];
+export const teamFacts = [
+  { slug: "elena-cross" },
+  { slug: "marcus-ahn" },
+  { slug: "priya-nandakumar" },
+  { slug: "jonas-weber" },
+] as const;
+
+export type TeamMember = { slug: string; name: string; role: string; bio: string };
+
+export function getTeam(t: (key: string) => string): TeamMember[] {
+  return teamFacts.map((member) => ({
+    ...member,
+    name: t(`members.${member.slug}.name`),
+    role: t(`members.${member.slug}.role`),
+    bio: t(`members.${member.slug}.bio`),
+  }));
+}
