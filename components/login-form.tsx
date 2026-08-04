@@ -7,6 +7,7 @@ import { Link } from "@/lib/i18n/navigation";
 import { Mail, PawPrint, Loader2, CheckCircle2, AlertTriangle, KeyRound } from "lucide-react";
 import { createClient } from "@/lib/supabase/client";
 import { isSupabaseConfigured } from "@/lib/supabase/config";
+import { setRememberMe as persistRememberMe } from "@/lib/supabase/remember";
 
 type Status = "idle" | "sending" | "sent" | "error";
 
@@ -15,6 +16,7 @@ export function LoginForm() {
   const searchParams = useSearchParams();
   const redirect = searchParams.get("redirect") ?? "/portal";
   const [email, setEmail] = useState("");
+  const [rememberMe, setRememberMe] = useState(true);
   const [status, setStatus] = useState<Status>("idle");
   const [error, setError] = useState<string | null>(null);
   const [code, setCode] = useState("");
@@ -29,6 +31,7 @@ export function LoginForm() {
       return;
     }
 
+    persistRememberMe(rememberMe);
     setStatus("sending");
     setError(null);
 
@@ -164,6 +167,16 @@ export function LoginForm() {
                   />
                 </div>
               </div>
+
+              <label className="flex items-center gap-2 text-sm text-ink-muted">
+                <input
+                  type="checkbox"
+                  checked={rememberMe}
+                  onChange={(e) => setRememberMe(e.target.checked)}
+                  className="h-4 w-4 rounded border-black/20 text-brand-700 focus:ring-brand-200"
+                />
+                {t("rememberMe")}
+              </label>
 
               {error && (
                 <p className="flex items-start gap-1.5 text-sm text-red-600">

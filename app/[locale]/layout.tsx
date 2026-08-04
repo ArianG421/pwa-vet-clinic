@@ -10,6 +10,7 @@ import { RegisterServiceWorker } from "@/components/register-sw";
 import { PawClickEffect } from "@/components/paw-click-effect";
 import { ScrollToTop } from "@/components/scroll-to-top";
 import { InstallPrompt } from "@/components/install-prompt";
+import { SessionGuard } from "@/components/session-guard";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -75,6 +76,7 @@ export default async function LocaleLayout({
         <ScrollToTop />
         <PawClickEffect />
         <RegisterServiceWorker />
+        <SessionGuard />
       </body>
     </html>
   );

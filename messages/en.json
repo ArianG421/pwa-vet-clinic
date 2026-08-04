@@ -283,6 +283,7 @@
     "title": "Sign in",
     "subtitle": "Enter your email and we'll send you a magic link — no password to remember.",
     "email": "Email",
+    "rememberMe": "Keep me signed in on this device",
     "sendLink": "Send magic link",
     "notConfigured": "This demo's backend isn't connected yet — check back shortly.",
     "checkEmailTitle": "Check your email",

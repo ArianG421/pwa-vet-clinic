@@ -283,6 +283,7 @@
     "title": "Logga in",
     "subtitle": "Ange din e-postadress så skickar vi en inloggningslänk — inget lösenord att komma ihåg.",
     "email": "E-post",
+    "rememberMe": "Håll mig inloggad på den här enheten",
     "sendLink": "Skicka inloggningslänk",
     "notConfigured": "Den här demons backend är inte ansluten än — kom tillbaka snart.",
     "checkEmailTitle": "Kolla din e-post",
