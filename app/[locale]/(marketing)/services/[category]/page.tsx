@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Clock } from "lucide-react";
 import { getServiceCategory, serviceCategoryFacts } from "@/lib/data/services";
+import { formatKr } from "@/lib/currency";
 import { CategoryIcon } from "@/components/category-icon";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { routing } from "@/lib/i18n/routing";
@@ -40,8 +41,8 @@ export default async function ServiceCategoryPage({
 
   function formatPrice(from: number, to: number) {
     if (from === 0 && to === 0) return t("priceIncluded");
-    if (from === to) return `$${from}`;
-    return `$${from}–$${to}`;
+    if (from === to) return formatKr(from);
+    return `${formatKr(from)}–${formatKr(to)}`;
   }
 
   function formatDuration(minutes: number) {

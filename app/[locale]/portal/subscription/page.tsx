@@ -8,6 +8,7 @@ import { CheckoutModal } from "@/components/portal/checkout-modal";
 import { PawLoader } from "@/components/paw-loader";
 import type { SubscriptionTierRow } from "@/lib/supabase/types";
 import { getPlanText } from "@/lib/data/plans";
+import { formatKr } from "@/lib/currency";
 
 export default function SubscriptionPage() {
   const t = useTranslations("portal.subscription");
@@ -40,7 +41,7 @@ export default function SubscriptionPage() {
                 ? getPlanText(tPlans, (k) => tPlans.raw(k) as unknown as string[], subscription.subscription_tiers.slug, subscription.subscription_tiers).name
                 : ""}
             </p>
-            <p className="text-sm text-brand-100">${subscription.subscription_tiers?.price_monthly}{t("perMonthLong")}</p>
+            <p className="text-sm text-brand-100">{formatKr(subscription.subscription_tiers?.price_monthly ?? 0)}{t("perMonthLong")}</p>
           </div>
           <button
             type="button"
@@ -58,7 +59,7 @@ export default function SubscriptionPage() {
               <div key={tier.id} className="flex flex-col rounded-3xl border border-black/5 bg-surface p-6 shadow-sm">
                 <p className="font-semibold text-ink">{text.name}</p>
                 <p className="mt-1 text-xs text-ink-muted">{text.tagline}</p>
-                <p className="mt-4"><span className="text-3xl font-bold text-ink">${tier.price_monthly}</span><span className="text-sm text-ink-muted"> {t("perMonthShort")}</span></p>
+                <p className="mt-4"><span className="text-3xl font-bold text-ink">{formatKr(tier.price_monthly)}</span><span className="text-sm text-ink-muted"> {t("perMonthShort")}</span></p>
                 <ul className="mt-4 flex-1 space-y-2 text-xs text-ink-muted">
                   {text.features.map((f) => (
                     <li key={f} className="flex items-start gap-1.5">

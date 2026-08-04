@@ -124,7 +124,7 @@
         "beaglePuppyBall": {
           "alt": "En beaglevalp leker med en boll i gräset",
           "eyebrow": "Priser som inte biter",
-          "title": "Medlemskap från $19/månad",
+          "title": "Medlemskap från 190 kr/månad",
           "body": "Fördela kostnaden för rutinvård över året — avsluta när som helst."
         },
         "goldenRetrieverBokeh": {
@@ -153,7 +153,7 @@
         "labPuppiesContainer": {
           "alt": "Gula labradorvalpar",
           "title": "Prissatt för sinnesro",
-          "body": "Medlemskap från $19/månad — inga överraskande räkningar för det ditt husdjur behöver varje år."
+          "body": "Medlemskap från bara 190 kr/månad — inga överraskande räkningar för det ditt husdjur behöver varje år."
         },
         "vetExamTable": {
           "alt": "En veterinär undersöker en hund på ett undersökningsbord",
@@ -231,26 +231,72 @@
     "teamBody": "Ett litet, erfaret team som känner era husdjur vid namn — inte bara som ett journalnummer.",
     "team": {
       "members": {
-        "elena-cross": {
-          "name": "Elena Cross, leg. veterinär",
-          "role": "Grundare & chefsveterinär",
-          "bio": "15 års erfarenhet av smådjurspraktik med fokus på mjukdelskirurgi och ortopedi."
+        "johanna-wadstrom": {
+          "role": "Leg. veterinär",
+          "bio": "Legitimerad veterinär som arbetar med vardaglig hälso- och sjukvård."
         },
-        "marcus-ahn": {
-          "name": "Marcus Ahn, leg. veterinär",
-          "role": "Biträdande veterinär",
-          "bio": "Särskilt intresse för invärtesmedicin, endoskopi och hälsovård för äldre husdjur."
+        "yaacob-sharon": {
+          "role": "Steg 1-specialist i hundens och kattens sjukdomar",
+          "bio": "Steg 1-specialist i hundens och kattens sjukdomar."
         },
-        "priya-nandakumar": {
-          "name": "Priya Nandakumar, leg. djursjukskötare",
-          "role": "Ansvarig djursjukskötare",
-          "bio": "Driver diagnostiklabbet och samordnar narkos och övervakning vid operationer."
+        "elina-thern": {
+          "role": "Leg. veterinär",
+          "bio": "Legitimerad veterinär som arbetar med vardaglig hälso- och sjukvård."
         },
-        "jonas-weber": {
-          "name": "Jonas Weber",
-          "role": "Kundansvarig",
-          "bio": "Din första kontakt för bokningar, medlemsfrågor och förberedelser inför besök."
+        "dragan-panic": {
+          "role": "Chefsveterinär, steg 1-specialist i hundens och kattens sjukdomar",
+          "bio": "Chefsveterinär och steg 1-specialist i hundens och kattens sjukdomar."
+        },
+        "elisabet-kinnby": {
+          "role": "Leg. veterinär",
+          "bio": "Legitimerad veterinär som arbetar med vardaglig hälso- och sjukvård."
+        },
+        "katrine-lindegaard": {
+          "role": "Ultraljudsspecialist",
+          "bio": "Ultraljudsspecialist med fokus på bilddiagnostik."
+        },
+        "josefine-lofgren": {
+          "role": "Leg. veterinär",
+          "bio": "Legitimerad veterinär som arbetar med vardaglig hälso- och sjukvård."
+        },
+        "malin-freij": {
+          "role": "Leg. djursjuksköterska"
+        },
+        "martina-ljunggren": {
+          "role": "Leg. djursjuksköterska"
+        },
+        "ellen-herrlin-vuris": {
+          "role": "Leg. djursjuksköterska"
+        },
+        "emelie-stavenheim": {
+          "role": "Djurvårdare nivå 3"
+        },
+        "paulina-engbe": {
+          "role": "Djurvårdare nivå 2 / Labbansvarig"
+        },
+        "emma-anna-panic": {
+          "role": "Djurvårdare nivå 3"
+        },
+        "linn-hanssen": {
+          "role": "Djurvårdare nivå 2"
+        },
+        "caroline-dahlgren": {
+          "role": "Verksamhetskoordinator"
+        },
+        "ellinor-wernquist": {
+          "role": "Reception/Butiksansvarig"
+        },
+        "annika-eriksson": {
+          "role": "Sterilansvarig"
+        },
+        "peter-kanne": {
+          "role": "Administratör"
         }
+      },
+      "groups": {
+        "nurses": "Djursjuksköterskor",
+        "care": "Djurvårdare",
+        "operations": "Klinikadministration"
       }
     }
   },
@@ -421,7 +467,7 @@
         "cardNumber": "Kortnummer",
         "expiry": "Utgångsdatum",
         "cvc": "CVC",
-        "confirm": "Bekräfta ${amount}/månad",
+        "confirm": "Bekräfta {amount} kr/månad",
         "demoNote": "Demokassa — ingen riktig betalning genomförs."
       }
     },
@@ -433,7 +479,7 @@
       "loadingLabel": "Hämtar dina förmåner…",
       "howYouEarn": {
         "spend": {
-          "title": "1 poäng per $1 som spenderas",
+          "title": "1 poäng per 10 kr som spenderas",
           "detail": "Intjänas automatiskt vid varje genomfört besök."
         },
         "wellness": {
@@ -459,20 +505,20 @@
       "tiers": {
         "tail-wagger": {
           "name": "Svansviftare",
-          "perk": "1 poäng per $1 som spenderas"
+          "perk": "1 poäng per 10 kr som spenderas"
         },
         "loyal-companion": {
           "name": "Trogen Vän",
-          "perk": "1,25 poäng per $1 + tidig bokningstillgång"
+          "perk": "1,25 poäng per 10 kr + tidig bokningstillgång"
         },
         "best-friend": {
           "name": "Bästa Vän",
-          "perk": "1,5 poäng per $1 + en kostnadsfri årlig hälsokontroll"
+          "perk": "1,5 poäng per 10 kr + en kostnadsfri årlig hälsokontroll"
         }
       },
       "catalog": {
         "discount-5": {
-          "name": "$5 rabatt på ditt nästa besök",
+          "name": "50 kr rabatt på ditt nästa besök",
           "description": "Gäller alla bokningar, inget minimibelopp."
         },
         "free-nail-trim": {
@@ -480,7 +526,7 @@
           "description": "En snabb klippning på oss vid vilket besök som helst."
         },
         "discount-15": {
-          "name": "$15 rabatt på ditt nästa besök",
+          "name": "150 kr rabatt på ditt nästa besök",
           "description": "Gäller alla bokningar, inget minimibelopp."
         },
         "free-follow-up": {
@@ -488,12 +534,12 @@
           "description": "En kostnadsfri uppföljning inom 30 dagar efter ett besök."
         },
         "discount-50": {
-          "name": "$50 rabatt på ett ingrepp",
+          "name": "500 kr rabatt på ett ingrepp",
           "description": "Gäller kirurgi, tandvård eller ortopediska ingrepp."
         },
         "free-wellness": {
           "name": "Gratis hälsokontroll",
-          "description": "En fullständig kontroll från nos till svans, på oss (värde upp till $90)."
+          "description": "En fullständig kontroll från nos till svans, på oss (värde 850 kr)."
         }
       },
       "seed": {
@@ -601,9 +647,13 @@
         "summary": "Från rutinmässig kastrering till komplex mjukdelskirurgi.",
         "description": "Vår operationsavdelning är utrustad för allt från rutinmässiga steriliseringar till komplex mjukdels- och akutkirurgi, med fullständig undersökning inför narkos och dedikerad eftervårdsövervakning för varje patient.",
         "services": {
-          "spay-neuter": {
-            "name": "Kastrering/sterilisering",
-            "description": "Rutinmässig sterilisering med blodprover inför narkos och smärtlindringsplan att ta med hem."
+          "spay-neuter-cat": {
+            "name": "Kastrering – katt",
+            "description": "Rutinmässig sterilisering av katt med blodprover inför narkos och smärtlindringsplan att ta med hem."
+          },
+          "spay-neuter-dog": {
+            "name": "Kastrering – hund",
+            "description": "Rutinmässig sterilisering av hund med blodprover inför narkos och smärtlindringsplan att ta med hem."
           },
           "soft-tissue-surgery": {
             "name": "Mjukdelskirurgi",
@@ -624,9 +674,17 @@
             "name": "Hälsokontroll",
             "description": "Fullständig kontroll från nos till svans hos en legitimerad veterinär."
           },
-          "vaccination-package": {
-            "name": "Vaccinationspaket",
-            "description": "Grund- och tilläggsvaccin anpassade efter ålder och risk."
+          "vaccination-cat": {
+            "name": "Vaccination – katt",
+            "description": "Grundvaccin samt tilläggsvaccin mot rabies, anpassat efter din katts livsstil och risk."
+          },
+          "vaccination-dog": {
+            "name": "Vaccination – hund",
+            "description": "Grundvaccin samt tilläggsvaccin mot rabies, anpassat efter din hunds livsstil och risk."
+          },
+          "vaccination-rabbit": {
+            "name": "Vaccination – kanin",
+            "description": "Skydd mot kaninpest och kaningulsot (Myxo-RHD)."
           },
           "puppy-kitten-starter-visit": {
             "name": "Startbesök för valp & kattunge",

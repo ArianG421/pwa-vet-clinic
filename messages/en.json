@@ -124,7 +124,7 @@
         "beaglePuppyBall": {
           "alt": "A beagle puppy playing with a ball in the grass",
           "eyebrow": "Prices that don't bite",
-          "title": "Membership plans start at $19/month",
+          "title": "Membership plans start at 190 kr/month",
           "body": "Spread the cost of routine care across the year — cancel any time."
         },
         "goldenRetrieverBokeh": {
@@ -153,7 +153,7 @@
         "labPuppiesContainer": {
           "alt": "Yellow labrador puppies",
           "title": "Priced for peace of mind",
-          "body": "Membership plans start at just $19/month — no surprise bills for the basics your pet needs every year."
+          "body": "Membership plans start at just 190 kr/month — no surprise bills for the basics your pet needs every year."
         },
         "vetExamTable": {
           "alt": "A veterinarian examining a dog on an exam table",
@@ -231,26 +231,72 @@
     "teamBody": "A small, experienced team that knows your pets by name — not just by chart number.",
     "team": {
       "members": {
-        "elena-cross": {
-          "name": "Dr. Elena Cross, DVM",
-          "role": "Founder & Lead Veterinarian",
-          "bio": "15 years in small-animal practice with a focus on soft-tissue surgery and orthopedics."
+        "johanna-wadstrom": {
+          "role": "Licensed Veterinarian",
+          "bio": "Licensed veterinarian providing everyday wellness and medical care."
         },
-        "marcus-ahn": {
-          "name": "Dr. Marcus Ahn, DVM",
-          "role": "Associate Veterinarian",
-          "bio": "Special interest in internal medicine, endoscopy, and senior pet wellness."
+        "yaacob-sharon": {
+          "role": "Step 1 Specialist in Canine & Feline Medicine",
+          "bio": "Step 1 specialist in canine and feline internal medicine."
         },
-        "priya-nandakumar": {
-          "name": "Priya Nandakumar, RVT",
-          "role": "Lead Veterinary Technician",
-          "bio": "Runs the diagnostics lab and coordinates surgical anaesthesia and monitoring."
+        "elina-thern": {
+          "role": "Licensed Veterinarian",
+          "bio": "Licensed veterinarian providing everyday wellness and medical care."
         },
-        "jonas-weber": {
-          "name": "Jonas Weber",
-          "role": "Client Care Coordinator",
-          "bio": "Your first call for bookings, membership questions, and pre-visit prep."
+        "dragan-panic": {
+          "role": "Chief Veterinarian, Step 1 Specialist in Canine & Feline Medicine",
+          "bio": "Chief veterinarian and Step 1 specialist in canine and feline medicine."
+        },
+        "elisabet-kinnby": {
+          "role": "Licensed Veterinarian",
+          "bio": "Licensed veterinarian providing everyday wellness and medical care."
+        },
+        "katrine-lindegaard": {
+          "role": "Ultrasound Specialist",
+          "bio": "Ultrasound specialist focused on diagnostic imaging."
+        },
+        "josefine-lofgren": {
+          "role": "Licensed Veterinarian",
+          "bio": "Licensed veterinarian providing everyday wellness and medical care."
+        },
+        "malin-freij": {
+          "role": "Licensed Veterinary Nurse"
+        },
+        "martina-ljunggren": {
+          "role": "Licensed Veterinary Nurse"
+        },
+        "ellen-herrlin-vuris": {
+          "role": "Licensed Veterinary Nurse"
+        },
+        "emelie-stavenheim": {
+          "role": "Animal Care Assistant, Level 3"
+        },
+        "paulina-engbe": {
+          "role": "Animal Care Assistant, Level 2 / Lab Manager"
+        },
+        "emma-anna-panic": {
+          "role": "Animal Care Assistant, Level 3"
+        },
+        "linn-hanssen": {
+          "role": "Animal Care Assistant, Level 2"
+        },
+        "caroline-dahlgren": {
+          "role": "Operations Coordinator"
+        },
+        "ellinor-wernquist": {
+          "role": "Reception & Shop Manager"
+        },
+        "annika-eriksson": {
+          "role": "Sterilization Manager"
+        },
+        "peter-kanne": {
+          "role": "Administrator"
         }
+      },
+      "groups": {
+        "nurses": "Veterinary Nurses",
+        "care": "Animal Care Team",
+        "operations": "Clinic Operations"
       }
     }
   },
@@ -421,7 +467,7 @@
         "cardNumber": "Card number",
         "expiry": "Expiry",
         "cvc": "CVC",
-        "confirm": "Confirm ${amount}/month",
+        "confirm": "Confirm {amount} kr/month",
         "demoNote": "Demo checkout — no real payment is processed."
       }
     },
@@ -433,7 +479,7 @@
       "loadingLabel": "Fetching your rewards…",
       "howYouEarn": {
         "spend": {
-          "title": "1 point per $1 spent",
+          "title": "1 point per 10 kr spent",
           "detail": "Earned automatically on every completed visit."
         },
         "wellness": {
@@ -459,20 +505,20 @@
       "tiers": {
         "tail-wagger": {
           "name": "Tail Wagger",
-          "perk": "1 point per $1 spent"
+          "perk": "1 point per 10 kr spent"
         },
         "loyal-companion": {
           "name": "Loyal Companion",
-          "perk": "1.25 points per $1 + early booking windows"
+          "perk": "1.25 points per 10 kr + early booking windows"
         },
         "best-friend": {
           "name": "Best Friend",
-          "perk": "1.5 points per $1 + a free annual wellness exam"
+          "perk": "1.5 points per 10 kr + a free annual wellness exam"
         }
       },
       "catalog": {
         "discount-5": {
-          "name": "$5 off your next visit",
+          "name": "50 kr off your next visit",
           "description": "Applies to any appointment, no minimum spend."
         },
         "free-nail-trim": {
@@ -480,7 +526,7 @@
           "description": "A quick, complimentary trim at any visit."
         },
         "discount-15": {
-          "name": "$15 off your next visit",
+          "name": "150 kr off your next visit",
           "description": "Applies to any appointment, no minimum spend."
         },
         "free-follow-up": {
@@ -488,12 +534,12 @@
           "description": "A complimentary recheck within 30 days of a visit."
         },
         "discount-50": {
-          "name": "$50 off a procedure",
+          "name": "500 kr off a procedure",
           "description": "Applies to surgery, dental, or orthopedic procedures."
         },
         "free-wellness": {
           "name": "Free wellness exam",
-          "description": "A full nose-to-tail check-up, on us (up to $90 value)."
+          "description": "A full nose-to-tail check-up, on us (worth 850 kr)."
         }
       },
       "seed": {
@@ -601,9 +647,13 @@
         "summary": "From routine spays to complex soft-tissue surgery.",
         "description": "Our surgical suite is equipped for everything from routine sterilizations to complex soft-tissue and emergency procedures, with full pre-anaesthetic screening and dedicated post-op monitoring for every patient.",
         "services": {
-          "spay-neuter": {
-            "name": "Spay / Neuter",
-            "description": "Routine sterilization with pre-anaesthetic bloodwork and take-home pain plan."
+          "spay-neuter-cat": {
+            "name": "Spay / Neuter — Cat",
+            "description": "Routine cat sterilization with pre-anaesthetic bloodwork and take-home pain plan."
+          },
+          "spay-neuter-dog": {
+            "name": "Spay / Neuter — Dog",
+            "description": "Routine dog sterilization with pre-anaesthetic bloodwork and take-home pain plan."
           },
           "soft-tissue-surgery": {
             "name": "Soft-Tissue Surgery",
@@ -624,9 +674,17 @@
             "name": "Wellness Exam",
             "description": "Full nose-to-tail check-up with a licensed veterinarian."
           },
-          "vaccination-package": {
-            "name": "Vaccination Package",
-            "description": "Core + lifestyle vaccines tailored to age and risk."
+          "vaccination-cat": {
+            "name": "Vaccination — Cat",
+            "description": "Core vaccines plus rabies add-on, tailored to your cat's lifestyle and risk."
+          },
+          "vaccination-dog": {
+            "name": "Vaccination — Dog",
+            "description": "Core vaccines plus rabies add-on, tailored to your dog's lifestyle and risk."
+          },
+          "vaccination-rabbit": {
+            "name": "Vaccination — Rabbit",
+            "description": "Protection against myxomatosis and RHD (Myxo-RHD)."
           },
           "puppy-kitten-starter-visit": {
             "name": "Puppy & Kitten Starter Visit",

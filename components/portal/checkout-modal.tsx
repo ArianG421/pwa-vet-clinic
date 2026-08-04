@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import { Loader2, Lock, X } from "lucide-react";
 import type { SubscriptionTierRow } from "@/lib/supabase/types";
 import { getPlanText } from "@/lib/data/plans";
+import { formatKr } from "@/lib/currency";
 
 export function CheckoutModal({
   tier,
@@ -46,7 +47,7 @@ export function CheckoutModal({
 
         <div className="mt-4 rounded-2xl bg-surface-muted p-4">
           <p className="text-sm font-semibold text-ink">{tierText.name}</p>
-          <p className="text-xs text-ink-muted">${tier.price_monthly}{t("billedMonthly")}</p>
+          <p className="text-xs text-ink-muted">{formatKr(tier.price_monthly)}{t("billedMonthly")}</p>
         </div>
 
         <form onSubmit={handleSubmit} className="mt-5 space-y-4">

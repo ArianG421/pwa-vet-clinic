@@ -9,9 +9,9 @@ export type PlanTierFact = {
 };
 
 export const planTierFacts: PlanTierFact[] = [
-  { slug: "essential", priceMonthly: 19, featureCount: 4 },
-  { slug: "wellness", priceMonthly: 39, highlighted: true, featureCount: 5 },
-  { slug: "complete", priceMonthly: 69, featureCount: 6 },
+  { slug: "essential", priceMonthly: 190, featureCount: 4 },
+  { slug: "wellness", priceMonthly: 390, highlighted: true, featureCount: 5 },
+  { slug: "complete", priceMonthly: 690, featureCount: 6 },
 ];
 
 export type PlanTier = PlanTierFact & { name: string; tagline: string; features: string[] };

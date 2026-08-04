@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Check } from "lucide-react";
 import { getPlanTiers } from "@/lib/data/plans";
+import { formatKr } from "@/lib/currency";
 import { routing } from "@/lib/i18n/routing";
 
 export function generateStaticParams() {
@@ -59,7 +60,7 @@ export default async function PricingPage({ params }: { params: Promise<{ locale
             <p className={`text-lg font-semibold ${plan.highlighted ? "text-white" : "text-ink"}`}>{plan.name}</p>
             <p className={`mt-1 text-sm ${plan.highlighted ? "text-brand-100" : "text-ink-muted"}`}>{plan.tagline}</p>
             <p className="mt-5">
-              <span className="text-4xl font-bold">${plan.priceMonthly}</span>
+              <span className="text-4xl font-bold">{formatKr(plan.priceMonthly)}</span>
               <span className={`text-sm ${plan.highlighted ? "text-brand-100" : "text-ink-muted"}`}> {t("perMonth")}</span>
             </p>
             <ul className="mt-6 flex-1 space-y-3 text-sm">

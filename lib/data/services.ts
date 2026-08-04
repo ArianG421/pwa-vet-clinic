@@ -17,77 +17,99 @@ export type ServiceCategoryFact = {
   services: ServiceFact[];
 };
 
+// Prices are SEK. Where marked "real", the figure is taken directly from
+// oresundsveterinarklinik.se's published price list (the pitch target),
+// including the species split for vaccination/spay-neuter — cats and dogs
+// genuinely price differently there, which is the point of splitting them.
+// Everything else is currency-converted from the original placeholder USD
+// figures (~10x) rather than invented from scratch, since the reference
+// site — like most real clinics — only publishes exact pricing for
+// routine/predictable procedures and quotes complex surgical cases
+// individually.
 export const serviceCategoryFacts: ServiceCategoryFact[] = [
   {
     slug: "surgery",
     icon: "Scissors",
     services: [
-      { slug: "spay-neuter", priceFrom: 220, priceTo: 420, durationMinutes: 90 },
-      { slug: "soft-tissue-surgery", priceFrom: 450, priceTo: 1800, durationMinutes: 120 },
-      { slug: "post-op-care-plan", priceFrom: 60, priceTo: 120, durationMinutes: 30 },
+      // real: Hankatt 850 / Honkatt 1350
+      { slug: "spay-neuter-cat", priceFrom: 850, priceTo: 1350, durationMinutes: 90 },
+      // real: Hanhund 3700-4500 / Tik 5300-6300
+      { slug: "spay-neuter-dog", priceFrom: 3700, priceTo: 6300, durationMinutes: 90 },
+      { slug: "soft-tissue-surgery", priceFrom: 4500, priceTo: 18000, durationMinutes: 120 },
+      { slug: "post-op-care-plan", priceFrom: 600, priceTo: 1200, durationMinutes: 30 },
     ],
   },
   {
     slug: "preventive-care",
     icon: "ShieldPlus",
     services: [
-      { slug: "wellness-exam", priceFrom: 55, priceTo: 90, durationMinutes: 30 },
-      { slug: "vaccination-package", priceFrom: 40, priceTo: 150, durationMinutes: 20 },
-      { slug: "puppy-kitten-starter-visit", priceFrom: 70, priceTo: 110, durationMinutes: 40 },
-      { slug: "microchipping-id", priceFrom: 35, priceTo: 55, durationMinutes: 15 },
+      // real: Besiktning vuxen hund/katt 850
+      { slug: "wellness-exam", priceFrom: 850, priceTo: 850, durationMinutes: 30 },
+      // real: Katt RC/Ducat 435 – Katt Rabies+RCP 820
+      { slug: "vaccination-cat", priceFrom: 435, priceTo: 820, durationMinutes: 20 },
+      // real: Hund Pi/KC 435 – Hund Rabies+DHPPi 820
+      { slug: "vaccination-dog", priceFrom: 435, priceTo: 820, durationMinutes: 20 },
+      // real: Kanin Myxo-RHD PLUS 800
+      { slug: "vaccination-rabbit", priceFrom: 800, priceTo: 800, durationMinutes: 20 },
+      // real: Besiktning valp/kattunge <12v 595 – med chip & vaccination 850
+      { slug: "puppy-kitten-starter-visit", priceFrom: 595, priceTo: 850, durationMinutes: 40 },
+      // real: ID-märkning chip 320 – tatuering 640
+      { slug: "microchipping-id", priceFrom: 320, priceTo: 640, durationMinutes: 15 },
     ],
   },
   {
     slug: "dental",
     icon: "Sparkles",
     services: [
-      { slug: "dental-cleaning-polish", priceFrom: 280, priceTo: 550, durationMinutes: 90 },
-      { slug: "dental-x-rays", priceFrom: 90, priceTo: 150, durationMinutes: 30 },
-      { slug: "tooth-extraction", priceFrom: 120, priceTo: 400, durationMinutes: 60 },
+      { slug: "dental-cleaning-polish", priceFrom: 2800, priceTo: 5500, durationMinutes: 90 },
+      { slug: "dental-x-rays", priceFrom: 900, priceTo: 1500, durationMinutes: 30 },
+      { slug: "tooth-extraction", priceFrom: 1200, priceTo: 4000, durationMinutes: 60 },
     ],
   },
   {
     slug: "diagnostics",
     icon: "FlaskConical",
     services: [
-      { slug: "bloodwork-panel", priceFrom: 90, priceTo: 220, durationMinutes: 45 },
-      { slug: "urinalysis", priceFrom: 45, priceTo: 80, durationMinutes: 30 },
-      { slug: "rapid-test-panels", priceFrom: 40, priceTo: 95, durationMinutes: 20 },
+      { slug: "bloodwork-panel", priceFrom: 900, priceTo: 2200, durationMinutes: 45 },
+      { slug: "urinalysis", priceFrom: 450, priceTo: 800, durationMinutes: 30 },
+      { slug: "rapid-test-panels", priceFrom: 400, priceTo: 950, durationMinutes: 20 },
     ],
   },
   {
     slug: "imaging",
     icon: "ScanLine",
     services: [
-      { slug: "digital-radiography", priceFrom: 110, priceTo: 260, durationMinutes: 30 },
-      { slug: "abdominal-ultrasound", priceFrom: 180, priceTo: 350, durationMinutes: 45 },
+      // real: SKK höftleder 1545 – höftleder+armbågsleder 1900
+      { slug: "digital-radiography", priceFrom: 1545, priceTo: 1900, durationMinutes: 30 },
+      // real: Bukultraljud 3000-3200
+      { slug: "abdominal-ultrasound", priceFrom: 3000, priceTo: 3200, durationMinutes: 45 },
     ],
   },
   {
     slug: "orthopedics",
     icon: "Bone",
     services: [
-      { slug: "orthopedic-consultation", priceFrom: 85, priceTo: 140, durationMinutes: 40 },
-      { slug: "cruciate-acl-repair", priceFrom: 1800, priceTo: 3800, durationMinutes: 150 },
-      { slug: "fracture-repair", priceFrom: 900, priceTo: 3200, durationMinutes: 150 },
+      { slug: "orthopedic-consultation", priceFrom: 850, priceTo: 1400, durationMinutes: 40 },
+      { slug: "cruciate-acl-repair", priceFrom: 18000, priceTo: 38000, durationMinutes: 150 },
+      { slug: "fracture-repair", priceFrom: 9000, priceTo: 32000, durationMinutes: 150 },
     ],
   },
   {
     slug: "endoscopy",
     icon: "Search",
     services: [
-      { slug: "gastroscopy", priceFrom: 450, priceTo: 950, durationMinutes: 60 },
-      { slug: "bronchoscopy", priceFrom: 450, priceTo: 950, durationMinutes: 60 },
-      { slug: "foreign-body-retrieval", priceFrom: 500, priceTo: 1100, durationMinutes: 75 },
+      { slug: "gastroscopy", priceFrom: 4500, priceTo: 9500, durationMinutes: 60 },
+      { slug: "bronchoscopy", priceFrom: 4500, priceTo: 9500, durationMinutes: 60 },
+      { slug: "foreign-body-retrieval", priceFrom: 5000, priceTo: 11000, durationMinutes: 75 },
     ],
   },
   {
     slug: "emergency",
     icon: "Siren",
     services: [
-      { slug: "emergency-exam", priceFrom: 120, priceTo: 180, durationMinutes: 30 },
-      { slug: "overnight-monitoring", priceFrom: 200, priceTo: 450, durationMinutes: 720 },
-      { slug: "after-hours-consultation", priceFrom: 0, priceTo: 45, durationMinutes: 15 },
+      { slug: "emergency-exam", priceFrom: 1200, priceTo: 1800, durationMinutes: 30 },
+      { slug: "overnight-monitoring", priceFrom: 2000, priceTo: 4500, durationMinutes: 720 },
+      { slug: "after-hours-consultation", priceFrom: 0, priceTo: 450, durationMinutes: 15 },
     ],
   },
 ];

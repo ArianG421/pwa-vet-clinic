@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import { Loader2, X } from "lucide-react";
 import type { Pet, ServiceCategoryRow, ServiceRow } from "@/lib/supabase/types";
 import { getServiceBySlug } from "@/lib/data/services";
+import { formatKr } from "@/lib/currency";
 
 function nextBusinessDayIso() {
   const d = new Date();
@@ -118,7 +119,7 @@ export function BookingForm({
               >
                 {servicesInCategory.map((s) => (
                   <option key={s.id} value={s.id}>
-                    {getServiceBySlug(tServices, s.slug)?.name ?? s.name} (${s.price_from}–${s.price_to})
+                    {getServiceBySlug(tServices, s.slug)?.name ?? s.name} ({formatKr(s.price_from)}–{formatKr(s.price_to)})
                   </option>
                 ))}
               </select>

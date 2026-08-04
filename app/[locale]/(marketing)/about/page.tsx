@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Cat, Dog, Microscope, ShieldCheck } from "lucide-react";
-import { getTeam } from "@/lib/data/team";
+import { getTeamByTier } from "@/lib/data/team";
 import { site } from "@/lib/site";
 import { routing } from "@/lib/i18n/routing";
 
@@ -30,7 +30,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations("about");
-  const team = getTeam((key) => t(`team.${key}`));
+  const team = getTeamByTier((key) => t(`team.${key}`));
   const facilityKeys = Object.keys(FACILITY_ICONS) as (keyof typeof FACILITY_ICONS)[];
 
   return (
@@ -77,12 +77,34 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
             {t("teamBody")}
           </p>
           <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {team.map((member) => (
+            {team.vets.map((member) => (
               <div key={member.slug} className="rounded-2xl border border-black/5 bg-surface p-5 shadow-sm">
                 <div className="h-12 w-12 rounded-full bg-brand-100" aria-hidden />
                 <p className="mt-4 text-sm font-semibold text-ink">{member.name}</p>
                 <p className="text-xs font-medium text-brand-700">{member.role}</p>
                 <p className="mt-2 text-xs text-ink-muted">{member.bio}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-10 grid gap-6 sm:grid-cols-3">
+            {(
+              [
+                ["nurses", t("team.groups.nurses")],
+                ["care", t("team.groups.care")],
+                ["operations", t("team.groups.operations")],
+              ] as const
+            ).map(([key, heading]) => (
+              <div key={key}>
+                <p className="text-xs font-semibold uppercase tracking-wide text-ink-muted">{heading}</p>
+                <ul className="mt-3 space-y-2">
+                  {team[key].map((member) => (
+                    <li key={member.slug} className="text-sm">
+                      <span className="font-medium text-ink">{member.name}</span>
+                      <span className="block text-xs text-ink-muted">{member.role}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>
