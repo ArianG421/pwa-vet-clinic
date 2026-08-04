@@ -21,6 +21,7 @@ export type ServiceCategoryRow = {
 export type ServiceRow = {
   id: string;
   category_id: string;
+  slug: string | null;
   name: string;
   description: string | null;
   price_from: number;
@@ -41,7 +42,7 @@ export type Appointment = {
   notes: string | null;
   created_at: string;
   pets?: { name: string } | null;
-  services?: { name: string } | null;
+  services?: { name: string; slug: string | null } | null;
 };
 
 export type SubscriptionTierRow = {

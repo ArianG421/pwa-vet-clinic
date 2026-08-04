@@ -4,6 +4,7 @@ import { useMemo, useState, type FormEvent } from "react";
 import { useTranslations } from "next-intl";
 import { Loader2, X } from "lucide-react";
 import type { Pet, ServiceCategoryRow, ServiceRow } from "@/lib/supabase/types";
+import { getServiceBySlug } from "@/lib/data/services";
 
 function nextBusinessDayIso() {
   const d = new Date();
@@ -32,6 +33,7 @@ export function BookingForm({
   onClose: () => void;
 }) {
   const t = useTranslations("portal.appointments.form");
+  const tServices = useTranslations("services");
   const [petId, setPetId] = useState(pets[0]?.id ?? "");
   const [categoryId, setCategoryId] = useState(categories[0]?.id ?? "");
   const servicesInCategory = useMemo(() => services.filter((s) => s.category_id === categoryId), [services, categoryId]);
@@ -101,7 +103,7 @@ export function BookingForm({
                 className="mt-1.5 w-full rounded-xl border border-black/10 bg-surface px-3 py-2.5 text-sm text-ink outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-200"
               >
                 {categories.map((c) => (
-                  <option key={c.id} value={c.id}>{c.name}</option>
+                  <option key={c.id} value={c.id}>{tServices(`categories.${c.slug}.name`)}</option>
                 ))}
               </select>
             </div>
@@ -115,7 +117,9 @@ export function BookingForm({
                 className="mt-1.5 w-full rounded-xl border border-black/10 bg-surface px-3 py-2.5 text-sm text-ink outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-200"
               >
                 {servicesInCategory.map((s) => (
-                  <option key={s.id} value={s.id}>{s.name} (${s.price_from}–${s.price_to})</option>
+                  <option key={s.id} value={s.id}>
+                    {getServiceBySlug(tServices, s.slug)?.name ?? s.name} (${s.price_from}–${s.price_to})
+                  </option>
                 ))}
               </select>
             </div>

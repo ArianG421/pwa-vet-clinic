@@ -28,7 +28,7 @@ export default function PortalDashboard() {
   const { pets, loaded: petsLoaded } = usePets();
   const { appointments, loaded: appointmentsLoaded } = useAppointments();
   const [email, setEmail] = useState<string | null>(null);
-  const tier = getTier((key) => tRewards(`tiers.${key}`), lifetimePoints);
+  const tier = getTier((key) => tRewards(key), lifetimePoints);
 
   useEffect(() => {
     createClient()

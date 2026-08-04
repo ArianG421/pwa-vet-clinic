@@ -11,7 +11,7 @@ export function useLoyalty() {
   const [transactions, setTransactions] = useState<LoyaltyTransaction[] | null>(null);
 
   const loadTransactions = useCallback((): LoyaltyTransaction[] => {
-    const seed = getSeedTransactions((key) => t(`seed.${key}`));
+    const seed = getSeedTransactions((key) => t(key));
     if (typeof window === "undefined") return seed;
     try {
       const raw = window.localStorage.getItem(STORAGE_KEY);
@@ -55,7 +55,7 @@ export function useLoyalty() {
   );
 
   const reset = useCallback(() => {
-    setTransactions(getSeedTransactions((key) => t(`seed.${key}`)));
+    setTransactions(getSeedTransactions((key) => t(key)));
   }, [t]);
 
   const loaded = transactions !== null;

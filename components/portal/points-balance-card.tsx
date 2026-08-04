@@ -6,7 +6,7 @@ import { getNextTier, getTier } from "@/lib/data/loyalty";
 
 export function PointsBalanceCard({ balance, lifetimePoints }: { balance: number; lifetimePoints: number }) {
   const t = useTranslations("portal.rewards");
-  const tTier = (key: string) => t(`tiers.${key}`);
+  const tTier = (key: string) => t(key);
   const tier = getTier(tTier, lifetimePoints);
   const nextTier = getNextTier(tTier, lifetimePoints);
   const progressPct = nextTier

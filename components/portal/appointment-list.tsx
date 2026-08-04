@@ -3,6 +3,7 @@
 import { useTranslations } from "next-intl";
 import { CalendarX2 } from "lucide-react";
 import type { Appointment, AppointmentStatus } from "@/lib/supabase/types";
+import { getServiceBySlug } from "@/lib/data/services";
 
 const STATUS_STYLES: Record<string, string> = {
   pending: "bg-accent-50 text-accent-700",
@@ -36,6 +37,7 @@ export function AppointmentList({
   onCancel: (id: string) => void;
 }) {
   const t = useTranslations("portal.appointments");
+  const tServices = useTranslations("services");
 
   if (appointments.length === 0) {
     return <p className="text-sm text-ink-muted">{t("noAppointments")}</p>;
@@ -47,7 +49,7 @@ export function AppointmentList({
         <div key={a.id} className="flex flex-col gap-3 p-4 sm:flex-row sm:items-center sm:justify-between">
           <div>
             <p className="text-sm font-medium text-ink">
-              {a.services?.name ?? t("serviceFallback")} — {a.pets?.name ?? t("petFallback")}
+              {getServiceBySlug(tServices, a.services?.slug)?.name ?? a.services?.name ?? t("serviceFallback")} — {a.pets?.name ?? t("petFallback")}
             </p>
             <p className="mt-0.5 text-xs text-ink-muted">{formatDateTime(a.requested_at)}</p>
           </div>

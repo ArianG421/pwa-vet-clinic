@@ -29,7 +29,7 @@ export function useAppointments() {
 
     const { data, error: fetchError } = await supabase
       .from("appointments")
-      .select("*, pets(name), services(name)")
+      .select("*, pets(name), services(name, slug)")
       .order("requested_at", { ascending: false });
 
     if (fetchError) setError(fetchError.message);

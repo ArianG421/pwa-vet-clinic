@@ -118,3 +118,15 @@ export function getServiceCategories(t: (key: string) => string): ServiceCategor
 export function getServiceCategory(t: (key: string) => string, slug: string) {
   return getServiceCategories(t).find((c) => c.slug === slug);
 }
+
+// Service slugs are unique across the whole catalog, so a DB row carrying
+// only its own slug (not its parent category's) can still be matched back
+// to translated text by searching every category.
+export function getServiceBySlug(t: (key: string) => string, slug: string | null | undefined) {
+  if (!slug) return undefined;
+  for (const cat of getServiceCategories(t)) {
+    const found = cat.services.find((s) => s.slug === slug);
+    if (found) return found;
+  }
+  return undefined;
+}

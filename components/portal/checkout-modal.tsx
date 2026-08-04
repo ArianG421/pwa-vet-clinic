@@ -4,6 +4,7 @@ import { useState, type FormEvent } from "react";
 import { useTranslations } from "next-intl";
 import { Loader2, Lock, X } from "lucide-react";
 import type { SubscriptionTierRow } from "@/lib/supabase/types";
+import { getPlanText } from "@/lib/data/plans";
 
 export function CheckoutModal({
   tier,
@@ -15,6 +16,8 @@ export function CheckoutModal({
   onClose: () => void;
 }) {
   const t = useTranslations("portal.subscription.checkout");
+  const tPlans = useTranslations("plans");
+  const tierText = getPlanText(tPlans, (k) => tPlans.raw(k) as unknown as string[], tier.slug, tier);
   const [card, setCard] = useState("4242 4242 4242 4242");
   const [expiry, setExpiry] = useState("12/29");
   const [cvc, setCvc] = useState("123");
@@ -42,7 +45,7 @@ export function CheckoutModal({
         </div>
 
         <div className="mt-4 rounded-2xl bg-surface-muted p-4">
-          <p className="text-sm font-semibold text-ink">{tier.name}</p>
+          <p className="text-sm font-semibold text-ink">{tierText.name}</p>
           <p className="text-xs text-ink-muted">${tier.price_monthly}{t("billedMonthly")}</p>
         </div>
 

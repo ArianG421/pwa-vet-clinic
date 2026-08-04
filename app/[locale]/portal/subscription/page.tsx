@@ -7,9 +7,11 @@ import { useSubscription } from "@/hooks/use-subscription";
 import { CheckoutModal } from "@/components/portal/checkout-modal";
 import { PawLoader } from "@/components/paw-loader";
 import type { SubscriptionTierRow } from "@/lib/supabase/types";
+import { getPlanText } from "@/lib/data/plans";
 
 export default function SubscriptionPage() {
   const t = useTranslations("portal.subscription");
+  const tPlans = useTranslations("plans");
   const { tiers, subscription, loaded, error, subscribe, cancelSubscription } = useSubscription();
   const [checkoutTier, setCheckoutTier] = useState<SubscriptionTierRow | null>(null);
 
@@ -33,7 +35,11 @@ export default function SubscriptionPage() {
         <div className="mt-8 flex flex-wrap items-center justify-between gap-4 rounded-3xl bg-brand-800 p-6 text-white">
           <div>
             <p className="text-xs font-semibold uppercase tracking-wide text-brand-100">{t("activePlan")}</p>
-            <p className="mt-1 text-xl font-semibold">{subscription.subscription_tiers?.name}</p>
+            <p className="mt-1 text-xl font-semibold">
+              {subscription.subscription_tiers
+                ? getPlanText(tPlans, (k) => tPlans.raw(k) as unknown as string[], subscription.subscription_tiers.slug, subscription.subscription_tiers).name
+                : ""}
+            </p>
             <p className="text-sm text-brand-100">${subscription.subscription_tiers?.price_monthly}{t("perMonthLong")}</p>
           </div>
           <button
@@ -46,27 +52,30 @@ export default function SubscriptionPage() {
         </div>
       ) : (
         <div className="mt-8 grid gap-5 sm:grid-cols-3">
-          {tiers.map((tier) => (
-            <div key={tier.id} className="flex flex-col rounded-3xl border border-black/5 bg-surface p-6 shadow-sm">
-              <p className="font-semibold text-ink">{tier.name}</p>
-              <p className="mt-1 text-xs text-ink-muted">{tier.tagline}</p>
-              <p className="mt-4"><span className="text-3xl font-bold text-ink">${tier.price_monthly}</span><span className="text-sm text-ink-muted"> {t("perMonthShort")}</span></p>
-              <ul className="mt-4 flex-1 space-y-2 text-xs text-ink-muted">
-                {tier.features.map((f) => (
-                  <li key={f} className="flex items-start gap-1.5">
-                    <Check className="mt-0.5 h-3.5 w-3.5 shrink-0 text-brand-600" /> {f}
-                  </li>
-                ))}
-              </ul>
-              <button
-                type="button"
-                onClick={() => setCheckoutTier(tier)}
-                className="cta-bounce mt-5 rounded-full bg-brand-700 px-4 py-2.5 text-sm font-semibold text-white hover:bg-brand-800"
-              >
-                {t("choosePlan", { name: tier.name })}
-              </button>
-            </div>
-          ))}
+          {tiers.map((tier) => {
+            const text = getPlanText(tPlans, (k) => tPlans.raw(k) as unknown as string[], tier.slug, tier);
+            return (
+              <div key={tier.id} className="flex flex-col rounded-3xl border border-black/5 bg-surface p-6 shadow-sm">
+                <p className="font-semibold text-ink">{text.name}</p>
+                <p className="mt-1 text-xs text-ink-muted">{text.tagline}</p>
+                <p className="mt-4"><span className="text-3xl font-bold text-ink">${tier.price_monthly}</span><span className="text-sm text-ink-muted"> {t("perMonthShort")}</span></p>
+                <ul className="mt-4 flex-1 space-y-2 text-xs text-ink-muted">
+                  {text.features.map((f) => (
+                    <li key={f} className="flex items-start gap-1.5">
+                      <Check className="mt-0.5 h-3.5 w-3.5 shrink-0 text-brand-600" /> {f}
+                    </li>
+                  ))}
+                </ul>
+                <button
+                  type="button"
+                  onClick={() => setCheckoutTier(tier)}
+                  className="cta-bounce mt-5 rounded-full bg-brand-700 px-4 py-2.5 text-sm font-semibold text-white hover:bg-brand-800"
+                >
+                  {t("choosePlan", { name: text.name })}
+                </button>
+              </div>
+            );
+          })}
         </div>
       )}
 

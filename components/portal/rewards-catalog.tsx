@@ -13,7 +13,7 @@ export function RewardsCatalog({
   onRedeem: (rewardId: string, name: string, pointsCost: number) => void;
 }) {
   const t = useTranslations("portal.rewards");
-  const rewardsCatalog = getRewardsCatalog((key) => t(`catalog.${key}`));
+  const rewardsCatalog = getRewardsCatalog((key) => t(key));
   const [justRedeemed, setJustRedeemed] = useState<string | null>(null);
 
   function handleRedeem(id: string, name: string, cost: number) {
