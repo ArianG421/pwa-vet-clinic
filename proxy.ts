@@ -2,7 +2,7 @@ import { NextResponse, type NextRequest } from "next/server";
 import { createServerClient } from "@supabase/ssr";
 import createMiddleware from "next-intl/middleware";
 import { routing } from "@/lib/i18n/routing";
-import { isSupabaseConfigured, supabaseAnonKey, supabaseUrl } from "@/lib/supabase/config";
+import { isSupabaseConfigured, supabaseAnonKey, supabaseCookieOptions, supabaseUrl } from "@/lib/supabase/config";
 
 const handleI18nRouting = createMiddleware(routing);
 
@@ -31,6 +31,7 @@ export async function proxy(request: NextRequest) {
   let response = handleI18nRouting(request);
 
   const supabase = createServerClient(supabaseUrl!, supabaseAnonKey!, {
+    cookieOptions: supabaseCookieOptions,
     cookies: {
       getAll() {
         return request.cookies.getAll();
