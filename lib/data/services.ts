@@ -114,6 +114,29 @@ export const serviceCategoryFacts: ServiceCategoryFact[] = [
   },
 ];
 
+export type ServiceRichSection = {
+  heading: string;
+  body?: string;
+  bullets?: { label: string; detail?: string }[];
+};
+
+export type ServiceRichContent = {
+  intro: string;
+  sections: ServiceRichSection[];
+};
+
+// Purely textual (no language-neutral facts to merge), so this reads
+// directly via next-intl's raw accessor rather than going through the
+// facts-array pattern the rest of this file uses.
+export function getServiceRichContent(tRaw: (key: string) => unknown, slug: string): ServiceRichContent | null {
+  try {
+    const raw = tRaw(`categories.${slug}.richContent`);
+    return (raw as ServiceRichContent) ?? null;
+  } catch {
+    return null;
+  }
+}
+
 export type ServiceItem = ServiceFact & { name: string; description: string };
 export type ServiceCategory = Omit<ServiceCategoryFact, "services"> & {
   name: string;

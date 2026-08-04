@@ -7,6 +7,7 @@ const NAV_KEYS: Record<string, string> = {
   "/services": "services",
   "/pricing": "pricing",
   "/about": "about",
+  "/faq": "faq",
   "/contact": "contact",
 };
 

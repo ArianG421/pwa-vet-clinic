@@ -18,4 +18,4 @@ export const site = {
 
 // Hours and nav labels are translated — see messages/{locale}.json
 // ("site.hours" and "nav").
-export const navHrefs = ["/services", "/pricing", "/about", "/contact"] as const;
+export const navHrefs = ["/services", "/pricing", "/about", "/faq", "/contact"] as const;

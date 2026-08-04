@@ -38,6 +38,7 @@
     "services": "Services",
     "pricing": "Membership",
     "about": "About",
+    "faq": "FAQ",
     "contact": "Contact",
     "clientLogin": "Client Login",
     "bookVisit": "Book a visit",
@@ -186,6 +187,8 @@
   },
   "serviceCategory": {
     "servicesCrumb": "Services",
+    "pricingHeading": "Pricing",
+    "jumpToPricing": "Jump to pricing",
     "readyToBook": "Ready to book {category}?",
     "priorityNote": "Members get priority, same-week appointments.",
     "bookAppointment": "Book an appointment",
@@ -663,6 +666,63 @@
             "name": "Post-Op Care Plan",
             "description": "Suture check, pain management review, and recovery monitoring."
           }
+        },
+        "richContent": {
+          "intro": "We offer a complete range of surgical services, from minor procedures to complex operations. Our surgical suite is equipped with the latest technology to help ensure safety and successful outcomes.",
+          "sections": [
+            {
+              "heading": "Before your surgery",
+              "body": "Your pet needs a clean bill of health before a routine operation — we typically confirm this with bloodwork a few days beforehand. Please have your pet fast from midnight the night before (feeding schedules differ for kittens, puppies, and rabbits — just ask). Drop-off is between 7:45–8:00 AM; you'll fill out a short intake form on arrival, and dogs should have had a chance to relieve themselves first."
+            },
+            {
+              "heading": "Common procedures we perform",
+              "bullets": [
+                {
+                  "label": "Spay & neuter"
+                },
+                {
+                  "label": "Emergency surgery"
+                },
+                {
+                  "label": "Advanced soft-tissue surgery"
+                }
+              ]
+            },
+            {
+              "heading": "Advanced soft-tissue surgery",
+              "bullets": [
+                {
+                  "label": "Tumor surgery",
+                  "detail": "Gentle removal of benign and malignant tumors, with careful aftercare."
+                },
+                {
+                  "label": "Reconstructive surgery",
+                  "detail": "Restoring function and appearance after injury using advanced techniques."
+                },
+                {
+                  "label": "Abdominal surgery",
+                  "detail": "Emergency and planned procedures — e.g. bloat, uterine infection, or intestinal issues."
+                }
+              ]
+            },
+            {
+              "heading": "How we prepare, monitor, and recover your pet",
+              "bullets": [
+                {
+                  "label": "Preparation",
+                  "detail": "A thorough health check and a conversation with you about every option before the procedure."
+                },
+                {
+                  "label": "Monitoring",
+                  "detail": "Continuous monitoring by experienced veterinarians and licensed veterinary nurses, with modern anaesthesia techniques to minimize risk and stress."
+                },
+                {
+                  "label": "Aftercare",
+                  "detail": "Clear at-home care instructions, plus a follow-up to confirm recovery is on track."
+                }
+              ]
+            }
+          ]
         }
       },
       "preventive-care": {
@@ -694,6 +754,35 @@
             "name": "Microchipping & ID",
             "description": "Permanent ID chip with registry enrollment."
           }
+        },
+        "richContent": {
+          "intro": "A broad range of wellness and primary care services, so your pet feels their best through every life stage — vaccinations, ID chipping, spay/neuter, or advice before travelling abroad, we're here with care tailored to your pet.",
+          "sections": [
+            {
+              "heading": "Vaccinations for dogs, cats & rabbits",
+              "body": "We provide all standard vaccinations to protect against infectious disease. For cats: protection against cat flu and panleukopenia (RC/Ducat or RCP/Tricat). For dogs: kennel cough, distemper, parvovirus, hepatitis, and leptospirosis (Pi, KC, DHPPi). Rabbits can be protected against myxomatosis and RHD via Myxo-RHD PLUS."
+            },
+            {
+              "heading": "Spay & neuter",
+              "body": "We neuter and spay dogs, cats, rabbits, and guinea pigs of either sex — supporting calmer behavior, lower disease risk, and fewer unplanned litters."
+            },
+            {
+              "heading": "ID chipping & EU pet passports",
+              "body": "To identify your pet while travelling, if lost, or for registration, we offer both microchipping and tattoo ID. We also help issue an EU pet passport — required for travel within and outside the EU — which records ID and rabies vaccination details."
+            },
+            {
+              "heading": "Health checks & nail trims",
+              "body": "We offer veterinary exams for adult pets and puppies/kittens, with or without vaccination and chipping — especially useful before a sale or for insurance. We're also happy to help with nail trims."
+            },
+            {
+              "heading": "Reproduction & pregnancy checks",
+              "body": "Progesterone testing ahead of breeding, and pregnancy checks to support a safe, healthy reproductive process."
+            },
+            {
+              "heading": "A gentle goodbye",
+              "body": "When it's time to say goodbye, we offer a calm, respectful farewell — including cremation, individual or shared, with the option of an urn. You'll have a private room on arrival and a separate exit if you'd rather avoid the main waiting area on your way out."
+            }
+          ]
         }
       },
       "dental": {
@@ -713,6 +802,40 @@
             "name": "Tooth Extraction",
             "description": "Simple to surgical extractions with pain management."
           }
+        },
+        "richContent": {
+          "intro": "Dental health is a key part of your pet's overall wellbeing. We offer a complete range of dental services, from preventive cleanings to advanced treatment — just like for us, untreated tooth problems can cause both pain and wider health issues.",
+          "sections": [
+            {
+              "heading": "Before a dental procedure",
+              "body": "We'll want a clear picture of your pet's health beforehand, usually confirmed with bloodwork a few days ahead. Your pet should fast from midnight the night before (different timing applies for kittens and puppies). Drop-off is 7:45–8:00 AM with a short intake form, and dogs should be well-exercised beforehand."
+            },
+            {
+              "heading": "What we offer",
+              "bullets": [
+                {
+                  "label": "Scaling & polishing",
+                  "detail": "Ultrasonic cleaning to thoroughly remove plaque and tartar, reducing the risk of tooth loss."
+                },
+                {
+                  "label": "Dental X-rays",
+                  "detail": "Advanced imaging to spot problems below the gumline, like root infections or fractures."
+                },
+                {
+                  "label": "Extractions",
+                  "detail": "Safe, gentle removal for infected, damaged, or unsalvageable teeth."
+                },
+                {
+                  "label": "Periodontal treatment",
+                  "detail": "Treating gum disease before it spreads and causes further problems."
+                },
+                {
+                  "label": "At-home advice",
+                  "detail": "Tips and product recommendations for daily dental care, like brushes and chew products."
+                }
+              ]
+            }
+          ]
         }
       },
       "diagnostics": {
@@ -732,6 +855,40 @@
             "name": "Rapid Test Panels",
             "description": "Parvo, heartworm, tick-borne disease, and FeLV/FIV screening."
           }
+        },
+        "richContent": {
+          "intro": "Our in-house laboratory is a key part of how we diagnose and treat quickly. By analyzing samples directly at the clinic, we can often give you answers within the same visit — meaning faster treatment and better care.",
+          "sections": [
+            {
+              "heading": "Before a lab visit",
+              "body": "For most blood work, your pet should arrive fasting unless told otherwise, to keep results accurate. Turnaround time varies depending on which values are being tested."
+            },
+            {
+              "heading": "Lab services we offer",
+              "bullets": [
+                {
+                  "label": "Blood work",
+                  "detail": "From blood values and organ function to signs of inflammation or infection — a key tool for tracking conditions like kidney disease, diabetes, or hormonal imbalances."
+                },
+                {
+                  "label": "Urine testing",
+                  "detail": "Identifies kidney and urinary tract disease, infections, and crystals."
+                },
+                {
+                  "label": "Fecal testing",
+                  "detail": "Detects parasites and other gastrointestinal issues."
+                },
+                {
+                  "label": "Cytology & biopsy",
+                  "detail": "Fast analysis of cells and tissue when we spot a suspicious change in skin or elsewhere."
+                },
+                {
+                  "label": "Infectious disease testing",
+                  "detail": "Testing for bacteria, viruses, and other organisms to find the underlying cause of illness."
+                }
+              ]
+            }
+          ]
         }
       },
       "imaging": {
@@ -747,6 +904,41 @@
             "name": "Abdominal Ultrasound",
             "description": "Non-invasive imaging for organs and soft tissue."
           }
+        },
+        "richContent": {
+          "intro": "X-ray and ultrasound are essential tools in modern veterinary care. We've invested in the latest imaging technology, so we can examine everything from skeletal injuries to organ function without more invasive methods.",
+          "sections": [
+            {
+              "heading": "X-ray",
+              "bullets": [
+                {
+                  "label": "High-quality digital imaging",
+                  "detail": "Fast results identifying fractures, joint problems, or lung and heart conditions."
+                },
+                {
+                  "label": "Foreign object detection",
+                  "detail": "Especially useful when something's been swallowed — we can quickly locate it and plan safe next steps."
+                }
+              ]
+            },
+            {
+              "heading": "Ultrasound",
+              "bullets": [
+                {
+                  "label": "Organ imaging",
+                  "detail": "A gentle way to examine the liver, kidneys, bladder, and heart."
+                },
+                {
+                  "label": "Pregnancy checks",
+                  "detail": "Confirming pregnancy and monitoring fetal development."
+                },
+                {
+                  "label": "Disease investigation",
+                  "detail": "Getting a clear picture of tumors or fluid buildup to help plan treatment."
+                }
+              ]
+            }
+          ]
         }
       },
       "orthopedics": {
@@ -766,6 +958,36 @@
             "name": "Fracture Repair",
             "description": "Stabilization and fixation for fractures."
           }
+        },
+        "richContent": {
+          "intro": "Orthopedics demands real expertise and specialized equipment — we're proud to offer these services to help improve your pet's quality of life.",
+          "sections": [
+            {
+              "heading": "Orthopedic care",
+              "bullets": [
+                {
+                  "label": "Fractures & injuries",
+                  "detail": "Careful diagnosis via X-ray, with treatments including surgical fixation and casting."
+                },
+                {
+                  "label": "Joint problems",
+                  "detail": "Conditions like hip dysplasia and patellar luxation, treated both surgically and non-surgically."
+                },
+                {
+                  "label": "Arthritis & degenerative conditions",
+                  "detail": "Pain management and rehabilitation plans to improve mobility."
+                }
+              ]
+            },
+            {
+              "heading": "Cruciate ligament injuries",
+              "body": "A common condition in dogs and cats, causing pain and reduced mobility. We use modern equipment to confirm the diagnosis, and perform an arthroscopic exam alongside TPLO surgery to fully assess the joint and plan treatment."
+            },
+            {
+              "heading": "Disc herniation",
+              "body": "A serious condition, mostly affecting dogs, where a disc between the vertebrae is damaged or displaced. We're proud to be one of the few clinics that performs disc herniation surgery — we assess the extent of the damage and recommend the treatment that fits your pet best."
+            }
+          ]
         }
       },
       "endoscopy": {
@@ -785,6 +1007,19 @@
             "name": "Foreign Body Retrieval",
             "description": "Non-surgical removal of swallowed objects where possible."
           }
+        },
+        "richContent": {
+          "intro": "Bronchoscopy and gastroscopy let us examine and treat the airways and GI tract without major surgery — gentler on your pet, with a faster recovery.",
+          "sections": [
+            {
+              "heading": "Bronchoscopy",
+              "body": "Used to examine the airways and lungs when we suspect chronic coughing or breathing difficulty, an inhaled foreign object, or a suspected infection or tumor. We use a thin, flexible camera to see inside the airways while removing objects or collecting samples for analysis."
+            },
+            {
+              "heading": "Gastroscopy",
+              "body": "Used to examine and treat the esophagus, stomach, and upper small intestine — for swallowing problems or suspected blockages, ulcers, inflammation, or tumors, and to retrieve swallowed foreign objects."
+            }
+          ]
         }
       },
       "emergency": {
@@ -804,6 +1039,19 @@
             "name": "After-Hours Consultation",
             "description": "Phone triage line for existing clients."
           }
+        },
+        "richContent": {
+          "intro": "We're here when you need us — emergency care is available daily during our opening hours for injuries, wounds, and urgent procedures.",
+          "sections": [
+            {
+              "heading": "Please call before you come in",
+              "body": "For urgent cases, always call us first. That lets us assess the situation, prepare staff, and make sure we're ready to receive your pet the moment you arrive."
+            },
+            {
+              "heading": "How we handle urgent cases",
+              "body": "For symptoms like diarrhea, vomiting, or sudden skin issues, we have a dedicated isolation area to limit the spread of illness. Some wait time can occur during busy periods, but life-threatening conditions are always prioritized. We can also offer daytime inpatient monitoring when needed."
+            }
+          ]
         }
       }
     }
@@ -842,6 +1090,58 @@
           "24/7 after-hours triage line",
           "Multi-pet discount eligible"
         ]
+      }
+    }
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Frequently asked questions",
+    "body": "Quick answers to what pet owners ask us most. Can't find what you're looking for? Reach out and we'll help directly.",
+    "groups": {
+      "symptoms": "Symptoms & when to worry",
+      "surgery": "Surgery & reproduction",
+      "booking": "Booking & prescriptions"
+    },
+    "items": {
+      "tick-prescription": {
+        "question": "How do I get a prescription for tick medication?",
+        "answer": "We can issue preventive prescriptions, such as tick medication, by email or phone — no in-person visit needed. Our only requirement is that your pet has been seen at the clinic at some point during the year. Note it can take a couple of days before the prescription is ready for pickup at the pharmacy."
+      },
+      "cat-neuter-age": {
+        "question": "At what age can I neuter my cat?",
+        "answer": "Cats are typically neutered at around 5 to 6 months old. That's a good window — old enough to safely undergo the procedure, but young enough to avoid unwanted behaviors that can appear with sexual maturity. It's always worth discussing timing with a veterinarian for advice specific to your cat."
+      },
+      "fever": {
+        "question": "How do I know if my pet has a fever?",
+        "answer": "A few signs to watch for: temperature — the most reliable method is a digital rectal thermometer, normal is typically 38–39°C for cats and dogs; behavior changes — more tired, less active, or sleeping more than usual; appetite — a sudden drop can be a warning sign; body language — excessive licking, hiding, or reacting negatively to touch; breathing — faster or labored breathing can also indicate fever or illness. If you suspect a fever or illness, it's best to contact a veterinarian for advice and a possible exam."
+      },
+      "diarrhea": {
+        "question": "My dog has diarrhea. What should I do?",
+        "answer": "Watch the symptoms — note how long it's been going on and whether there are other signs like vomiting, low appetite, lethargy, or blood. Reduce food intake — offer small portions of something easy to digest, like rice with boiled chicken or white fish, over the following days. Make sure your dog is drinking enough water, offering a pet-specific electrolyte solution if needed. If diarrhea continues past 24–48 hours, or you see blood or signs of dehydration, contact a veterinarian. See a vet sooner if your dog is very young, senior, or has other health conditions."
+      },
+      "overweight": {
+        "question": "Does it matter if my pet is a little overweight?",
+        "answer": "Yes — even a little extra weight can make a difference. It can contribute to diabetes, joint problems, and heart disease. A veterinarian can advise on diet and exercise, and regular check-ups plus a balanced diet can meaningfully improve your pet's quality of life."
+      },
+      "cough": {
+        "question": "My dog has a cough. What should I do?",
+        "answer": "Start by observing closely — note any other signs like fever, tiredness, low appetite, or nasal discharge. It's best to book a veterinary exam, since coughing can come from several causes, including infections, allergies, or heart issues. Keep your dog calm and avoid strenuous activity until you know the cause, and follow your vet's guidance closely if treatment is prescribed."
+      },
+      "heat-cycle": {
+        "question": "How often does a female dog go into heat?",
+        "answer": "On average, every six to twelve months, with each cycle lasting around 2–3 weeks. This varies between individual dogs, so some cycles run longer or shorter than others. If you have specific questions about your dog's cycle, it's worth checking in with a veterinarian."
+      },
+      "neuter-pros-cons": {
+        "question": "What are the pros and cons of neutering?",
+        "answer": "Benefits: fewer unplanned litters; can reduce aggression and territorial behavior in males and certain behaviors in females; lowers the risk of certain diseases; neutered pets tend to live longer on average. Considerations: like any surgery, there's a small risk of complications; metabolism can shift, so weight gain is possible if diet isn't adjusted; personality or energy level can shift in some cases. Worth discussing these factors with a veterinarian to make an informed choice for your pet."
+      },
+      "vomiting-cat": {
+        "question": "My cat vomits often. Is that normal?",
+        "answer": "Occasional vomiting isn't unusual in cats, but it's worth paying attention to how often it happens. Common causes: hairballs from grooming, eating too fast or too much, food sensitivities, or — less commonly — an underlying illness. If your cat vomits frequently, or you notice other symptoms like diarrhea, lethargy, or appetite changes, it's worth a veterinary visit for a proper assessment."
+      },
+      "prescription-no-visit": {
+        "question": "Can I get a prescription without coming in for a visit?",
+        "answer": "We can issue preventive prescriptions, like tick medication, by email or phone. Other prescriptions require a veterinary visit. Pets on ongoing medication typically need to be seen once a year for us to keep renewing prescriptions."
       }
     }
   }

@@ -38,6 +38,7 @@
     "services": "Tjänster",
     "pricing": "Medlemskap",
     "about": "Om oss",
+    "faq": "Vanliga frågor",
     "contact": "Kontakt",
     "clientLogin": "Kundinloggning",
     "bookVisit": "Boka besök",
@@ -186,6 +187,8 @@
   },
   "serviceCategory": {
     "servicesCrumb": "Tjänster",
+    "pricingHeading": "Priser",
+    "jumpToPricing": "Hoppa till priser",
     "readyToBook": "Redo att boka {category}?",
     "priorityNote": "Medlemmar får prioriterad bokning, tider samma vecka.",
     "bookAppointment": "Boka en tid",
@@ -663,6 +666,63 @@
             "name": "Eftervårdsplan",
             "description": "Kontroll av suturer, genomgång av smärtlindring och återhämtningsövervakning."
           }
+        },
+        "richContent": {
+          "intro": "Vi erbjuder ett komplett utbud av kirurgiska tjänster, från mindre ingrepp till mer komplexa operationer. Vår operationssal är utrustad med den senaste teknologin för att säkerställa säkerhet och framgångsrika resultat.",
+          "sections": [
+            {
+              "heading": "Inför din operation",
+              "body": "Inför en rutinoperation är det viktigt att ditt djur är friskt — det säkerställer vi vanligtvis genom blodprov ett par dagar innan. Ditt djur behöver fasta från midnatt kvällen innan (avvikande tider gäller kattungar, valpar och kaniner — fråga oss gärna). Inlämning sker mellan 07:45–08:00, du fyller i ett mottagningsbevis vid ankomst, och hundar bör vara välrastade innan."
+            },
+            {
+              "heading": "Vanliga kirurgiska ingrepp vi utför",
+              "bullets": [
+                {
+                  "label": "Kastrering och sterilisering"
+                },
+                {
+                  "label": "Akuta operationer"
+                },
+                {
+                  "label": "Avancerade mjukdelsoperationer"
+                }
+              ]
+            },
+            {
+              "heading": "Avancerad mjukdelskirurgi",
+              "bullets": [
+                {
+                  "label": "Tumörkirurgi",
+                  "detail": "Skonsam borttagning av godartade och elakartade tumörer, följt av noggrann eftervård."
+                },
+                {
+                  "label": "Rekonstruktiv kirurgi",
+                  "detail": "Vi återställer funktion och estetik efter skador med avancerade metoder."
+                },
+                {
+                  "label": "Bukoperationer",
+                  "detail": "Akuta och planerade operationer, till exempel vid magomvridning, livmoderinflammation eller tarmproblem."
+                }
+              ]
+            },
+            {
+              "heading": "Hur vi förbereder, övervakar och tar hand om ditt djur",
+              "bullets": [
+                {
+                  "label": "Förberedelser",
+                  "detail": "En noggrann hälsokontroll och genomgång av alla alternativ innan ingreppet."
+                },
+                {
+                  "label": "Övervakning",
+                  "detail": "Kontinuerlig övervakning av erfarna veterinärer och legitimerade djursjukskötare, med modern anestesiteknik för att minimera risk och stress."
+                },
+                {
+                  "label": "Eftervård",
+                  "detail": "Tydliga instruktioner för hemmavård, samt uppföljning för att säkerställa god återhämtning."
+                }
+              ]
+            }
+          ]
         }
       },
       "preventive-care": {
@@ -694,6 +754,35 @@
             "name": "Id-märkning",
             "description": "Permanent id-chip med registrering."
           }
+        },
+        "richContent": {
+          "intro": "Ett brett utbud av friskvårds- och primärvårdstjänster, så ditt husdjur mår så bra som möjligt genom hela livet — vaccinationer, ID-märkning, kastrering eller rådgivning inför utlandsresa. Vi finns här med vård anpassad efter just ditt djur.",
+          "sections": [
+            {
+              "heading": "Vaccinationer för hund, katt och kanin",
+              "body": "Vi utför alla vanliga vaccinationer för att skydda mot smittsamma sjukdomar. För katter: skydd mot kattsnuva och kattpest (RC/Ducat eller RCP/Tricat). För hundar: kennelhosta, valpsjuka, parvovirus, HCC och leptospiros (bl.a. Pi, KC, DHPPi). Kaniner kan skyddas mot kaninpest och kaningulsot via Myxo-RHD PLUS."
+            },
+            {
+              "heading": "Kastrering",
+              "body": "Vi kastrerar hanar och honor hos hund, katt, kanin och marsvin — det kan bidra till lugnare beteende, minskad sjukdomsrisk och minskat oönskat parande."
+            },
+            {
+              "heading": "ID-märkning & EU-pass",
+              "body": "För identifiering vid resa, försvinnande eller registrering erbjuder vi både chipmärkning och tatuering. Vi hjälper dig även att utfärda ett EU-pass, vilket krävs för resa inom och utanför EU och innehåller information om ID-märkning och rabiesvaccination."
+            },
+            {
+              "heading": "Besiktning & kloklippning",
+              "body": "Vi erbjuder veterinärbesiktning av vuxna djur och valpar/kattungar — med eller utan vaccination och chipmärkning. Särskilt användbart inför försäljning eller försäkring. Vi hjälper även gärna till med kloklippning."
+            },
+            {
+              "heading": "Reproduktion & dräktighetskontroller",
+              "body": "Progesteronprovtagning inför parning och dräktighetsundersökning för en trygg och hälsosam reproduktionsprocess."
+            },
+            {
+              "heading": "Ett omtänksamt farväl",
+              "body": "När det är dags att säga farväl erbjuder vi en lugn och respektfull avslutning, med möjlighet till kremering — gemensam eller separat, samt urna. Ni får ett eget rum vid ankomst, och en separat utgång om ni hellre vill slippa gå genom väntrummet."
+            }
+          ]
         }
       },
       "dental": {
@@ -713,6 +802,40 @@
             "name": "Tandutdragning",
             "description": "Enkla till kirurgiska extraktioner med smärtlindring."
           }
+        },
+        "richContent": {
+          "intro": "Tandhälsan hos ditt husdjur är en viktig del av dess övergripande välmående. Vi erbjuder ett komplett utbud av tandvårdstjänster — precis som för oss människor kan obehandlade tandproblem orsaka både smärta och andra hälsoproblem.",
+          "sections": [
+            {
+              "heading": "Inför tandbehandling",
+              "body": "Vi vill ha god kännedom om ditt djurs hälsostatus innan, vilket vanligtvis säkerställs med blodprov några dagar innan. Ditt djur behöver fasta från midnatt kvällen innan (avvikande tider gäller kattungar och valpar). Inlämning sker 07:45–08:00 med ett kort mottagningsbevis, och hundar bör vara välrastade innan."
+            },
+            {
+              "heading": "Vad vi erbjuder",
+              "bullets": [
+                {
+                  "label": "Tandstensborttagning och polering",
+                  "detail": "Ultraljudsrengöring som grundligt tar bort plack och tandsten, vilket minskar risken för tandlossning."
+                },
+                {
+                  "label": "Tandröntgen",
+                  "detail": "Avancerad röntgenteknik för att identifiera problem under tandköttet, som rotinflammationer eller frakturer."
+                },
+                {
+                  "label": "Tandutdragning",
+                  "detail": "Säker och skonsam borttagning vid infektioner, skador eller tänder som inte kan räddas."
+                },
+                {
+                  "label": "Parodontal behandling",
+                  "detail": "Behandling av tandköttssjukdomar innan de sprider sig och orsakar fler problem."
+                },
+                {
+                  "label": "Individuell rådgivning",
+                  "detail": "Tips och produkter för daglig tandvård hemma, som tandborstar och tuggvänliga produkter."
+                }
+              ]
+            }
+          ]
         }
       },
       "diagnostics": {
@@ -732,6 +855,40 @@
             "name": "Snabbtester",
             "description": "Parvo, hjärtmask, fästingburna sjukdomar och FeLV/FIV-screening."
           }
+        },
+        "richContent": {
+          "intro": "Vårt moderna laboratorium är en viktig del av vår diagnostiska process. Genom att analysera prover direkt på kliniken kan vi ofta ge svar inom samma besök — det innebär snabbare behandling och bättre vård.",
+          "sections": [
+            {
+              "heading": "Inför ett labbesök",
+              "body": "Vid de flesta blodprover bör ditt djur komma fastande om inget annat anges, för ett tillförlitligt provsvar. Svarstiden kan variera beroende på vilket värde som analyseras."
+            },
+            {
+              "heading": "Laboratorietjänster vi erbjuder",
+              "bullets": [
+                {
+                  "label": "Blodprov",
+                  "detail": "Från blodvärden och organfunktion till tecken på inflammation och infektion — ett viktigt verktyg vid t.ex. njursvikt, diabetes eller hormonella obalanser."
+                },
+                {
+                  "label": "Urinprover",
+                  "detail": "Identifierar njur- och urinvägssjukdomar, infektioner och kristaller."
+                },
+                {
+                  "label": "Avföringsprover",
+                  "detail": "Upptäcker parasiter och andra mag-tarmproblem."
+                },
+                {
+                  "label": "Cytologi och biopsi",
+                  "detail": "Snabb analys av celler och vävnad vid misstänkta förändringar i hud eller andra vävnader."
+                },
+                {
+                  "label": "Infektionsdiagnostik",
+                  "detail": "Testar för bakterier, virus och andra mikroorganismer för att hitta orsaken till sjukdom."
+                }
+              ]
+            }
+          ]
         }
       },
       "imaging": {
@@ -747,6 +904,41 @@
             "name": "Bukultraljud",
             "description": "Skonsam bilddiagnostik av organ och mjukvävnad."
           }
+        },
+        "richContent": {
+          "intro": "Röntgen och ultraljud är nödvändiga verktyg i modern veterinärvård. Vi har investerat i den senaste teknologin för att erbjuda ditt husdjur bästa möjliga diagnostik — från skelettskador till organens funktion, utan mer invasiva metoder.",
+          "sections": [
+            {
+              "heading": "Röntgenundersökning",
+              "bullets": [
+                {
+                  "label": "Digitala högkvalitetsbilder",
+                  "detail": "Snabba svar som identifierar frakturer, ledproblem eller sjukdomar i lungor och hjärta."
+                },
+                {
+                  "label": "Främmande föremål",
+                  "detail": "Särskilt användbart vid misstanke om svalda föremål — vi kan snabbt lokalisera och planera en säker åtgärd."
+                }
+              ]
+            },
+            {
+              "heading": "Ultraljudsundersökning",
+              "bullets": [
+                {
+                  "label": "Organundersökning",
+                  "detail": "Ett skonsamt sätt att undersöka lever, njurar, urinblåsa och hjärta."
+                },
+                {
+                  "label": "Dräktighetskontroll",
+                  "detail": "Kontroll av dräktighet och fostrets utveckling."
+                },
+                {
+                  "label": "Sjukdomsutredning",
+                  "detail": "Tydlig bild vid till exempel tumörer eller vätskeansamlingar, för att planera fortsatt behandling."
+                }
+              ]
+            }
+          ]
         }
       },
       "orthopedics": {
@@ -766,6 +958,36 @@
             "name": "Frakturbehandling",
             "description": "Stabilisering och fixering vid frakturer."
           }
+        },
+        "richContent": {
+          "intro": "Ortopedi kräver hög kompetens och specialiserad utrustning — vi är stolta över att kunna erbjuda dessa tjänster för att förbättra livskvaliteten hos ditt husdjur.",
+          "sections": [
+            {
+              "heading": "Ortopedisk vård",
+              "bullets": [
+                {
+                  "label": "Frakturer och skador",
+                  "detail": "Noggrann diagnostik med röntgen, med behandlingar som kirurgisk fixering och gipsning."
+                },
+                {
+                  "label": "Ledproblem",
+                  "detail": "Tillstånd som höftledsdysplasi och patellaluxation, behandlade både kirurgiskt och icke-kirurgiskt."
+                },
+                {
+                  "label": "Artros och degenerativa sjukdomar",
+                  "detail": "Smärtlindring och rehabiliteringsplaner för att förbättra rörligheten."
+                }
+              ]
+            },
+            {
+              "heading": "Korsbandsskador",
+              "body": "En vanlig åkomma hos hundar och katter som leder till smärta och nedsatt rörlighet. Vi använder modern utrustning för att säkerställa diagnosen och utför en artroskopisk undersökning i samband med TPLO-operationen för att bedöma ledens tillstånd fullt ut."
+            },
+            {
+              "heading": "Diskbråck",
+              "body": "En allvarlig åkomma som framförallt drabbar hundar, där en disk mellan ryggkotorna skadas eller förskjuts. Vi är stolta över att vara en av få kliniker som utför diskbråcksoperationer — vi bedömer skadans omfattning och rekommenderar den behandling som passar ditt djur bäst."
+            }
+          ]
         }
       },
       "endoscopy": {
@@ -785,6 +1007,19 @@
             "name": "Borttagning av främmande föremål",
             "description": "Icke-kirurgisk borttagning av nedsvalda föremål där det är möjligt."
           }
+        },
+        "richContent": {
+          "intro": "Med hjälp av bronkoskopi och gastroskopi kan vi undersöka och behandla luftvägar och mag-tarmkanalen utan stora kirurgiska ingrepp — skonsammare för ditt djur, med snabbare återhämtning.",
+          "sections": [
+            {
+              "heading": "Bronkoskopi",
+              "body": "Används för att undersöka luftvägar och lungor vid misstänkt kronisk hosta eller andningssvårigheter, främmande föremål i luftvägarna, eller misstänkta infektioner eller tumörer. Vi använder en tunn, flexibel kamera för att visualisera luftvägarna samtidigt som vi kan ta bort föremål eller samla prov."
+            },
+            {
+              "heading": "Gastroskopi",
+              "body": "Används för att undersöka och behandla matstrupe, magsäck och övre tunntarm — vid sväljningsproblem, misstänkta blockeringar, magsår, inflammation eller tumörer, samt för att avlägsna svalda främmande föremål."
+            }
+          ]
         }
       },
       "emergency": {
@@ -804,6 +1039,19 @@
             "name": "Jourrådgivning",
             "description": "Telefonrådgivning för befintliga kunder."
           }
+        },
+        "richContent": {
+          "intro": "Vi finns här när du behöver oss — akutmottagning erbjuds dagligen under våra öppettider för skador, sårskador och akuta ingrepp.",
+          "sections": [
+            {
+              "heading": "Ring oss alltid innan du kommer",
+              "body": "Vid akuta ärenden ber vi dig alltid ringa oss innan besöket. Det gör att vi kan bedöma situationen, förbereda personal och säkerställa att vi kan ta emot ditt djur direkt vid ankomst."
+            },
+            {
+              "heading": "Så hanterar vi akuta fall",
+              "body": "Vid symptom som diarré, kräkningar eller akuta hudproblem har vi en särskild isoleringsavdelning för att minimera smittspridning. Viss väntetid kan förekomma vid akuta fall, men livshotande tillstånd prioriteras alltid. Vid behov kan vi även erbjuda stationärvård under dagen."
+            }
+          ]
         }
       }
     }
@@ -842,6 +1090,58 @@
           "Jourlinje dygnet runt",
           "Berättigad till rabatt för flera husdjur"
         ]
+      }
+    }
+  },
+  "faq": {
+    "eyebrow": "Vanliga frågor",
+    "title": "Vanliga frågor",
+    "body": "Snabba svar på det djurägare frågar oss mest om. Hittar du inte det du söker? Hör av dig så hjälper vi dig direkt.",
+    "groups": {
+      "symptoms": "Symtom & när du bör oroa dig",
+      "surgery": "Kirurgi & reproduktion",
+      "booking": "Bokning & recept"
+    },
+    "items": {
+      "tick-prescription": {
+        "question": "Hur gör jag för att få recept på fästingmedel?",
+        "answer": "Vi kan skriva ut profylaktiska recept, såsom fästingmedel, via mail eller telefon utan att ett fysiskt besök krävs. Vårt enda krav är att djuret någon gång under året har varit inne på kliniken. Observera att det kan ta ett par dagar innan receptet är klart för uthämtning på apoteket."
+      },
+      "cat-neuter-age": {
+        "question": "Vilken ålder kan jag kastrera min katt?",
+        "answer": "Katter kan vanligtvis kastreras vid ungefär 5 till 6 månaders ålder. Det är en bra tidpunkt eftersom de är tillräckligt gamla för att genomgå ingreppet, men fortfarande unga nog för att undvika oönskat beteende som kan uppkomma med könsmognad. Det är alltid bra att diskutera med en veterinär för råd specifika för din katt."
+      },
+      "fever": {
+        "question": "Hur vet jag om mitt djur har feber?",
+        "answer": "Några tecken att titta efter: temperaturmätning — mät kroppstemperaturen med en digital rektaltermometer, normaltemperaturen ligger vanligtvis mellan 38–39°C; beteendeförändringar — mer trött, mindre aktiv eller sover mer än vanligt; aptit — en plötslig minskning kan vara ett varningstecken; kroppsspråk — överdriven slickning, gömmer sig eller reagerar negativt vid beröring; andning — ökad eller ansträngd andning kan också indikera feber eller sjukdom. Misstänker du feber eller sjukdom är det bäst att kontakta en veterinär."
+      },
+      "diarrhea": {
+        "question": "Min hund har diarré. Vad gör jag?",
+        "answer": "Observera symptomen — notera hur länge det pågått och om det finns andra tecken som kräkningar, aptitlöshet, letargi eller blod. Minska matintaget — ge små portioner lättsmält kost, som ris med kokt kyckling eller vitfisk, under de följande dagarna. Se till att hunden dricker tillräckligt, erbjud en elektrolytlösning anpassad för djur vid behov. Fortsätter diarrén i mer än 24–48 timmar, eller du ser blod eller tecken på uttorkning, kontakta en veterinär. Sök vård snabbare om hunden är mycket ung, gammal eller har andra hälsoproblem."
+      },
+      "overweight": {
+        "question": "Gör det något om mitt djur är lite överviktig?",
+        "answer": "Ja, det kan göra en skillnad om ditt djur är överviktigt. Övervikt kan leda till flera hälsoproblem, inklusive diabetes, ledproblem och hjärtsjukdomar. En veterinär kan ge råd om kost och motion, och regelbundna kontroller plus en balanserad kost kan bidra till att förbättra livskvaliteten för ditt djur."
+      },
+      "cough": {
+        "question": "Min hund har hosta. Vad gör jag?",
+        "answer": "Börja med att observera noggrant — notera om hunden har andra tecken som feber, trötthet, aptitlöshet eller nasal urladdning. Det är bäst att boka tid hos en veterinär för en noggrann bedömning, eftersom hosta kan bero på flera orsaker, till exempel infektioner, allergier eller hjärtproblem. Håll hunden lugn och undvik ansträngande aktiviteter tills orsaken är klarlagd, och följ veterinärens råd noggrant om behandling föreslås."
+      },
+      "heat-cycle": {
+        "question": "Hur länge löper en tik?",
+        "answer": "En tik löper vanligtvis var sjätte till tolfte månad, och varje löpperiod varar i cirka 2 till 3 veckor. Löpcykler kan variera mellan olika hundar, så vissa tikar har längre eller kortare cykler. Har du specifika frågor om din hunds löpning kan det vara bra att rådfråga en veterinär."
+      },
+      "neuter-pros-cons": {
+        "question": "Vilka för- och nackdelar finns det med kastrering?",
+        "answer": "Fördelar: minskad oönskad reproduktion; kan minska aggressivitet och revirbeteende hos hanar samt vissa oönskade beteenden hos honor; minskar risken för vissa sjukdomar; kastrerade djur tenderar att leva längre. Att tänka på: som vid alla operationer finns viss risk för komplikationer; ämnesomsättningen kan påverkas, vilket kan ge viktökning om kosten inte justeras; i vissa fall kan personlighet eller energinivå förändras. Diskutera gärna dessa faktorer med en veterinär för ett välgrundat beslut."
+      },
+      "vomiting-cat": {
+        "question": "Min katt kräks ofta. Är det normalt?",
+        "answer": "Det är inte ovanligt att katter kräks då och då, men det är värt att observera hur ofta det sker. Vanliga orsaker: hårbollar från pälsvård, överätande eller att äta för snabbt, matallergier eller intoleranser, eller — mer sällan — bakomliggande sjukdom. Kräks katten ofta, eller om du märker andra symtom som diarré, trötthet eller förändrad aptit, är det värt ett veterinärbesök för en noggrann bedömning."
+      },
+      "prescription-no-visit": {
+        "question": "Kan jag få recept utan att komma på ett besök?",
+        "answer": "Vi kan skriva ut profylaktiska recept, såsom fästingmedel, via mail eller telefon. För övriga recept krävs ett veterinärbesök. Djur som står på medicinering behöver normalt besöka veterinären en gång om året för att vi ska kunna fortsätta skriva ut recept."
       }
     }
   }

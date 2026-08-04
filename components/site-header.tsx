@@ -3,7 +3,7 @@
 import { Link, usePathname } from "@/lib/i18n/navigation";
 import { useState } from "react";
 import { useTranslations } from "next-intl";
-import { Menu, Stethoscope, HeartHandshake, Info, Mail, X, type LucideIcon } from "lucide-react";
+import { Menu, Stethoscope, HeartHandshake, Info, HelpCircle, Mail, X, type LucideIcon } from "lucide-react";
 import { navHrefs, site } from "@/lib/site";
 import { LanguageSwitcher } from "@/components/language-switcher";
 
@@ -11,6 +11,7 @@ const NAV_ICONS: Record<string, LucideIcon> = {
   "/services": Stethoscope,
   "/pricing": HeartHandshake,
   "/about": Info,
+  "/faq": HelpCircle,
   "/contact": Mail,
 };
 
@@ -18,6 +19,7 @@ const NAV_KEYS: Record<string, string> = {
   "/services": "services",
   "/pricing": "pricing",
   "/about": "about",
+  "/faq": "faq",
   "/contact": "contact",
 };
 
@@ -58,7 +60,10 @@ export function SiteHeader() {
 
         <div className="hidden items-center gap-3 md:flex">
           <LanguageSwitcher />
-          <Link href="/login" className="text-sm font-medium text-ink-muted transition-colors hover:text-brand-700">
+          <Link
+            href="/login"
+            className="rounded-full border-2 border-brand-600 px-4 py-[7px] text-sm font-semibold text-brand-700 transition-colors hover:bg-brand-50"
+          >
             {t("clientLogin")}
           </Link>
           <Link
@@ -106,7 +111,7 @@ export function SiteHeader() {
             })}
             <Link
               href="/login"
-              className="rounded-lg px-3 py-2.5 text-sm font-medium text-ink hover:bg-surface-muted"
+              className="rounded-full border-2 border-brand-600 px-3 py-2.5 text-center text-sm font-semibold text-brand-700 hover:bg-brand-50"
               onClick={() => setOpen(false)}
             >
               {t("clientLogin")}

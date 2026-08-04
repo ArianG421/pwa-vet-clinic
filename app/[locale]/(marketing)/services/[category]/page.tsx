@@ -3,10 +3,12 @@ import { Link } from "@/lib/i18n/navigation";
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Clock } from "lucide-react";
-import { getServiceCategory, serviceCategoryFacts } from "@/lib/data/services";
+import { getServiceCategory, getServiceRichContent, serviceCategoryFacts } from "@/lib/data/services";
 import { formatKr } from "@/lib/currency";
 import { CategoryIcon } from "@/components/category-icon";
 import { Breadcrumbs } from "@/components/breadcrumbs";
+import { ServiceRichContentBlock } from "@/components/service-rich-content";
+import { StickyPricingCta } from "@/components/sticky-pricing-cta";
 import { routing } from "@/lib/i18n/routing";
 
 export function generateStaticParams() {
@@ -38,6 +40,7 @@ export default async function ServiceCategoryPage({
   const tServices = await getTranslations("services");
   const cat = getServiceCategory((key) => tServices(key), category);
   if (!cat) notFound();
+  const richContent = getServiceRichContent((key) => tServices.raw(key), category);
 
   function formatPrice(from: number, to: number) {
     if (from === 0 && to === 0) return t("priceIncluded");
@@ -67,7 +70,16 @@ export default async function ServiceCategoryPage({
         </div>
       </div>
 
-      <div className="mt-10 divide-y divide-black/5 rounded-2xl border border-black/5 bg-surface">
+      {richContent && (
+        <div className="mt-10">
+          <ServiceRichContentBlock content={richContent} />
+        </div>
+      )}
+
+      <h2 id="pricing" className="mt-12 scroll-mt-20 text-lg font-semibold text-ink">
+        {t("pricingHeading")}
+      </h2>
+      <div className="mt-4 divide-y divide-black/5 rounded-2xl border border-black/5 bg-surface">
         {cat.services.map((service) => (
           <div key={service.slug} className="flex flex-col gap-3 p-5 sm:flex-row sm:items-center sm:justify-between">
             <div>
@@ -100,6 +112,8 @@ export default async function ServiceCategoryPage({
       <p className="mt-4 text-xs text-ink-muted">
         {t("pricingDisclaimer")}
       </p>
+
+      {richContent && <StickyPricingCta targetId="pricing" label={t("jumpToPricing")} />}
     </div>
   );
 }
