@@ -1,7 +1,9 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/lib/i18n/navigation";
-import { MapPin, Phone, Mail, ExternalLink } from "lucide-react";
+import { MapPin, Phone, Mail } from "lucide-react";
 import { navHrefs, site } from "@/lib/site";
+import { InstagramIcon, FacebookIcon } from "@/components/icons/social-icons";
+import { SocialPreviews } from "@/components/social-previews";
 
 const NAV_KEYS: Record<string, string> = {
   "/services": "services",
@@ -30,7 +32,7 @@ export function SiteFooter() {
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-ink-muted hover:text-brand-700"
             >
-              <ExternalLink className="h-4 w-4 shrink-0" /> {site.social.instagramHandle}
+              <InstagramIcon className="h-4 w-4 shrink-0" /> {site.social.instagramHandle}
             </a>
             <a
               href={site.social.facebook}
@@ -38,7 +40,7 @@ export function SiteFooter() {
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-ink-muted hover:text-brand-700"
             >
-              <ExternalLink className="h-4 w-4 shrink-0" /> {site.social.facebookHandle}
+              <FacebookIcon className="h-4 w-4 shrink-0" /> {site.social.facebookHandle}
             </a>
           </div>
         </div>
@@ -85,6 +87,13 @@ export function SiteFooter() {
           </ul>
         </div>
       </div>
+
+      <div className="border-t border-black/5 px-4 py-10 sm:px-6">
+        <div className="mx-auto max-w-6xl">
+          <SocialPreviews />
+        </div>
+      </div>
+
       <div className="border-t border-black/5 py-4 text-center text-xs text-ink-muted">
         {t("demoNotice", { year: new Date().getFullYear(), siteName: site.name })}
       </div>

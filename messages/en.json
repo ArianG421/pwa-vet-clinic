@@ -48,6 +48,7 @@
     "explore": "Explore",
     "hours": "Hours",
     "contact": "Contact",
+    "latestFromSocial": "Latest from social",
     "demoNotice": "© {year} {siteName}. Demo build — not a real clinic."
   },
   "home": {
