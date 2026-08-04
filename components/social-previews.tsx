@@ -87,11 +87,11 @@ export function SocialPreviews() {
   return (
     <div>
       <p className="text-sm font-semibold text-ink">{t("latestFromSocial")}</p>
-      <div className="mt-3 grid gap-4 sm:grid-cols-2">
-        <div className="overflow-hidden rounded-xl border border-black/5 bg-surface">
+      <div className="mt-3 grid min-w-0 gap-4 sm:grid-cols-2">
+        <div className="relative min-w-0 overflow-hidden rounded-xl border border-black/5 bg-surface">
           <InstagramPreview />
         </div>
-        <div className="overflow-hidden rounded-xl border border-black/5 bg-surface">
+        <div className="relative min-w-0 overflow-hidden rounded-xl border border-black/5 bg-surface">
           <FacebookPreview />
         </div>
       </div>
