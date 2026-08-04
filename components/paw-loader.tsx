@@ -1,6 +1,11 @@
+"use client";
+
+import { useTranslations } from "next-intl";
 import { PawPrint } from "lucide-react";
 
-export function PawLoader({ label = "Fetching the good stuff…", size = "md" }: { label?: string; size?: "sm" | "md" }) {
+export function PawLoader({ label, size = "md" }: { label?: string; size?: "sm" | "md" }) {
+  const t = useTranslations("common");
+  const resolvedLabel = label ?? t("loading");
   const iconSize = size === "sm" ? "h-4 w-4" : "h-6 w-6";
 
   return (
@@ -15,8 +20,8 @@ export function PawLoader({ label = "Fetching the good stuff…", size = "md" }:
           />
         ))}
       </div>
-      {label && <p className="text-sm text-ink-muted">{label}</p>}
-      <span className="sr-only">Loading</span>
+      {resolvedLabel && <p className="text-sm text-ink-muted">{resolvedLabel}</p>}
+      <span className="sr-only">{t("loadingAria")}</span>
     </div>
   );
 }

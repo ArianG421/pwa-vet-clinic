@@ -1,6 +1,7 @@
 {
   "common": {
     "loading": "Loading…",
+    "loadingAria": "Loading",
     "skipToContent": "Skip to main content",
     "backToSite": "Back to site"
   },
@@ -244,6 +245,146 @@
       "roleClient": "client",
       "roleStaff": "staff",
       "signOut": "Sign out"
+    },
+    "dashboard": {
+      "welcomeBack": "Welcome back",
+      "greeting": "Hi, {name} 👋",
+      "greetingFallback": "Hi there 👋",
+      "subtitle": "Here's a snapshot of your account.",
+      "viewRewards": "View rewards",
+      "ptsTier": "{tier} tier",
+      "nextAppointment": "Next appointment",
+      "manage": "Manage",
+      "nothingBooked": "Nothing booked yet.",
+      "yourPets": "Your pets",
+      "noPetsYet": "No pets added yet.",
+      "viewProfiles": "View profiles"
+    },
+    "pets": {
+      "eyebrow": "Pets",
+      "title": "Your pets",
+      "subtitle": "Keep profiles up to date so the clinic has what it needs before every visit.",
+      "addPet": "Add a pet",
+      "loadingLabel": "Fetching your pets…",
+      "emptyTitle": "No pets yet",
+      "emptyBody": "Add your first pet to start booking appointments and tracking their care.",
+      "editAria": "Edit {name}",
+      "deleteAria": "Delete {name}",
+      "removeTitle": "Remove {name}?",
+      "removeBody": "This can't be undone.",
+      "cancel": "Cancel",
+      "remove": "Remove",
+      "ageMonths": "{count} mo",
+      "ageYears": "{count, plural, one {# yr} other {# yrs}}",
+      "speciesDog": "Dog",
+      "speciesCat": "Cat",
+      "speciesRabbit": "Rabbit",
+      "speciesBird": "Bird",
+      "speciesOther": "Other",
+      "form": {
+        "editTitle": "Edit pet",
+        "addTitle": "Add a pet",
+        "close": "Close",
+        "name": "Name",
+        "species": "Species",
+        "breed": "Breed",
+        "dob": "Date of birth",
+        "notes": "Notes",
+        "notesPlaceholder": "Allergies, temperament, anything the clinic should know",
+        "cancel": "Cancel",
+        "saveChanges": "Save changes",
+        "addPet": "Add pet"
+      }
+    },
+    "appointments": {
+      "eyebrow": "Appointments",
+      "title": "Your appointments",
+      "subtitle": "Book a visit or manage what's already on the calendar.",
+      "bookVisit": "Book a visit",
+      "loadingLabel": "Fetching your appointments…",
+      "addPetFirst": "Add a pet on the Pets tab before booking your first appointment.",
+      "noAppointments": "No appointments yet.",
+      "cancel": "Cancel",
+      "statusPending": "Pending",
+      "statusConfirmed": "Confirmed",
+      "statusCompleted": "Completed",
+      "statusCancelled": "Cancelled",
+      "serviceFallback": "Service",
+      "petFallback": "Pet",
+      "form": {
+        "title": "Book an appointment",
+        "needPetFirst": "You'll need to add a pet before booking. Head to the Pets tab first.",
+        "pet": "Pet",
+        "category": "Category",
+        "service": "Service",
+        "date": "Date",
+        "time": "Time",
+        "errorAddPet": "Add a pet before booking an appointment.",
+        "submit": "Request appointment",
+        "note": "We'll confirm by email — this creates a pending request."
+      }
+    },
+    "subscription": {
+      "eyebrow": "Membership",
+      "title": "Your membership",
+      "subtitle": "Simple monthly plans. Cancel any time — this is a demo checkout, no real charge.",
+      "loadingLabel": "Fetching your membership…",
+      "activePlan": "Active plan",
+      "perMonthLong": "/month",
+      "perMonthShort": "/mo",
+      "cancelMembership": "Cancel membership",
+      "choosePlan": "Choose {name}",
+      "checkout": {
+        "title": "Confirm membership",
+        "billedMonthly": "/month · billed monthly",
+        "cardNumber": "Card number",
+        "expiry": "Expiry",
+        "cvc": "CVC",
+        "confirm": "Confirm ${amount}/month",
+        "demoNote": "Demo checkout — no real payment is processed."
+      }
+    },
+    "rewards": {
+      "eyebrow": "Rewards",
+      "title": "Willowbrook Rewards",
+      "subtitle": "Every visit earns points automatically. Redeem them for discounts or free services — no punch card required.",
+      "resetDemo": "Reset demo data",
+      "loadingLabel": "Fetching your rewards…",
+      "howYouEarn": {
+        "spend": { "title": "1 point per $1 spent", "detail": "Earned automatically on every completed visit." },
+        "wellness": { "title": "Bonus for wellness visits", "detail": "Extra points for routine check-ups and vaccinations." },
+        "referral": { "title": "Refer a friend", "detail": "Get 100 bonus points when they book their first visit." }
+      },
+      "redeemHeading": "Redeem your points",
+      "redeemSubtitle": "Points update instantly — this is a live demo, not a mockup.",
+      "activityHeading": "Activity",
+      "noActivity": "No activity yet — points appear here after your first visit.",
+      "redeemedDetail": "Redeemed — show this at your next visit",
+      "lifetimeEarned": "{count} lifetime points earned",
+      "ptsToNext": "{count} pts to {tier}",
+      "topTierMessage": "You've reached our top tier — thank you for being a {tier} member.",
+      "redeemBtn": "Redeem",
+      "redeemedBtn": "Redeemed",
+      "needMorePts": "Need {count} more pts",
+      "tiers": {
+        "tail-wagger": { "name": "Tail Wagger", "perk": "1 point per $1 spent" },
+        "loyal-companion": { "name": "Loyal Companion", "perk": "1.25 points per $1 + early booking windows" },
+        "best-friend": { "name": "Best Friend", "perk": "1.5 points per $1 + a free annual wellness exam" }
+      },
+      "catalog": {
+        "discount-5": { "name": "$5 off your next visit", "description": "Applies to any appointment, no minimum spend." },
+        "free-nail-trim": { "name": "Free nail trim", "description": "A quick, complimentary trim at any visit." },
+        "discount-15": { "name": "$15 off your next visit", "description": "Applies to any appointment, no minimum spend." },
+        "free-follow-up": { "name": "Free follow-up exam", "description": "A complimentary recheck within 30 days of a visit." },
+        "discount-50": { "name": "$50 off a procedure", "description": "Applies to surgery, dental, or orthopedic procedures." },
+        "free-wellness": { "name": "Free wellness exam", "description": "A full nose-to-tail check-up, on us (up to $90 value)." }
+      },
+      "seed": {
+        "seed-1": { "label": "Wellness Exam", "detail": "Visit on Jun 12" },
+        "seed-2": { "label": "Vaccination Package", "detail": "Visit on Jun 12" },
+        "seed-3": { "label": "Bloodwork Panel", "detail": "Visit on Jul 3" },
+        "seed-4": { "label": "Digital Radiography", "detail": "Visit on Jul 22" }
+      }
     }
   },
   "services": {

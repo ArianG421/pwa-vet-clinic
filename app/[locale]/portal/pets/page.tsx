@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 import { Cat, Dog, Plus, Rabbit, PawPrint, Pencil, Trash2 } from "lucide-react";
 import { usePets } from "@/hooks/use-pets";
 import { PetForm } from "@/components/portal/pet-form";
@@ -9,25 +10,26 @@ import type { Pet } from "@/lib/supabase/types";
 
 const SPECIES_ICON: Record<string, typeof Dog> = { Dog, Cat, Rabbit };
 
-function ageFromDob(dob: string | null) {
-  if (!dob) return null;
-  const birth = new Date(dob);
-  const now = new Date();
-  let years = now.getFullYear() - birth.getFullYear();
-  const months = now.getMonth() - birth.getMonth();
-  if (months < 0 || (months === 0 && now.getDate() < birth.getDate())) years--;
-  if (years < 1) {
-    const totalMonths = (now.getFullYear() - birth.getFullYear()) * 12 + months;
-    return `${Math.max(totalMonths, 0)} mo`;
-  }
-  return `${years} yr${years === 1 ? "" : "s"}`;
-}
-
 export default function PetsPage() {
+  const t = useTranslations("portal.pets");
   const { pets, loaded, error, addPet, updatePet, deletePet } = usePets();
   const [formOpen, setFormOpen] = useState(false);
   const [editingPet, setEditingPet] = useState<Pet | undefined>(undefined);
   const [pendingDelete, setPendingDelete] = useState<Pet | null>(null);
+
+  function ageFromDob(dob: string | null) {
+    if (!dob) return null;
+    const birth = new Date(dob);
+    const now = new Date();
+    let years = now.getFullYear() - birth.getFullYear();
+    const months = now.getMonth() - birth.getMonth();
+    if (months < 0 || (months === 0 && now.getDate() < birth.getDate())) years--;
+    if (years < 1) {
+      const totalMonths = (now.getFullYear() - birth.getFullYear()) * 12 + months;
+      return t("ageMonths", { count: Math.max(totalMonths, 0) });
+    }
+    return t("ageYears", { count: years });
+  }
 
   function openAdd() {
     setEditingPet(undefined);
@@ -48,7 +50,7 @@ export default function PetsPage() {
   if (!loaded) {
     return (
       <div className="mx-auto max-w-4xl px-4 py-14 sm:px-6">
-        <PawLoader label="Fetching your pets…" />
+        <PawLoader label={t("loadingLabel")} />
       </div>
     );
   }
@@ -57,10 +59,10 @@ export default function PetsPage() {
     <div className="mx-auto max-w-4xl px-4 py-10 sm:px-6 sm:py-14">
       <div className="flex flex-wrap items-end justify-between gap-4">
         <div>
-          <p className="text-sm font-semibold uppercase tracking-wide text-brand-700">Pets</p>
-          <h1 className="mt-1 text-2xl font-semibold text-ink sm:text-3xl">Your pets</h1>
+          <p className="text-sm font-semibold uppercase tracking-wide text-brand-700">{t("eyebrow")}</p>
+          <h1 className="mt-1 text-2xl font-semibold text-ink sm:text-3xl">{t("title")}</h1>
           <p className="mt-2 max-w-md text-sm text-ink-muted">
-            Keep profiles up to date so the clinic has what it needs before every visit.
+            {t("subtitle")}
           </p>
         </div>
         <button
@@ -68,7 +70,7 @@ export default function PetsPage() {
           onClick={openAdd}
           className="cta-bounce inline-flex items-center gap-2 rounded-full bg-accent-500 px-5 py-2.5 text-sm font-semibold text-white hover:bg-accent-600"
         >
-          <Plus className="h-4 w-4" /> Add a pet
+          <Plus className="h-4 w-4" /> {t("addPet")}
         </button>
       </div>
 
@@ -77,8 +79,8 @@ export default function PetsPage() {
       {pets && pets.length === 0 ? (
         <div className="mt-10 flex flex-col items-center gap-3 rounded-3xl border border-dashed border-black/10 py-16 text-center">
           <PawPrint className="h-8 w-8 text-brand-300" />
-          <p className="font-semibold text-ink">No pets yet</p>
-          <p className="max-w-xs text-sm text-ink-muted">Add your first pet to start booking appointments and tracking their care.</p>
+          <p className="font-semibold text-ink">{t("emptyTitle")}</p>
+          <p className="max-w-xs text-sm text-ink-muted">{t("emptyBody")}</p>
         </div>
       ) : (
         <div className="mt-8 grid gap-4 sm:grid-cols-2">
@@ -102,7 +104,7 @@ export default function PetsPage() {
                   <div className="flex shrink-0 gap-1">
                     <button
                       type="button"
-                      aria-label={`Edit ${pet.name}`}
+                      aria-label={t("editAria", { name: pet.name })}
                       onClick={() => openEdit(pet)}
                       className="flex h-8 w-8 items-center justify-center rounded-full text-ink-muted hover:bg-surface-muted hover:text-brand-700"
                     >
@@ -110,7 +112,7 @@ export default function PetsPage() {
                     </button>
                     <button
                       type="button"
-                      aria-label={`Delete ${pet.name}`}
+                      aria-label={t("deleteAria", { name: pet.name })}
                       onClick={() => setPendingDelete(pet)}
                       className="flex h-8 w-8 items-center justify-center rounded-full text-ink-muted hover:bg-red-50 hover:text-red-600"
                     >
@@ -136,22 +138,22 @@ export default function PetsPage() {
       {pendingDelete && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 p-4" role="dialog" aria-modal="true">
           <div className="w-full max-w-sm rounded-3xl bg-surface p-6 shadow-xl">
-            <p className="font-semibold text-ink">Remove {pendingDelete.name}?</p>
-            <p className="mt-2 text-sm text-ink-muted">This can't be undone.</p>
+            <p className="font-semibold text-ink">{t("removeTitle", { name: pendingDelete.name })}</p>
+            <p className="mt-2 text-sm text-ink-muted">{t("removeBody")}</p>
             <div className="mt-5 flex gap-3">
               <button
                 type="button"
                 onClick={() => setPendingDelete(null)}
                 className="flex-1 rounded-full border border-black/10 px-4 py-2.5 text-sm font-semibold text-ink-muted hover:bg-surface-muted"
               >
-                Cancel
+                {t("cancel")}
               </button>
               <button
                 type="button"
                 onClick={handleDelete}
                 className="flex-1 rounded-full bg-red-600 px-4 py-2.5 text-sm font-semibold text-white hover:bg-red-700"
               >
-                Remove
+                {t("remove")}
               </button>
             </div>
           </div>

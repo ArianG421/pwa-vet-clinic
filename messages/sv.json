@@ -1,6 +1,7 @@
 {
   "common": {
     "loading": "Läser in…",
+    "loadingAria": "Läser in",
     "skipToContent": "Hoppa till huvudinnehållet",
     "backToSite": "Tillbaka till webbplatsen"
   },
@@ -244,6 +245,146 @@
       "roleClient": "kund",
       "roleStaff": "personal",
       "signOut": "Logga ut"
+    },
+    "dashboard": {
+      "welcomeBack": "Välkommen tillbaka",
+      "greeting": "Hej, {name} 👋",
+      "greetingFallback": "Hej där 👋",
+      "subtitle": "Här är en översikt över ditt konto.",
+      "viewRewards": "Visa förmåner",
+      "ptsTier": "{tier}-nivå",
+      "nextAppointment": "Nästa besök",
+      "manage": "Hantera",
+      "nothingBooked": "Inget bokat än.",
+      "yourPets": "Dina husdjur",
+      "noPetsYet": "Inga husdjur tillagda än.",
+      "viewProfiles": "Visa profiler"
+    },
+    "pets": {
+      "eyebrow": "Husdjur",
+      "title": "Dina husdjur",
+      "subtitle": "Håll profilerna uppdaterade så att kliniken har det som behövs inför varje besök.",
+      "addPet": "Lägg till husdjur",
+      "loadingLabel": "Hämtar dina husdjur…",
+      "emptyTitle": "Inga husdjur än",
+      "emptyBody": "Lägg till ditt första husdjur för att börja boka besök och följa deras vård.",
+      "editAria": "Redigera {name}",
+      "deleteAria": "Ta bort {name}",
+      "removeTitle": "Ta bort {name}?",
+      "removeBody": "Det här kan inte ångras.",
+      "cancel": "Avbryt",
+      "remove": "Ta bort",
+      "ageMonths": "{count} mån",
+      "ageYears": "{count, plural, one {# år} other {# år}}",
+      "speciesDog": "Hund",
+      "speciesCat": "Katt",
+      "speciesRabbit": "Kanin",
+      "speciesBird": "Fågel",
+      "speciesOther": "Annat",
+      "form": {
+        "editTitle": "Redigera husdjur",
+        "addTitle": "Lägg till husdjur",
+        "close": "Stäng",
+        "name": "Namn",
+        "species": "Art",
+        "breed": "Ras",
+        "dob": "Födelsedatum",
+        "notes": "Anteckningar",
+        "notesPlaceholder": "Allergier, temperament, allt kliniken bör veta",
+        "cancel": "Avbryt",
+        "saveChanges": "Spara ändringar",
+        "addPet": "Lägg till husdjur"
+      }
+    },
+    "appointments": {
+      "eyebrow": "Bokningar",
+      "title": "Dina bokningar",
+      "subtitle": "Boka ett besök eller hantera det som redan finns inbokat.",
+      "bookVisit": "Boka besök",
+      "loadingLabel": "Hämtar dina bokningar…",
+      "addPetFirst": "Lägg till ett husdjur under fliken Husdjur innan du bokar ditt första besök.",
+      "noAppointments": "Inga bokningar än.",
+      "cancel": "Avboka",
+      "statusPending": "Väntar",
+      "statusConfirmed": "Bekräftad",
+      "statusCompleted": "Genomförd",
+      "statusCancelled": "Avbokad",
+      "serviceFallback": "Tjänst",
+      "petFallback": "Husdjur",
+      "form": {
+        "title": "Boka en tid",
+        "needPetFirst": "Du behöver lägga till ett husdjur innan du bokar. Gå till fliken Husdjur först.",
+        "pet": "Husdjur",
+        "category": "Kategori",
+        "service": "Tjänst",
+        "date": "Datum",
+        "time": "Tid",
+        "errorAddPet": "Lägg till ett husdjur innan du bokar en tid.",
+        "submit": "Skicka bokningsförfrågan",
+        "note": "Vi bekräftar via e-post — detta skapar en väntande förfrågan."
+      }
+    },
+    "subscription": {
+      "eyebrow": "Medlemskap",
+      "title": "Ditt medlemskap",
+      "subtitle": "Enkla månadsnivåer. Avsluta när som helst — det här är en demo-kassa, ingen riktig kostnad tillkommer.",
+      "loadingLabel": "Hämtar ditt medlemskap…",
+      "activePlan": "Aktiv nivå",
+      "perMonthLong": "/månad",
+      "perMonthShort": "/mån",
+      "cancelMembership": "Avsluta medlemskap",
+      "choosePlan": "Välj {name}",
+      "checkout": {
+        "title": "Bekräfta medlemskap",
+        "billedMonthly": "/månad · faktureras månadsvis",
+        "cardNumber": "Kortnummer",
+        "expiry": "Utgångsdatum",
+        "cvc": "CVC",
+        "confirm": "Bekräfta ${amount}/månad",
+        "demoNote": "Demokassa — ingen riktig betalning genomförs."
+      }
+    },
+    "rewards": {
+      "eyebrow": "Förmåner",
+      "title": "Willowbrook Rewards",
+      "subtitle": "Varje besök ger poäng automatiskt. Lös in dem mot rabatter eller gratistjänster — inget stämpelkort behövs.",
+      "resetDemo": "Återställ demodata",
+      "loadingLabel": "Hämtar dina förmåner…",
+      "howYouEarn": {
+        "spend": { "title": "1 poäng per $1 som spenderas", "detail": "Intjänas automatiskt vid varje genomfört besök." },
+        "wellness": { "title": "Bonus för hälsobesök", "detail": "Extra poäng för rutinkontroller och vaccinationer." },
+        "referral": { "title": "Tipsa en vän", "detail": "Få 100 bonuspoäng när de bokar sitt första besök." }
+      },
+      "redeemHeading": "Lös in dina poäng",
+      "redeemSubtitle": "Poängen uppdateras direkt — det här är en live-demo, inte en mockup.",
+      "activityHeading": "Aktivitet",
+      "noActivity": "Ingen aktivitet än — poäng visas här efter ditt första besök.",
+      "redeemedDetail": "Inlöst — visa detta vid ditt nästa besök",
+      "lifetimeEarned": "{count} intjänade poäng totalt",
+      "ptsToNext": "{count} poäng till {tier}",
+      "topTierMessage": "Du har nått vår högsta nivå — tack för att du är {tier}-medlem.",
+      "redeemBtn": "Lös in",
+      "redeemedBtn": "Inlöst",
+      "needMorePts": "Behöver {count} poäng till",
+      "tiers": {
+        "tail-wagger": { "name": "Svansviftare", "perk": "1 poäng per $1 som spenderas" },
+        "loyal-companion": { "name": "Trogen Vän", "perk": "1,25 poäng per $1 + tidig bokningstillgång" },
+        "best-friend": { "name": "Bästa Vän", "perk": "1,5 poäng per $1 + en kostnadsfri årlig hälsokontroll" }
+      },
+      "catalog": {
+        "discount-5": { "name": "$5 rabatt på ditt nästa besök", "description": "Gäller alla bokningar, inget minimibelopp." },
+        "free-nail-trim": { "name": "Gratis kloklippning", "description": "En snabb klippning på oss vid vilket besök som helst." },
+        "discount-15": { "name": "$15 rabatt på ditt nästa besök", "description": "Gäller alla bokningar, inget minimibelopp." },
+        "free-follow-up": { "name": "Gratis återbesök", "description": "En kostnadsfri uppföljning inom 30 dagar efter ett besök." },
+        "discount-50": { "name": "$50 rabatt på ett ingrepp", "description": "Gäller kirurgi, tandvård eller ortopediska ingrepp." },
+        "free-wellness": { "name": "Gratis hälsokontroll", "description": "En fullständig kontroll från nos till svans, på oss (värde upp till $90)." }
+      },
+      "seed": {
+        "seed-1": { "label": "Hälsokontroll", "detail": "Besök 12 juni" },
+        "seed-2": { "label": "Vaccinationspaket", "detail": "Besök 12 juni" },
+        "seed-3": { "label": "Blodprovspanel", "detail": "Besök 3 juli" },
+        "seed-4": { "label": "Digital röntgen", "detail": "Besök 22 juli" }
+      }
     }
   },
   "services": {

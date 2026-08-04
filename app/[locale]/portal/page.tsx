@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { Link } from "@/lib/i18n/navigation";
+import { useTranslations } from "next-intl";
 import { ArrowRight, CalendarDays, Gift, PawPrint } from "lucide-react";
 import { useLoyalty } from "@/hooks/use-loyalty";
 import { usePets } from "@/hooks/use-pets";
@@ -21,11 +22,13 @@ function formatDateTime(iso: string) {
 }
 
 export default function PortalDashboard() {
+  const t = useTranslations("portal.dashboard");
+  const tRewards = useTranslations("portal.rewards");
   const { loaded: loyaltyLoaded, balance, lifetimePoints } = useLoyalty();
   const { pets, loaded: petsLoaded } = usePets();
   const { appointments, loaded: appointmentsLoaded } = useAppointments();
   const [email, setEmail] = useState<string | null>(null);
-  const tier = getTier(lifetimePoints);
+  const tier = getTier((key) => tRewards(`tiers.${key}`), lifetimePoints);
 
   useEffect(() => {
     createClient()
@@ -39,11 +42,11 @@ export default function PortalDashboard() {
 
   return (
     <div className="mx-auto max-w-5xl px-4 py-10 sm:px-6 sm:py-14">
-      <p className="text-sm font-semibold uppercase tracking-wide text-brand-700">Welcome back</p>
+      <p className="text-sm font-semibold uppercase tracking-wide text-brand-700">{t("welcomeBack")}</p>
       <h1 className="mt-1 text-2xl font-semibold text-ink sm:text-3xl">
-        {email ? `Hi, ${email.split("@")[0]} 👋` : "Hi there 👋"}
+        {email ? t("greeting", { name: email.split("@")[0] }) : t("greetingFallback")}
       </h1>
-      <p className="mt-2 max-w-xl text-sm text-ink-muted">Here's a snapshot of your account.</p>
+      <p className="mt-2 max-w-xl text-sm text-ink-muted">{t("subtitle")}</p>
 
       <div className="mt-8 grid gap-4 sm:grid-cols-3">
         <Link href="/portal/rewards" className="group rounded-2xl border border-black/5 bg-surface p-5 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md">
@@ -53,13 +56,13 @@ export default function PortalDashboard() {
           {loyaltyLoaded ? (
             <>
               <p className="mt-3 text-2xl font-bold text-ink">{balance.toLocaleString()} pts</p>
-              <p className="text-xs text-ink-muted">{tier.name} tier</p>
+              <p className="text-xs text-ink-muted">{t("ptsTier", { tier: tier.name })}</p>
             </>
           ) : (
             <div className="mt-3"><PawLoader size="sm" label="" /></div>
           )}
           <span className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-brand-700 group-hover:text-brand-800">
-            View rewards <ArrowRight className="h-4 w-4" />
+            {t("viewRewards")} <ArrowRight className="h-4 w-4" />
           </span>
         </Link>
 
@@ -67,7 +70,7 @@ export default function PortalDashboard() {
           <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-50 text-brand-700">
             <CalendarDays className="h-5 w-5" />
           </span>
-          <p className="mt-3 text-sm font-semibold text-ink">Next appointment</p>
+          <p className="mt-3 text-sm font-semibold text-ink">{t("nextAppointment")}</p>
           {!appointmentsLoaded ? (
             <div className="mt-1"><PawLoader size="sm" label="" /></div>
           ) : nextAppointment ? (
@@ -75,10 +78,10 @@ export default function PortalDashboard() {
               {nextAppointment.services?.name} — {formatDateTime(nextAppointment.requested_at)}
             </p>
           ) : (
-            <p className="mt-1 text-xs text-ink-muted">Nothing booked yet.</p>
+            <p className="mt-1 text-xs text-ink-muted">{t("nothingBooked")}</p>
           )}
           <Link href="/portal/appointments" className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-brand-700 hover:text-brand-800">
-            Manage <ArrowRight className="h-4 w-4" />
+            {t("manage")} <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
 
@@ -86,16 +89,16 @@ export default function PortalDashboard() {
           <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-50 text-brand-700">
             <PawPrint className="h-5 w-5" />
           </span>
-          <p className="mt-3 text-sm font-semibold text-ink">Your pets</p>
+          <p className="mt-3 text-sm font-semibold text-ink">{t("yourPets")}</p>
           {!petsLoaded ? (
             <div className="mt-1"><PawLoader size="sm" label="" /></div>
           ) : pets && pets.length > 0 ? (
             <p className="mt-1 text-xs text-ink-muted">{pets.map((p) => p.name).join(" · ")}</p>
           ) : (
-            <p className="mt-1 text-xs text-ink-muted">No pets added yet.</p>
+            <p className="mt-1 text-xs text-ink-muted">{t("noPetsYet")}</p>
           )}
           <Link href="/portal/pets" className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-brand-700 hover:text-brand-800">
-            View profiles <ArrowRight className="h-4 w-4" />
+            {t("viewProfiles")} <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
       </div>

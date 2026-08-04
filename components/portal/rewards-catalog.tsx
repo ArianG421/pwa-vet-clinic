@@ -1,8 +1,9 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 import { Check, Gift, Tag } from "lucide-react";
-import { rewardsCatalog } from "@/lib/data/loyalty";
+import { getRewardsCatalog } from "@/lib/data/loyalty";
 
 export function RewardsCatalog({
   balance,
@@ -11,6 +12,8 @@ export function RewardsCatalog({
   balance: number;
   onRedeem: (rewardId: string, name: string, pointsCost: number) => void;
 }) {
+  const t = useTranslations("portal.rewards");
+  const rewardsCatalog = getRewardsCatalog((key) => t(`catalog.${key}`));
   const [justRedeemed, setJustRedeemed] = useState<string | null>(null);
 
   function handleRedeem(id: string, name: string, cost: number) {
@@ -49,12 +52,12 @@ export function RewardsCatalog({
             >
               {redeemed ? (
                 <>
-                  <Check className="h-4 w-4" /> Redeemed
+                  <Check className="h-4 w-4" /> {t("redeemedBtn")}
                 </>
               ) : affordable ? (
-                "Redeem"
+                t("redeemBtn")
               ) : (
-                `Need ${(reward.pointsCost - balance).toLocaleString()} more pts`
+                t("needMorePts", { count: (reward.pointsCost - balance).toLocaleString() })
               )}
             </button>
           </div>

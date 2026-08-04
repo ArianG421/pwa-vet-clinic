@@ -1,3 +1,6 @@
+"use client";
+
+import { useTranslations } from "next-intl";
 import { ArrowDownCircle, ArrowUpCircle } from "lucide-react";
 import type { LoyaltyTransaction } from "@/lib/data/loyalty";
 
@@ -6,8 +9,10 @@ function formatDate(iso: string) {
 }
 
 export function PointsHistory({ transactions }: { transactions: LoyaltyTransaction[] }) {
+  const t = useTranslations("portal.rewards");
+
   if (transactions.length === 0) {
-    return <p className="text-sm text-ink-muted">No activity yet — points appear here after your first visit.</p>;
+    return <p className="text-sm text-ink-muted">{t("noActivity")}</p>;
   }
 
   return (

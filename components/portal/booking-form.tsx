@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState, type FormEvent } from "react";
+import { useTranslations } from "next-intl";
 import { Loader2, X } from "lucide-react";
 import type { Pet, ServiceCategoryRow, ServiceRow } from "@/lib/supabase/types";
 
@@ -30,6 +31,7 @@ export function BookingForm({
   onSubmit: (petId: string, serviceId: string, requestedAtIso: string) => Promise<{ error: string | null }>;
   onClose: () => void;
 }) {
+  const t = useTranslations("portal.appointments.form");
   const [petId, setPetId] = useState(pets[0]?.id ?? "");
   const [categoryId, setCategoryId] = useState(categories[0]?.id ?? "");
   const servicesInCategory = useMemo(() => services.filter((s) => s.category_id === categoryId), [services, categoryId]);
@@ -48,7 +50,7 @@ export function BookingForm({
   async function handleSubmit(e: FormEvent) {
     e.preventDefault();
     if (!petId || !serviceId) {
-      setError("Add a pet before booking an appointment.");
+      setError(t("errorAddPet"));
       return;
     }
     setSubmitting(true);
@@ -64,7 +66,7 @@ export function BookingForm({
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 p-4" role="dialog" aria-modal="true">
       <div className="w-full max-w-md rounded-3xl bg-surface p-6 shadow-xl">
         <div className="flex items-center justify-between">
-          <h2 className="text-lg font-semibold text-ink">Book an appointment</h2>
+          <h2 className="text-lg font-semibold text-ink">{t("title")}</h2>
           <button type="button" onClick={onClose} aria-label="Close" className="text-ink-muted hover:text-ink">
             <X className="h-5 w-5" />
           </button>
@@ -72,12 +74,12 @@ export function BookingForm({
 
         {pets.length === 0 ? (
           <p className="mt-4 text-sm text-ink-muted">
-            You'll need to add a pet before booking. Head to the Pets tab first.
+            {t("needPetFirst")}
           </p>
         ) : (
           <form onSubmit={handleSubmit} className="mt-5 space-y-4">
             <div>
-              <label htmlFor="booking-pet" className="text-sm font-medium text-ink">Pet</label>
+              <label htmlFor="booking-pet" className="text-sm font-medium text-ink">{t("pet")}</label>
               <select
                 id="booking-pet"
                 value={petId}
@@ -91,7 +93,7 @@ export function BookingForm({
             </div>
 
             <div>
-              <label htmlFor="booking-category" className="text-sm font-medium text-ink">Category</label>
+              <label htmlFor="booking-category" className="text-sm font-medium text-ink">{t("category")}</label>
               <select
                 id="booking-category"
                 value={categoryId}
@@ -105,7 +107,7 @@ export function BookingForm({
             </div>
 
             <div>
-              <label htmlFor="booking-service" className="text-sm font-medium text-ink">Service</label>
+              <label htmlFor="booking-service" className="text-sm font-medium text-ink">{t("service")}</label>
               <select
                 id="booking-service"
                 value={serviceId}
@@ -120,7 +122,7 @@ export function BookingForm({
 
             <div className="grid grid-cols-2 gap-3">
               <div>
-                <label htmlFor="booking-date" className="text-sm font-medium text-ink">Date</label>
+                <label htmlFor="booking-date" className="text-sm font-medium text-ink">{t("date")}</label>
                 <input
                   id="booking-date"
                   type="date"
@@ -132,15 +134,15 @@ export function BookingForm({
                 />
               </div>
               <div>
-                <label htmlFor="booking-time" className="text-sm font-medium text-ink">Time</label>
+                <label htmlFor="booking-time" className="text-sm font-medium text-ink">{t("time")}</label>
                 <select
                   id="booking-time"
                   value={time}
                   onChange={(e) => setTime(e.target.value)}
                   className="mt-1.5 w-full rounded-xl border border-black/10 bg-surface px-3 py-2.5 text-sm text-ink outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-200"
                 >
-                  {TIME_SLOTS.map((t) => (
-                    <option key={t} value={t}>{t}</option>
+                  {TIME_SLOTS.map((slot) => (
+                    <option key={slot} value={slot}>{slot}</option>
                   ))}
                 </select>
               </div>
@@ -154,9 +156,9 @@ export function BookingForm({
               className="flex w-full items-center justify-center gap-2 rounded-full bg-accent-500 px-4 py-2.5 text-sm font-semibold text-white hover:bg-accent-600 disabled:opacity-60"
             >
               {submitting && <Loader2 className="h-4 w-4 animate-spin" />}
-              Request appointment
+              {t("submit")}
             </button>
-            <p className="text-center text-xs text-ink-muted">We'll confirm by email — this creates a pending request.</p>
+            <p className="text-center text-xs text-ink-muted">{t("note")}</p>
           </form>
         )}
       </div>
