@@ -1,4 +1,5 @@
 import { Info } from "lucide-react";
+import { getTranslations } from "next-intl/server";
 import { PortalNav } from "@/components/portal/portal-nav";
 import { SignOutButton } from "@/components/sign-out-button";
 import { isSupabaseConfigured } from "@/lib/supabase/config";
@@ -17,15 +18,15 @@ export default async function PortalLayout({ children }: { children: React.React
     }
   }
 
+  const t = await getTranslations("portal.layout");
+
   return (
     <>
       <PortalNav />
       <div className="flex flex-wrap items-center justify-between gap-2 bg-accent-50 px-4 py-2 text-xs text-accent-700 sm:px-6">
         <span className="inline-flex items-center gap-1.5">
           <Info className="h-3.5 w-3.5" />
-          {user
-            ? "Live demo — pets, appointments, and membership are real. Rewards points sync once staff can mark visits complete."
-            : "Preview build — sign in to manage real pets, appointments, and membership."}
+          {user ? t("liveDemo") : t("previewBuild")}
         </span>
         {user && (
           <span className="flex items-center gap-3">
@@ -36,7 +37,7 @@ export default async function PortalLayout({ children }: { children: React.React
                   role === "staff" ? "bg-ink text-white" : "bg-brand-100 text-brand-700"
                 }`}
               >
-                {role}
+                {role === "staff" ? t("roleStaff") : t("roleClient")}
               </span>
             )}
             <SignOutButton />

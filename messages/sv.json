@@ -218,6 +218,34 @@
   "breadcrumbs": {
     "home": "Hem"
   },
+  "login": {
+    "title": "Logga in",
+    "subtitle": "Ange din e-postadress så skickar vi en inloggningslänk — inget lösenord att komma ihåg.",
+    "email": "E-post",
+    "sendLink": "Skicka inloggningslänk",
+    "notConfigured": "Den här demons backend är inte ansluten än — kom tillbaka snart.",
+    "checkEmailTitle": "Kolla din e-post",
+    "checkEmailBody": "Vi har skickat en inloggningslänk till <bold>{email}</bold>. Klicka på den för att slutföra inloggningen — den här fliken uppdateras automatiskt.",
+    "useDifferentEmail": "Använd en annan e-postadress",
+    "backToSite": "← Tillbaka till webbplatsen"
+  },
+  "portal": {
+    "nav": {
+      "portalSuffix": "Portal",
+      "dashboard": "Översikt",
+      "pets": "Husdjur",
+      "appointments": "Bokningar",
+      "rewards": "Förmåner",
+      "membership": "Medlemskap"
+    },
+    "layout": {
+      "liveDemo": "Live-demo — husdjur, bokningar och medlemskap är riktiga. Poäng synkas när personal kan markera besök som avslutade.",
+      "previewBuild": "Förhandsversion — logga in för att hantera riktiga husdjur, bokningar och medlemskap.",
+      "roleClient": "kund",
+      "roleStaff": "personal",
+      "signOut": "Logga ut"
+    }
+  },
   "services": {
     "categories": {
       "surgery": {

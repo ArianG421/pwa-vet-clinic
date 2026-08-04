@@ -1,19 +1,22 @@
 "use client";
 
 import { Link, usePathname } from "@/lib/i18n/navigation";
+import { useTranslations } from "next-intl";
 import { LayoutDashboard, PawPrint, CalendarDays, Gift, CreditCard, ArrowLeft } from "lucide-react";
 import { site } from "@/lib/site";
 
 const PORTAL_NAV = [
-  { href: "/portal", label: "Dashboard", icon: LayoutDashboard },
-  { href: "/portal/pets", label: "Pets", icon: PawPrint },
-  { href: "/portal/appointments", label: "Appointments", icon: CalendarDays },
-  { href: "/portal/rewards", label: "Rewards", icon: Gift },
-  { href: "/portal/subscription", label: "Membership", icon: CreditCard },
+  { href: "/portal", key: "dashboard", icon: LayoutDashboard },
+  { href: "/portal/pets", key: "pets", icon: PawPrint },
+  { href: "/portal/appointments", key: "appointments", icon: CalendarDays },
+  { href: "/portal/rewards", key: "rewards", icon: Gift },
+  { href: "/portal/subscription", key: "membership", icon: CreditCard },
 ] as const;
 
 export function PortalNav() {
   const pathname = usePathname();
+  const t = useTranslations("portal.nav");
+  const tCommon = useTranslations("common");
 
   return (
     <header className="sticky top-0 z-50 border-b border-black/5 bg-surface/90 backdrop-blur">
@@ -22,7 +25,7 @@ export function PortalNav() {
           <span className="flex h-9 w-9 items-center justify-center rounded-full bg-brand-600 text-white">
             <PawPrint className="h-5 w-5" />
           </span>
-          <span className="text-base sm:text-lg">{site.shortName} Portal</span>
+          <span className="text-base sm:text-lg">{site.shortName} {t("portalSuffix")}</span>
         </Link>
 
         <nav className="hidden items-center gap-1 lg:flex" aria-label="Member portal">
@@ -38,14 +41,14 @@ export function PortalNav() {
                 }`}
               >
                 <item.icon className="h-4 w-4" />
-                {item.label}
+                {t(item.key)}
               </Link>
             );
           })}
         </nav>
 
         <Link href="/" className="flex items-center gap-1.5 text-sm font-medium text-ink-muted hover:text-brand-700">
-          <ArrowLeft className="h-4 w-4" /> <span className="hidden sm:inline">Back to site</span>
+          <ArrowLeft className="h-4 w-4" /> <span className="hidden sm:inline">{tCommon("backToSite")}</span>
         </Link>
       </div>
 
@@ -62,7 +65,7 @@ export function PortalNav() {
               }`}
             >
               <item.icon className="h-3.5 w-3.5" />
-              {item.label}
+              {t(item.key)}
             </Link>
           );
         })}

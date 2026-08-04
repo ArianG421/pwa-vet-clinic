@@ -2,6 +2,7 @@
 
 import { useState, type FormEvent } from "react";
 import { useSearchParams } from "next/navigation";
+import { useTranslations } from "next-intl";
 import { Link } from "@/lib/i18n/navigation";
 import { Mail, PawPrint, Loader2, CheckCircle2, AlertTriangle } from "lucide-react";
 import { createClient } from "@/lib/supabase/client";
@@ -10,6 +11,7 @@ import { isSupabaseConfigured } from "@/lib/supabase/config";
 type Status = "idle" | "sending" | "sent" | "error";
 
 export function LoginForm() {
+  const t = useTranslations("login");
   const searchParams = useSearchParams();
   const redirect = searchParams.get("redirect") ?? "/portal";
   const [email, setEmail] = useState("");
@@ -19,7 +21,7 @@ export function LoginForm() {
   async function handleSubmit(e: FormEvent) {
     e.preventDefault();
     if (!isSupabaseConfigured) {
-      setError("This demo's backend isn't connected yet — check back shortly.");
+      setError(t("notConfigured"));
       setStatus("error");
       return;
     }
@@ -56,29 +58,31 @@ export function LoginForm() {
         {status === "sent" ? (
           <div className="text-center">
             <CheckCircle2 className="mx-auto h-9 w-9 text-brand-600" />
-            <p className="mt-3 text-lg font-semibold text-ink">Check your email</p>
+            <p className="mt-3 text-lg font-semibold text-ink">{t("checkEmailTitle")}</p>
             <p className="mt-2 text-sm text-ink-muted">
-              We sent a sign-in link to <span className="font-medium text-ink">{email}</span>.
-              Click it to finish signing in — this tab will pick it up automatically.
+              {t.rich("checkEmailBody", {
+                email,
+                bold: (chunks) => <span className="font-medium text-ink">{chunks}</span>,
+              })}
             </p>
             <button
               type="button"
               onClick={() => setStatus("idle")}
               className="mt-6 text-sm font-semibold text-brand-700 hover:text-brand-800"
             >
-              Use a different email
+              {t("useDifferentEmail")}
             </button>
           </div>
         ) : (
           <>
-            <h1 className="text-xl font-semibold text-ink">Sign in</h1>
+            <h1 className="text-xl font-semibold text-ink">{t("title")}</h1>
             <p className="mt-1.5 text-sm text-ink-muted">
-              Enter your email and we'll send you a magic link — no password to remember.
+              {t("subtitle")}
             </p>
 
             <form onSubmit={handleSubmit} className="mt-6 space-y-4">
               <div>
-                <label htmlFor="email" className="text-sm font-medium text-ink">Email</label>
+                <label htmlFor="email" className="text-sm font-medium text-ink">{t("email")}</label>
                 <div className="relative mt-1.5">
                   <Mail className="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-ink-muted" />
                   <input
@@ -105,7 +109,7 @@ export function LoginForm() {
                 className="flex w-full items-center justify-center gap-2 rounded-full bg-brand-700 px-6 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-800 disabled:opacity-60"
               >
                 {status === "sending" && <Loader2 className="h-4 w-4 animate-spin" />}
-                Send magic link
+                {t("sendLink")}
               </button>
             </form>
           </>
@@ -113,7 +117,7 @@ export function LoginForm() {
       </div>
 
       <p className="mt-6 text-center text-xs text-ink-muted">
-        <Link href="/" className="hover:text-brand-700">← Back to the site</Link>
+        <Link href="/" className="hover:text-brand-700">{t("backToSite")}</Link>
       </p>
     </div>
   );

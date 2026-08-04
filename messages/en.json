@@ -218,6 +218,34 @@
   "breadcrumbs": {
     "home": "Home"
   },
+  "login": {
+    "title": "Sign in",
+    "subtitle": "Enter your email and we'll send you a magic link — no password to remember.",
+    "email": "Email",
+    "sendLink": "Send magic link",
+    "notConfigured": "This demo's backend isn't connected yet — check back shortly.",
+    "checkEmailTitle": "Check your email",
+    "checkEmailBody": "We sent a sign-in link to <bold>{email}</bold>. Click it to finish signing in — this tab will pick it up automatically.",
+    "useDifferentEmail": "Use a different email",
+    "backToSite": "← Back to the site"
+  },
+  "portal": {
+    "nav": {
+      "portalSuffix": "Portal",
+      "dashboard": "Dashboard",
+      "pets": "Pets",
+      "appointments": "Appointments",
+      "rewards": "Rewards",
+      "membership": "Membership"
+    },
+    "layout": {
+      "liveDemo": "Live demo — pets, appointments, and membership are real. Rewards points sync once staff can mark visits complete.",
+      "previewBuild": "Preview build — sign in to manage real pets, appointments, and membership.",
+      "roleClient": "client",
+      "roleStaff": "staff",
+      "signOut": "Sign out"
+    }
+  },
   "services": {
     "categories": {
       "surgery": {
