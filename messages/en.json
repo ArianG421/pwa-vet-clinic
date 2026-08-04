@@ -237,7 +237,12 @@
     "sendLink": "Send magic link",
     "notConfigured": "This demo's backend isn't connected yet — check back shortly.",
     "checkEmailTitle": "Check your email",
-    "checkEmailBody": "We sent a sign-in link to <bold>{email}</bold>. Click it to finish signing in — this tab will pick it up automatically.",
+    "checkEmailBody": "We sent a sign-in link and a 6-digit code to <bold>{email}</bold>. Tap the link on this device, or enter the code below — handy if the link opens in a different app.",
+    "orEnterCode": "Or enter the code from the email",
+    "codeLabel": "6-digit code",
+    "verifyCode": "Verify code",
+    "verifying": "Verifying…",
+    "invalidCode": "That code didn't work — check it and try again.",
     "useDifferentEmail": "Use a different email",
     "backToSite": "← Back to the site"
   },

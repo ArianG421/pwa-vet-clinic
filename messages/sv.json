@@ -237,7 +237,12 @@
     "sendLink": "Skicka inloggningslänk",
     "notConfigured": "Den här demons backend är inte ansluten än — kom tillbaka snart.",
     "checkEmailTitle": "Kolla din e-post",
-    "checkEmailBody": "Vi har skickat en inloggningslänk till <bold>{email}</bold>. Klicka på den för att slutföra inloggningen — den här fliken uppdateras automatiskt.",
+    "checkEmailBody": "Vi har skickat en inloggningslänk och en 6-siffrig kod till <bold>{email}</bold>. Tryck på länken på den här enheten, eller ange koden nedan — praktiskt om länken öppnas i en annan app.",
+    "orEnterCode": "Eller ange koden från e-postmeddelandet",
+    "codeLabel": "6-siffrig kod",
+    "verifyCode": "Verifiera kod",
+    "verifying": "Verifierar…",
+    "invalidCode": "Koden fungerade inte — kontrollera den och försök igen.",
     "useDifferentEmail": "Använd en annan e-postadress",
     "backToSite": "← Tillbaka till webbplatsen"
   },
