@@ -1,6 +1,6 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/lib/i18n/navigation";
-import { MapPin, Phone, Mail } from "lucide-react";
+import { MapPin, Phone, Mail, ExternalLink } from "lucide-react";
 import { navHrefs, site } from "@/lib/site";
 
 const NAV_KEYS: Record<string, string> = {
@@ -23,12 +23,22 @@ export function SiteFooter() {
         <div>
           <p className="font-semibold text-ink">{site.name}</p>
           <p className="mt-2 text-sm text-ink-muted">{tSite("tagline")}</p>
-          <div className="mt-4 flex gap-4 text-sm">
-            <a href={site.social.instagram} className="text-ink-muted underline-offset-4 hover:text-brand-700 hover:underline">
-              Instagram
+          <div className="mt-4 space-y-2 text-sm">
+            <a
+              href={site.social.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-ink-muted hover:text-brand-700"
+            >
+              <ExternalLink className="h-4 w-4 shrink-0" /> {site.social.instagramHandle}
             </a>
-            <a href={site.social.facebook} className="text-ink-muted underline-offset-4 hover:text-brand-700 hover:underline">
-              Facebook
+            <a
+              href={site.social.facebook}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-ink-muted hover:text-brand-700"
+            >
+              <ExternalLink className="h-4 w-4 shrink-0" /> {site.social.facebookHandle}
             </a>
           </div>
         </div>

@@ -7,9 +7,9 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const outDir = path.join(__dirname, "..", "public", "icons");
 mkdirSync(outDir, { recursive: true });
 
-// Source: Öresunds Veterinärklinik's real favicon (blue cross + dog/cat/
-// rabbit silhouette), downloaded from their live site into public/brand-ref.
-const SOURCE = path.join(__dirname, "..", "public", "brand-ref", "favicon.png");
+// Source: Öresunds Veterinärklinik's real logo mark (blue cross + dog/cat/
+// rabbit silhouette), the same file used in-app for nav headers.
+const SOURCE = path.join(__dirname, "..", "public", "images", "logo-mark.png");
 // White, not brand blue — the source image is already a blue cross with
 // transparent corners, so a blue backing would wash it out to near-invisible.
 const BACKING = "#ffffff";
@@ -31,10 +31,25 @@ async function roundedIcon({ size, padding, background }) {
   return sharp(bg).composite([{ input: mark, gravity: "center" }]).png();
 }
 
+// Maskable icons get no baked-in rounded corners or transparency — the OS
+// applies its own mask shape (circle/squircle/rounded-square) on top, and
+// content must sit inside the spec's "safe zone" (a centered circle at 80%
+// of the icon's width) or it gets clipped. Firefox for Android has a known
+// bug where it doesn't crop maskable icons at all if they under-fill that
+// zone — the previous version here used ~45% fill, which rendered as
+// mostly blank white space on Android/Firefox (fine on iOS, which ignores
+// "maskable" and uses apple-touch-icon instead).
+async function maskableIcon({ size, background }) {
+  const padding = Math.round(size * 0.1); // 10% margin = 80% safe-zone fill
+  const inner = size - padding * 2;
+  const bg = sharp({ create: { width: size, height: size, channels: 4, background } });
+  const mark = await sharp(SOURCE).resize(inner, inner, { fit: "contain", background: { r: 0, g: 0, b: 0, alpha: 0 } }).toBuffer();
+  return bg.composite([{ input: mark, gravity: "center" }]).png();
+}
+
 const targets = [
   { file: "icon-192.png", size: 192, padding: 30 },
   { file: "icon-512.png", size: 512, padding: 80 },
-  { file: "maskable-512.png", size: 512, padding: 140 },
   { file: "apple-touch-icon.png", size: 180, padding: 26 },
 ];
 
@@ -43,6 +58,10 @@ for (const t of targets) {
   await img.toFile(path.join(outDir, t.file));
   console.log("wrote", t.file);
 }
+
+const maskable = await maskableIcon({ size: 512, background: BACKING });
+await maskable.toFile(path.join(outDir, "maskable-512.png"));
+console.log("wrote maskable-512.png");
 
 // Favicon (32px) placed at app root for Next's static favicon convention.
 const favicon = await roundedIcon({ size: 32, padding: 3, background: BACKING });

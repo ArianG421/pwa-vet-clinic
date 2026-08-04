@@ -10,9 +10,12 @@ export const site = {
     line1: "Storgatan 12",
     line2: "235 32 Vellinge",
   },
+  // Real handles — unlike phone/address/email, these are genuinely theirs.
   social: {
-    instagram: "https://instagram.com",
-    facebook: "https://facebook.com",
+    instagram: "https://www.instagram.com/oresunds_vet_vellinge/",
+    instagramHandle: "@oresunds_vet_vellinge",
+    facebook: "https://www.facebook.com/Oresundvellinge/",
+    facebookHandle: "Öresunds Veterinärklinik Vellinge",
   },
 } as const;
 
