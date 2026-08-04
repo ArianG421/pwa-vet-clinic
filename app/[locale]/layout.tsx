@@ -9,6 +9,7 @@ import { routing } from "@/lib/i18n/routing";
 import { RegisterServiceWorker } from "@/components/register-sw";
 import { PawClickEffect } from "@/components/paw-click-effect";
 import { ScrollToTop } from "@/components/scroll-to-top";
+import { InstallPrompt } from "@/components/install-prompt";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -67,7 +68,10 @@ export default async function LocaleLayout({
         <a href="#main-content" className="skip-link">
           {t("skipToContent")}
         </a>
-        <NextIntlClientProvider locale={locale} messages={messages}>{children}</NextIntlClientProvider>
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          {children}
+          <InstallPrompt />
+        </NextIntlClientProvider>
         <ScrollToTop />
         <PawClickEffect />
         <RegisterServiceWorker />

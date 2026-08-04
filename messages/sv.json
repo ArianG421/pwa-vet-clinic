@@ -5,6 +5,16 @@
     "skipToContent": "Hoppa till huvudinnehållet",
     "backToSite": "Tillbaka till webbplatsen"
   },
+  "install": {
+    "title": "Installera {shortName}",
+    "body": "Lägg till den på din hemskärm för snabb åtkomst, precis som en app — ingen app store behövs.",
+    "installButton": "Installera",
+    "notNow": "Inte nu",
+    "dismissAria": "Stäng",
+    "iosBody": "Tryck på delningsikonen och sedan \"Lägg till på hemskärmen\".",
+    "installedTitle": "Installerad!",
+    "installedBody": "Du hittar den på din hemskärm från och med nu."
+  },
   "site": {
     "tagline": "Omtänksam, modern vård för alla i familjen.",
     "description": "Willowbrook Veterinärklinik erbjuder förebyggande vård, kirurgi, tandvård, diagnostik och akutvård för hundar, katter och smådjur — med onlinebokning och en medlemsportal.",
