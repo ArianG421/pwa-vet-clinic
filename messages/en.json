@@ -20,9 +20,18 @@
     "tagline": "Compassionate, modern care for every member of the family.",
     "description": "Willowbrook Veterinary Clinic offers preventive care, surgery, dental, diagnostics, and emergency services for dogs, cats, and small pets — with online booking and a member portal.",
     "hours": [
-      { "label": "Monday – Friday", "value": "8:00 AM – 6:00 PM" },
-      { "label": "Saturday", "value": "9:00 AM – 2:00 PM" },
-      { "label": "Sunday", "value": "Closed (Emergency line active)" }
+      {
+        "label": "Monday – Friday",
+        "value": "8:00 AM – 6:00 PM"
+      },
+      {
+        "label": "Saturday",
+        "value": "9:00 AM – 2:00 PM"
+      },
+      {
+        "label": "Sunday",
+        "value": "Closed (Emergency line active)"
+      }
     ]
   },
   "nav": {
@@ -46,10 +55,22 @@
     "bookAppointment": "Book an appointment",
     "exploreServices": "Explore services",
     "features": {
-      "sameWeek": { "label": "Same-week appointments", "detail": "Priority booking for members" },
-      "inHouse": { "label": "In-house diagnostics", "detail": "Results in under an hour" },
-      "memberPlans": { "label": "Member plans", "detail": "3 tiers, cancel anytime" },
-      "triageLine": { "label": "24/7 triage line", "detail": "For existing clients" }
+      "sameWeek": {
+        "label": "Same-week appointments",
+        "detail": "Priority booking for members"
+      },
+      "inHouse": {
+        "label": "In-house diagnostics",
+        "detail": "Results in under an hour"
+      },
+      "memberPlans": {
+        "label": "Member plans",
+        "detail": "3 tiers, cancel anytime"
+      },
+      "triageLine": {
+        "label": "24/7 triage line",
+        "detail": "For existing clients"
+      }
     },
     "whyWillowbrook": {
       "eyebrow": "Why Willowbrook",
@@ -189,19 +210,47 @@
     "facilityHeading": "Our facility",
     "facilityBody": "Our clinic was designed around reducing stress for anxious patients — from separate waiting areas for dogs and cats to quiet exam rooms and equipment that keeps most diagnostics in-house, so your pet isn't waiting days for answers.",
     "facilityHighlights": {
-      "dogCatAreas": { "title": "Separate dog & cat waiting areas", "detail": "Lower-stress visits for every patient, with species-specific exam rooms." },
-      "labImaging": { "title": "In-house lab & imaging", "detail": "Digital X-ray, ultrasound, and same-hour bloodwork on site." },
-      "anaesthesia": { "title": "Modern anaesthesia monitoring", "detail": "Continuous monitoring for every sedated or surgical procedure." },
-      "fearFree": { "title": "Fear-free handling techniques", "detail": "Staff trained in low-stress handling for anxious or reactive pets." }
+      "dogCatAreas": {
+        "title": "Separate dog & cat waiting areas",
+        "detail": "Lower-stress visits for every patient, with species-specific exam rooms."
+      },
+      "labImaging": {
+        "title": "In-house lab & imaging",
+        "detail": "Digital X-ray, ultrasound, and same-hour bloodwork on site."
+      },
+      "anaesthesia": {
+        "title": "Modern anaesthesia monitoring",
+        "detail": "Continuous monitoring for every sedated or surgical procedure."
+      },
+      "fearFree": {
+        "title": "Fear-free handling techniques",
+        "detail": "Staff trained in low-stress handling for anxious or reactive pets."
+      }
     },
     "teamHeading": "Meet the team",
     "teamBody": "A small, experienced team that knows your pets by name — not just by chart number.",
     "team": {
       "members": {
-        "elena-cross": { "name": "Dr. Elena Cross, DVM", "role": "Founder & Lead Veterinarian", "bio": "15 years in small-animal practice with a focus on soft-tissue surgery and orthopedics." },
-        "marcus-ahn": { "name": "Dr. Marcus Ahn, DVM", "role": "Associate Veterinarian", "bio": "Special interest in internal medicine, endoscopy, and senior pet wellness." },
-        "priya-nandakumar": { "name": "Priya Nandakumar, RVT", "role": "Lead Veterinary Technician", "bio": "Runs the diagnostics lab and coordinates surgical anaesthesia and monitoring." },
-        "jonas-weber": { "name": "Jonas Weber", "role": "Client Care Coordinator", "bio": "Your first call for bookings, membership questions, and pre-visit prep." }
+        "elena-cross": {
+          "name": "Dr. Elena Cross, DVM",
+          "role": "Founder & Lead Veterinarian",
+          "bio": "15 years in small-animal practice with a focus on soft-tissue surgery and orthopedics."
+        },
+        "marcus-ahn": {
+          "name": "Dr. Marcus Ahn, DVM",
+          "role": "Associate Veterinarian",
+          "bio": "Special interest in internal medicine, endoscopy, and senior pet wellness."
+        },
+        "priya-nandakumar": {
+          "name": "Priya Nandakumar, RVT",
+          "role": "Lead Veterinary Technician",
+          "bio": "Runs the diagnostics lab and coordinates surgical anaesthesia and monitoring."
+        },
+        "jonas-weber": {
+          "name": "Jonas Weber",
+          "role": "Client Care Coordinator",
+          "bio": "Your first call for bookings, membership questions, and pre-visit prep."
+        }
       }
     }
   },
@@ -367,9 +416,18 @@
       "resetDemo": "Reset demo data",
       "loadingLabel": "Fetching your rewards…",
       "howYouEarn": {
-        "spend": { "title": "1 point per $1 spent", "detail": "Earned automatically on every completed visit." },
-        "wellness": { "title": "Bonus for wellness visits", "detail": "Extra points for routine check-ups and vaccinations." },
-        "referral": { "title": "Refer a friend", "detail": "Get 100 bonus points when they book their first visit." }
+        "spend": {
+          "title": "1 point per $1 spent",
+          "detail": "Earned automatically on every completed visit."
+        },
+        "wellness": {
+          "title": "Bonus for wellness visits",
+          "detail": "Extra points for routine check-ups and vaccinations."
+        },
+        "referral": {
+          "title": "Refer a friend",
+          "detail": "Get 100 bonus points when they book their first visit."
+        }
       },
       "redeemHeading": "Redeem your points",
       "redeemSubtitle": "Points update instantly — this is a live demo, not a mockup.",
@@ -383,23 +441,140 @@
       "redeemedBtn": "Redeemed",
       "needMorePts": "Need {count} more pts",
       "tiers": {
-        "tail-wagger": { "name": "Tail Wagger", "perk": "1 point per $1 spent" },
-        "loyal-companion": { "name": "Loyal Companion", "perk": "1.25 points per $1 + early booking windows" },
-        "best-friend": { "name": "Best Friend", "perk": "1.5 points per $1 + a free annual wellness exam" }
+        "tail-wagger": {
+          "name": "Tail Wagger",
+          "perk": "1 point per $1 spent"
+        },
+        "loyal-companion": {
+          "name": "Loyal Companion",
+          "perk": "1.25 points per $1 + early booking windows"
+        },
+        "best-friend": {
+          "name": "Best Friend",
+          "perk": "1.5 points per $1 + a free annual wellness exam"
+        }
       },
       "catalog": {
-        "discount-5": { "name": "$5 off your next visit", "description": "Applies to any appointment, no minimum spend." },
-        "free-nail-trim": { "name": "Free nail trim", "description": "A quick, complimentary trim at any visit." },
-        "discount-15": { "name": "$15 off your next visit", "description": "Applies to any appointment, no minimum spend." },
-        "free-follow-up": { "name": "Free follow-up exam", "description": "A complimentary recheck within 30 days of a visit." },
-        "discount-50": { "name": "$50 off a procedure", "description": "Applies to surgery, dental, or orthopedic procedures." },
-        "free-wellness": { "name": "Free wellness exam", "description": "A full nose-to-tail check-up, on us (up to $90 value)." }
+        "discount-5": {
+          "name": "$5 off your next visit",
+          "description": "Applies to any appointment, no minimum spend."
+        },
+        "free-nail-trim": {
+          "name": "Free nail trim",
+          "description": "A quick, complimentary trim at any visit."
+        },
+        "discount-15": {
+          "name": "$15 off your next visit",
+          "description": "Applies to any appointment, no minimum spend."
+        },
+        "free-follow-up": {
+          "name": "Free follow-up exam",
+          "description": "A complimentary recheck within 30 days of a visit."
+        },
+        "discount-50": {
+          "name": "$50 off a procedure",
+          "description": "Applies to surgery, dental, or orthopedic procedures."
+        },
+        "free-wellness": {
+          "name": "Free wellness exam",
+          "description": "A full nose-to-tail check-up, on us (up to $90 value)."
+        }
       },
       "seed": {
-        "seed-1": { "label": "Wellness Exam", "detail": "Visit on Jun 12" },
-        "seed-2": { "label": "Vaccination Package", "detail": "Visit on Jun 12" },
-        "seed-3": { "label": "Bloodwork Panel", "detail": "Visit on Jul 3" },
-        "seed-4": { "label": "Digital Radiography", "detail": "Visit on Jul 22" }
+        "seed-1": {
+          "label": "Wellness Exam",
+          "detail": "Visit on Jun 12"
+        },
+        "seed-2": {
+          "label": "Vaccination Package",
+          "detail": "Visit on Jun 12"
+        },
+        "seed-3": {
+          "label": "Bloodwork Panel",
+          "detail": "Visit on Jul 3"
+        },
+        "seed-4": {
+          "label": "Digital Radiography",
+          "detail": "Visit on Jul 22"
+        }
+      }
+    }
+  },
+  "crm": {
+    "nav": {
+      "crmSuffix": "Staff",
+      "dashboard": "Dashboard",
+      "customers": "Customers",
+      "leads": "Leads"
+    },
+    "layout": {
+      "staffTools": "Staff tools — visible to staff accounts only"
+    },
+    "dashboard": {
+      "eyebrow": "Staff CRM",
+      "title": "Customer overview",
+      "subtitle": "A live snapshot of who's active, who's gone quiet, and who's waiting to hear back from you.",
+      "activeCustomers": "Active customers",
+      "inactiveCustomers": "Inactive customers",
+      "winBackLeads": "Win-back leads",
+      "newInquiries": "New inquiries",
+      "workLeads": "Work the leads list"
+    },
+    "customers": {
+      "eyebrow": "Staff CRM",
+      "title": "Customers",
+      "subtitle": "Every registered customer, with their current activity status.",
+      "searchPlaceholder": "Search by name or email",
+      "noResults": "No customers match your search.",
+      "unnamed": "Unnamed customer",
+      "lastVisit": "Last visit {date}",
+      "noVisitsYet": "No visits yet",
+      "statusActive": "Active",
+      "statusInactive": "Inactive"
+    },
+    "leads": {
+      "eyebrow": "Staff CRM",
+      "title": "Leads",
+      "subtitle": "Customers who've gone quiet for 3+ months, and people who inquired but never booked — surfaced automatically, nothing to tag.",
+      "emptyTitle": "No open leads right now",
+      "emptyBody": "Once a customer goes quiet or someone submits the contact form, they'll show up here automatically.",
+      "sourceCustomer": "Inactive customer",
+      "sourceInquiry": "Inquiry",
+      "statusContacted": "Contacted",
+      "inactiveSince": "Inactive since {date}",
+      "inquiredOn": "Inquired on {date}",
+      "lastContacted": "Last contacted {date}",
+      "lastSendFailed": "last send failed",
+      "composeEmail": "Compose email",
+      "markConverted": "Mark converted",
+      "dismiss": "Dismiss"
+    },
+    "compose": {
+      "title": "Compose outreach email",
+      "close": "Close",
+      "sentTitle": "Sent",
+      "sentBody": "Your email was delivered to {email}.",
+      "done": "Done",
+      "template": "Start from a template",
+      "subject": "Subject",
+      "body": "Message",
+      "send": "Send email",
+      "templates": {
+        "we-miss-you": {
+          "label": "We miss you",
+          "subject": "We miss you at Willowbrook!",
+          "body": "Hi {{name}},\n\nIt's been a little while since your last visit, and we wanted to check in. Your pet's wellness is always our priority, and we'd love to see you both again soon.\n\nAs a thank-you for being a valued member of the Willowbrook family, here's 15% off your next visit — just mention this email when you book.\n\nWarmly,\nThe Willowbrook Veterinary Clinic Team"
+        },
+        "seasonal-checkup": {
+          "label": "Seasonal check-up",
+          "subject": "Time for a seasonal check-up?",
+          "body": "Hi {{name}},\n\nRegular check-ups help catch small issues before they become big ones. We have appointments available this week if you'd like to bring your pet in for a quick wellness visit.\n\nReply to this email or call us to schedule.\n\nWarmly,\nThe Willowbrook Veterinary Clinic Team"
+        },
+        "member-offer": {
+          "label": "Membership offer",
+          "subject": "A membership offer just for you",
+          "body": "Hi {{name}},\n\nWe'd love to have you join our membership program — routine care, priority booking, and predictable monthly pricing, all in one plan.\n\nSign up this month and we'll waive the first month's fee.\n\nWarmly,\nThe Willowbrook Veterinary Clinic Team"
+        }
       }
     }
   },
@@ -410,9 +585,18 @@
         "summary": "From routine spays to complex soft-tissue surgery.",
         "description": "Our surgical suite is equipped for everything from routine sterilizations to complex soft-tissue and emergency procedures, with full pre-anaesthetic screening and dedicated post-op monitoring for every patient.",
         "services": {
-          "spay-neuter": { "name": "Spay / Neuter", "description": "Routine sterilization with pre-anaesthetic bloodwork and take-home pain plan." },
-          "soft-tissue-surgery": { "name": "Soft-Tissue Surgery", "description": "Mass removals, wound repair, and abdominal procedures." },
-          "post-op-care-plan": { "name": "Post-Op Care Plan", "description": "Suture check, pain management review, and recovery monitoring." }
+          "spay-neuter": {
+            "name": "Spay / Neuter",
+            "description": "Routine sterilization with pre-anaesthetic bloodwork and take-home pain plan."
+          },
+          "soft-tissue-surgery": {
+            "name": "Soft-Tissue Surgery",
+            "description": "Mass removals, wound repair, and abdominal procedures."
+          },
+          "post-op-care-plan": {
+            "name": "Post-Op Care Plan",
+            "description": "Suture check, pain management review, and recovery monitoring."
+          }
         }
       },
       "preventive-care": {
@@ -420,10 +604,22 @@
         "summary": "Vaccinations, wellness exams, and puppy & kitten checks.",
         "description": "The foundation of a long, healthy life — core and lifestyle vaccinations, wellness exams, parasite prevention, microchipping, and health certificates for travel or breed registration.",
         "services": {
-          "wellness-exam": { "name": "Wellness Exam", "description": "Full nose-to-tail check-up with a licensed veterinarian." },
-          "vaccination-package": { "name": "Vaccination Package", "description": "Core + lifestyle vaccines tailored to age and risk." },
-          "puppy-kitten-starter-visit": { "name": "Puppy & Kitten Starter Visit", "description": "First-visit exam, deworming, and vaccine schedule planning." },
-          "microchipping-id": { "name": "Microchipping & ID", "description": "Permanent ID chip with registry enrollment." }
+          "wellness-exam": {
+            "name": "Wellness Exam",
+            "description": "Full nose-to-tail check-up with a licensed veterinarian."
+          },
+          "vaccination-package": {
+            "name": "Vaccination Package",
+            "description": "Core + lifestyle vaccines tailored to age and risk."
+          },
+          "puppy-kitten-starter-visit": {
+            "name": "Puppy & Kitten Starter Visit",
+            "description": "First-visit exam, deworming, and vaccine schedule planning."
+          },
+          "microchipping-id": {
+            "name": "Microchipping & ID",
+            "description": "Permanent ID chip with registry enrollment."
+          }
         }
       },
       "dental": {
@@ -431,9 +627,18 @@
         "summary": "Tartar removal, dental X-rays, and extractions.",
         "description": "Dental disease affects most pets by age three. We offer ultrasonic scaling and polishing, full-mouth dental radiographs, and extractions under monitored anaesthesia.",
         "services": {
-          "dental-cleaning-polish": { "name": "Dental Cleaning & Polish", "description": "Ultrasonic scaling and polishing under anaesthesia." },
-          "dental-x-rays": { "name": "Dental X-Rays", "description": "Full-mouth radiographs to catch disease below the gumline." },
-          "tooth-extraction": { "name": "Tooth Extraction", "description": "Simple to surgical extractions with pain management." }
+          "dental-cleaning-polish": {
+            "name": "Dental Cleaning & Polish",
+            "description": "Ultrasonic scaling and polishing under anaesthesia."
+          },
+          "dental-x-rays": {
+            "name": "Dental X-Rays",
+            "description": "Full-mouth radiographs to catch disease below the gumline."
+          },
+          "tooth-extraction": {
+            "name": "Tooth Extraction",
+            "description": "Simple to surgical extractions with pain management."
+          }
         }
       },
       "diagnostics": {
@@ -441,9 +646,18 @@
         "summary": "In-house bloodwork, urinalysis, and rapid test panels.",
         "description": "Our in-house lab returns most bloodwork and urinalysis results within the hour, so treatment decisions don't wait on a courier.",
         "services": {
-          "bloodwork-panel": { "name": "Bloodwork Panel", "description": "Complete blood count and chemistry panel, in-house results." },
-          "urinalysis": { "name": "Urinalysis", "description": "Screening for kidney, bladder, and metabolic issues." },
-          "rapid-test-panels": { "name": "Rapid Test Panels", "description": "Parvo, heartworm, tick-borne disease, and FeLV/FIV screening." }
+          "bloodwork-panel": {
+            "name": "Bloodwork Panel",
+            "description": "Complete blood count and chemistry panel, in-house results."
+          },
+          "urinalysis": {
+            "name": "Urinalysis",
+            "description": "Screening for kidney, bladder, and metabolic issues."
+          },
+          "rapid-test-panels": {
+            "name": "Rapid Test Panels",
+            "description": "Parvo, heartworm, tick-borne disease, and FeLV/FIV screening."
+          }
         }
       },
       "imaging": {
@@ -451,8 +665,14 @@
         "summary": "Digital radiography and ultrasound on site.",
         "description": "Digital X-ray and ultrasound equipment on site means faster, clearer answers for injuries, swallowed objects, and internal medicine cases — no referral wait.",
         "services": {
-          "digital-radiography": { "name": "Digital Radiography", "description": "High-resolution X-ray imaging with same-day read." },
-          "abdominal-ultrasound": { "name": "Abdominal Ultrasound", "description": "Non-invasive imaging for organs and soft tissue." }
+          "digital-radiography": {
+            "name": "Digital Radiography",
+            "description": "High-resolution X-ray imaging with same-day read."
+          },
+          "abdominal-ultrasound": {
+            "name": "Abdominal Ultrasound",
+            "description": "Non-invasive imaging for organs and soft tissue."
+          }
         }
       },
       "orthopedics": {
@@ -460,9 +680,18 @@
         "summary": "ACL injuries, fracture repair, and spinal care.",
         "description": "From cranial cruciate ligament injuries to fracture stabilization and spinal cases, our orthopedic service pairs surgical expertise with a structured rehab plan.",
         "services": {
-          "orthopedic-consultation": { "name": "Orthopedic Consultation", "description": "Lameness exam with imaging referral plan." },
-          "cruciate-acl-repair": { "name": "Cruciate (ACL) Repair", "description": "Surgical stabilization for cranial cruciate ligament injuries." },
-          "fracture-repair": { "name": "Fracture Repair", "description": "Stabilization and fixation for fractures." }
+          "orthopedic-consultation": {
+            "name": "Orthopedic Consultation",
+            "description": "Lameness exam with imaging referral plan."
+          },
+          "cruciate-acl-repair": {
+            "name": "Cruciate (ACL) Repair",
+            "description": "Surgical stabilization for cranial cruciate ligament injuries."
+          },
+          "fracture-repair": {
+            "name": "Fracture Repair",
+            "description": "Stabilization and fixation for fractures."
+          }
         }
       },
       "endoscopy": {
@@ -470,9 +699,18 @@
         "summary": "Minimally invasive scoping for scopes & swallowed objects.",
         "description": "Bronchoscopy and gastroscopy let us investigate chronic coughing, swallowing difficulty, or a suspected foreign body without open surgery in many cases.",
         "services": {
-          "gastroscopy": { "name": "Gastroscopy", "description": "Camera-guided exam of the oesophagus and stomach." },
-          "bronchoscopy": { "name": "Bronchoscopy", "description": "Airway scoping for chronic cough or breathing issues." },
-          "foreign-body-retrieval": { "name": "Foreign Body Retrieval", "description": "Non-surgical removal of swallowed objects where possible." }
+          "gastroscopy": {
+            "name": "Gastroscopy",
+            "description": "Camera-guided exam of the oesophagus and stomach."
+          },
+          "bronchoscopy": {
+            "name": "Bronchoscopy",
+            "description": "Airway scoping for chronic cough or breathing issues."
+          },
+          "foreign-body-retrieval": {
+            "name": "Foreign Body Retrieval",
+            "description": "Non-surgical removal of swallowed objects where possible."
+          }
         }
       },
       "emergency": {
@@ -480,9 +718,18 @@
         "summary": "Acute stabilization and urgent treatment.",
         "description": "Accidents don't wait for an appointment. We prioritize acute cases for same-day stabilization and treatment, with an after-hours line for existing clients.",
         "services": {
-          "emergency-exam": { "name": "Emergency Exam", "description": "Priority triage and stabilization exam." },
-          "overnight-monitoring": { "name": "Overnight Monitoring", "description": "Hospitalization with continuous monitoring." },
-          "after-hours-consultation": { "name": "After-Hours Consultation", "description": "Phone triage line for existing clients." }
+          "emergency-exam": {
+            "name": "Emergency Exam",
+            "description": "Priority triage and stabilization exam."
+          },
+          "overnight-monitoring": {
+            "name": "Overnight Monitoring",
+            "description": "Hospitalization with continuous monitoring."
+          },
+          "after-hours-consultation": {
+            "name": "After-Hours Consultation",
+            "description": "Phone triage line for existing clients."
+          }
         }
       }
     }
@@ -492,17 +739,35 @@
       "essential": {
         "name": "Essential",
         "tagline": "For healthy pets that just need the basics covered.",
-        "features": ["1 wellness exam per year", "10% off vaccinations", "Member-only booking priority", "Email appointment reminders"]
+        "features": [
+          "1 wellness exam per year",
+          "10% off vaccinations",
+          "Member-only booking priority",
+          "Email appointment reminders"
+        ]
       },
       "wellness": {
         "name": "Wellness Plus",
         "tagline": "Our most popular plan for ongoing preventive care.",
-        "features": ["2 wellness exams per year", "20% off vaccinations & dental cleanings", "Free annual bloodwork panel", "Priority booking + same-week appointments", "24/7 after-hours triage line"]
+        "features": [
+          "2 wellness exams per year",
+          "20% off vaccinations & dental cleanings",
+          "Free annual bloodwork panel",
+          "Priority booking + same-week appointments",
+          "24/7 after-hours triage line"
+        ]
       },
       "complete": {
         "name": "Complete Care",
         "tagline": "Comprehensive coverage for senior pets or multi-pet households.",
-        "features": ["Unlimited wellness exams", "30% off surgery, dental & imaging", "Free annual bloodwork + urinalysis", "Dedicated care coordinator", "24/7 after-hours triage line", "Multi-pet discount eligible"]
+        "features": [
+          "Unlimited wellness exams",
+          "30% off surgery, dental & imaging",
+          "Free annual bloodwork + urinalysis",
+          "Dedicated care coordinator",
+          "24/7 after-hours triage line",
+          "Multi-pet discount eligible"
+        ]
       }
     }
   }

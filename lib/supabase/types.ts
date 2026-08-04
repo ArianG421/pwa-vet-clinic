@@ -9,6 +9,41 @@ export type Pet = {
   created_at: string;
 };
 
+export type LeadStatus = "none" | "contacted" | "converted" | "dismissed";
+
+export type Profile = {
+  id: string;
+  role: "client" | "staff";
+  full_name: string | null;
+  email: string | null;
+  phone: string | null;
+  lead_status: LeadStatus;
+  created_at: string;
+};
+
+export type ContactMessageRow = {
+  id: string;
+  name: string;
+  email: string;
+  message: string;
+  lead_status: LeadStatus;
+  created_at: string;
+};
+
+export type CrmEmailRow = {
+  id: string;
+  profile_id: string | null;
+  contact_message_id: string | null;
+  to_email: string;
+  to_name: string | null;
+  subject: string;
+  body: string;
+  status: "sent" | "failed";
+  error_message: string | null;
+  staff_id: string;
+  created_at: string;
+};
+
 export type ServiceCategoryRow = {
   id: string;
   slug: string;
