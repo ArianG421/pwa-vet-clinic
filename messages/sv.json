@@ -22,15 +22,11 @@
     "hours": [
       {
         "label": "Måndag–fredag",
-        "value": "08:00–18:00"
+        "value": "08:00–17:00"
       },
       {
-        "label": "Lördag",
-        "value": "09:00–14:00"
-      },
-      {
-        "label": "Söndag",
-        "value": "Stängt (jourlinje aktiv)"
+        "label": "Lördag–söndag",
+        "value": "Stängt"
       }
     ]
   },

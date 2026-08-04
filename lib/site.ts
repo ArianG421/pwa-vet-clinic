@@ -1,13 +1,12 @@
-// Contact details are a plausible, clearly-fictional placeholder — not the
-// real clinic's actual phone/address/email, which weren't asked for here.
+// Real contact details, given explicitly for this pitch.
 export const site = {
   name: "Öresunds Veterinärklinik",
   shortName: "Öresunds Vet",
-  phone: "+46 40 123 45 67",
-  phoneHref: "tel:+46401234567",
-  email: "hello@oresundsvet.example",
+  phone: "+46 40 – 61 61 260",
+  phoneHref: "tel:+46406161260",
+  email: "info@oresundsveterinarklinik.se",
   address: {
-    line1: "Storgatan 12",
+    line1: "Kompanigatan 27",
     line2: "235 32 Vellinge",
   },
   // Real handles — unlike phone/address/email, these are genuinely theirs.

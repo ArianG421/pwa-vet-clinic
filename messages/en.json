@@ -22,15 +22,11 @@
     "hours": [
       {
         "label": "Monday – Friday",
-        "value": "8:00 AM – 6:00 PM"
+        "value": "8:00 AM – 5:00 PM"
       },
       {
-        "label": "Saturday",
-        "value": "9:00 AM – 2:00 PM"
-      },
-      {
-        "label": "Sunday",
-        "value": "Closed (Emergency line active)"
+        "label": "Saturday – Sunday",
+        "value": "Closed"
       }
     ]
   },
