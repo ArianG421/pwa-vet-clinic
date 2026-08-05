@@ -22,7 +22,25 @@ export type AssistantIndexEntry = {
   keywords?: string;
 };
 
-export async function getAssistantIndex(locale: string): Promise<AssistantIndexEntry[]> {
+// Pure derived data (translations + hardcoded facts) that only changes on
+// redeploy — but it gets rebuilt on every marketing page load (from the
+// layout) and every Ask AI message, so it's worth computing once per locale
+// per server process rather than on every call. Caching the in-flight
+// promise (not just the resolved value) means concurrent callers before the
+// first computation finishes all await the same one instead of triggering
+// duplicate work.
+const indexCache = new Map<string, Promise<AssistantIndexEntry[]>>();
+
+export function getAssistantIndex(locale: string): Promise<AssistantIndexEntry[]> {
+  let cached = indexCache.get(locale);
+  if (!cached) {
+    cached = computeAssistantIndex(locale);
+    indexCache.set(locale, cached);
+  }
+  return cached;
+}
+
+async function computeAssistantIndex(locale: string): Promise<AssistantIndexEntry[]> {
   const [tAssistant, tNav, tSite, tServicesPage, tServices, tPricing, tPlans, tAbout, tFaq, tContact, tBook] =
     await Promise.all([
       getTranslations({ locale, namespace: "assistant" }),
