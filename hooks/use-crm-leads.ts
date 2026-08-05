@@ -17,6 +17,7 @@ export type Lead = {
   lastAppointmentAt: string | null;
   profileId: string | null;
   contactMessageId: string | null;
+  message: string | null;
 };
 
 // A lead stays on the list until staff move it past "contacted" — nothing
@@ -68,6 +69,7 @@ export function useCrmLeads() {
         lastAppointmentAt: c.lastAppointmentAt,
         profileId: c.profile.id,
         contactMessageId: null,
+        message: null,
       }));
 
     const inquiryLeads: Lead[] = ((contactMessages as ContactMessageRow[]) ?? [])
@@ -82,6 +84,7 @@ export function useCrmLeads() {
         lastAppointmentAt: null,
         profileId: null,
         contactMessageId: m.id,
+        message: m.message,
       }));
 
     setLeads(

@@ -2,7 +2,7 @@
 
 import { Link, usePathname } from "@/lib/i18n/navigation";
 import { useTranslations } from "next-intl";
-import { LayoutDashboard, PawPrint, CalendarDays, Gift, CreditCard, ArrowLeft } from "lucide-react";
+import { LayoutDashboard, PawPrint, CalendarDays, Gift, CreditCard, User, ArrowLeft } from "lucide-react";
 import { site } from "@/lib/site";
 
 const PORTAL_NAV = [
@@ -11,6 +11,7 @@ const PORTAL_NAV = [
   { href: "/portal/appointments", key: "appointments", icon: CalendarDays },
   { href: "/portal/rewards", key: "rewards", icon: Gift },
   { href: "/portal/subscription", key: "membership", icon: CreditCard },
+  { href: "/portal/profile", key: "profile", icon: User },
 ] as const;
 
 export function PortalNav() {

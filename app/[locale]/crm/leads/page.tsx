@@ -2,10 +2,11 @@
 
 import { useState } from "react";
 import { useTranslations } from "next-intl";
-import { CheckCircle2, Mail, UserX, XCircle } from "lucide-react";
+import { CheckCircle2, Mail, MessageSquare, UserX, XCircle } from "lucide-react";
 import { useCrmLeads, type Lead } from "@/hooks/use-crm-leads";
 import { PawLoader } from "@/components/paw-loader";
 import { ComposeEmailModal } from "@/components/crm/compose-email-modal";
+import { MessageModal } from "@/components/crm/message-modal";
 
 function formatDate(iso: string) {
   return new Date(iso).toLocaleDateString(undefined, { year: "numeric", month: "short", day: "numeric" });
@@ -15,6 +16,7 @@ export default function CrmLeadsPage() {
   const t = useTranslations("crm.leads");
   const { leads, loaded, error, setLeadStatus, sendEmail, emailsFor } = useCrmLeads();
   const [composing, setComposing] = useState<Lead | null>(null);
+  const [viewingMessage, setViewingMessage] = useState<Lead | null>(null);
   const [statusError, setStatusError] = useState<string | null>(null);
 
   async function handleStatus(lead: Lead, status: "contacted" | "converted" | "dismissed") {
@@ -70,6 +72,15 @@ export default function CrmLeadsPage() {
                 </div>
 
                 <div className="flex flex-wrap items-center gap-2">
+                  {lead.message && (
+                    <button
+                      type="button"
+                      onClick={() => setViewingMessage(lead)}
+                      className="inline-flex items-center gap-1.5 rounded-full border border-black/10 px-3.5 py-1.5 text-xs font-semibold text-ink-muted hover:border-brand-500 hover:text-brand-700"
+                    >
+                      <MessageSquare className="h-3.5 w-3.5" /> {t("viewMessage")}
+                    </button>
+                  )}
                   <button
                     type="button"
                     onClick={() => setComposing(lead)}
@@ -110,6 +121,8 @@ export default function CrmLeadsPage() {
           }}
         />
       )}
+
+      {viewingMessage && <MessageModal lead={viewingMessage} onClose={() => setViewingMessage(null)} />}
     </div>
   );
 }

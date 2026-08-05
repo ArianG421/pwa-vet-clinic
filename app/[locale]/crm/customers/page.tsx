@@ -2,9 +2,11 @@
 
 import { useMemo, useState } from "react";
 import { useTranslations } from "next-intl";
-import { Search } from "lucide-react";
+import { Search, User } from "lucide-react";
 import { useCrmCustomers } from "@/hooks/use-crm-customers";
 import { PawLoader } from "@/components/paw-loader";
+import { CustomerProfileModal } from "@/components/crm/customer-profile-modal";
+import type { CustomerActivity } from "@/lib/crm-activity";
 
 function formatDate(iso: string) {
   return new Date(iso).toLocaleDateString(undefined, { year: "numeric", month: "short", day: "numeric" });
@@ -14,6 +16,7 @@ export default function CrmCustomersPage() {
   const t = useTranslations("crm.customers");
   const { customers, loaded, error } = useCrmCustomers();
   const [query, setQuery] = useState("");
+  const [viewing, setViewing] = useState<CustomerActivity | null>(null);
 
   const filtered = useMemo(() => {
     if (!customers) return [];
@@ -52,10 +55,24 @@ export default function CrmCustomersPage() {
       ) : (
         <div className="mt-6 divide-y divide-black/5 rounded-2xl border border-black/5 bg-surface">
           {filtered.map((c) => (
-            <div key={c.profile.id} className="flex flex-col gap-2 p-4 sm:flex-row sm:items-center sm:justify-between">
-              <div>
-                <p className="text-sm font-medium text-ink">{c.profile.full_name ?? t("unnamed")}</p>
-                <p className="mt-0.5 text-xs text-ink-muted">{c.profile.email}</p>
+            <button
+              key={c.profile.id}
+              type="button"
+              onClick={() => setViewing(c)}
+              className="flex w-full flex-col gap-3 p-4 text-left transition-colors hover:bg-surface-muted sm:flex-row sm:items-center sm:justify-between"
+            >
+              <div className="flex items-center gap-3">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-full bg-brand-50 text-brand-700">
+                  {c.profile.avatar_url ? (
+                    <img src={c.profile.avatar_url} alt="" className="h-full w-full object-cover" />
+                  ) : (
+                    <User className="h-4.5 w-4.5" />
+                  )}
+                </div>
+                <div>
+                  <p className="text-sm font-medium text-ink">{c.profile.full_name ?? t("unnamed")}</p>
+                  <p className="mt-0.5 text-xs text-ink-muted">{c.profile.email}</p>
+                </div>
               </div>
               <div className="flex items-center gap-3">
                 <span className="text-xs text-ink-muted">
@@ -71,10 +88,12 @@ export default function CrmCustomersPage() {
                   {c.active ? t("statusActive") : t("statusInactive")}
                 </span>
               </div>
-            </div>
+            </button>
           ))}
         </div>
       )}
+
+      {viewing && <CustomerProfileModal customer={viewing} onClose={() => setViewing(null)} />}
     </div>
   );
 }

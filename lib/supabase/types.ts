@@ -11,12 +11,19 @@ export type Pet = {
 
 export type LeadStatus = "none" | "contacted" | "converted" | "dismissed";
 
+export type PreferredContact = "email" | "phone" | "sms";
+
 export type Profile = {
   id: string;
   role: "client" | "staff";
   full_name: string | null;
   email: string | null;
   phone: string | null;
+  avatar_url: string | null;
+  address: string | null;
+  emergency_contact_name: string | null;
+  emergency_contact_phone: string | null;
+  preferred_contact: PreferredContact;
   lead_status: LeadStatus;
   created_at: string;
 };

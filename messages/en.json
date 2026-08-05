@@ -363,7 +363,8 @@
       "pets": "Pets",
       "appointments": "Appointments",
       "rewards": "Rewards",
-      "membership": "Membership"
+      "membership": "Membership",
+      "profile": "Profile"
     },
     "layout": {
       "liveDemo": "Live demo — pets, appointments, and membership are real. Rewards points sync once staff can mark visits complete.",
@@ -470,6 +471,30 @@
         "confirm": "Confirm {amount} kr/month",
         "demoNote": "Demo checkout — no real payment is processed."
       }
+    },
+    "profile": {
+      "eyebrow": "Profile",
+      "title": "Your profile",
+      "subtitle": "Keep your details current so the clinic can reach you and your pets get the right care.",
+      "loadingLabel": "Fetching your profile…",
+      "unnamed": "Unnamed",
+      "changePhoto": "Change photo",
+      "fullName": "Full name",
+      "phone": "Phone",
+      "address": "Address",
+      "preferredContact": "Preferred contact method",
+      "preferredContactOptions": {
+        "email": "Email",
+        "phone": "Phone",
+        "sms": "SMS"
+      },
+      "emergencyContactName": "Emergency contact name",
+      "emergencyContactPhone": "Emergency contact phone",
+      "save": "Save changes",
+      "saved": "Saved.",
+      "yourPets": "Your pets",
+      "noPetsYet": "No pets added yet.",
+      "managePets": "Manage pets"
     },
     "rewards": {
       "eyebrow": "Rewards",
@@ -592,7 +617,24 @@
       "lastVisit": "Last visit {date}",
       "noVisitsYet": "No visits yet",
       "statusActive": "Active",
-      "statusInactive": "Inactive"
+      "statusInactive": "Inactive",
+      "profileModal": {
+        "title": "Customer profile",
+        "close": "Close",
+        "unnamed": "Unnamed customer",
+        "statusActive": "Active",
+        "statusInactive": "Inactive",
+        "notProvided": "Not provided",
+        "emergencyContact": "Emergency contact",
+        "preferredContact": "Preferred contact",
+        "preferredContactOptions": {
+          "email": "Email",
+          "phone": "Phone",
+          "sms": "SMS"
+        },
+        "pets": "Pets",
+        "noPets": "No pets on file."
+      }
     },
     "leads": {
       "eyebrow": "Staff CRM",
@@ -607,6 +649,11 @@
       "inquiredOn": "Inquired on {date}",
       "lastContacted": "Last contacted {date}",
       "lastSendFailed": "last send failed",
+      "viewMessage": "View message",
+      "messageModal": {
+        "title": "Message",
+        "close": "Close"
+      },
       "composeEmail": "Compose email",
       "markConverted": "Mark converted",
       "dismiss": "Dismiss"

@@ -363,7 +363,8 @@
       "pets": "Husdjur",
       "appointments": "Bokningar",
       "rewards": "Förmåner",
-      "membership": "Medlemskap"
+      "membership": "Medlemskap",
+      "profile": "Profil"
     },
     "layout": {
       "liveDemo": "Live-demo — husdjur, bokningar och medlemskap är riktiga. Poäng synkas när personal kan markera besök som avslutade.",
@@ -470,6 +471,30 @@
         "confirm": "Bekräfta {amount} kr/månad",
         "demoNote": "Demokassa — ingen riktig betalning genomförs."
       }
+    },
+    "profile": {
+      "eyebrow": "Profil",
+      "title": "Din profil",
+      "subtitle": "Håll dina uppgifter aktuella så att kliniken kan nå dig och dina husdjur får rätt vård.",
+      "loadingLabel": "Hämtar din profil…",
+      "unnamed": "Namnlös",
+      "changePhoto": "Byt foto",
+      "fullName": "Fullständigt namn",
+      "phone": "Telefon",
+      "address": "Adress",
+      "preferredContact": "Föredragen kontaktmetod",
+      "preferredContactOptions": {
+        "email": "E-post",
+        "phone": "Telefon",
+        "sms": "SMS"
+      },
+      "emergencyContactName": "Namn, nödkontakt",
+      "emergencyContactPhone": "Telefon, nödkontakt",
+      "save": "Spara ändringar",
+      "saved": "Sparat.",
+      "yourPets": "Dina husdjur",
+      "noPetsYet": "Inga husdjur tillagda än.",
+      "managePets": "Hantera husdjur"
     },
     "rewards": {
       "eyebrow": "Förmåner",
@@ -592,7 +617,24 @@
       "lastVisit": "Senaste besök {date}",
       "noVisitsYet": "Inga besök än",
       "statusActive": "Aktiv",
-      "statusInactive": "Inaktiv"
+      "statusInactive": "Inaktiv",
+      "profileModal": {
+        "title": "Kundprofil",
+        "close": "Stäng",
+        "unnamed": "Namnlös kund",
+        "statusActive": "Aktiv",
+        "statusInactive": "Inaktiv",
+        "notProvided": "Ej angivet",
+        "emergencyContact": "Nödkontakt",
+        "preferredContact": "Föredragen kontakt",
+        "preferredContactOptions": {
+          "email": "E-post",
+          "phone": "Telefon",
+          "sms": "SMS"
+        },
+        "pets": "Husdjur",
+        "noPets": "Inga husdjur registrerade."
+      }
     },
     "leads": {
       "eyebrow": "Personal-CRM",
@@ -607,6 +649,11 @@
       "inquiredOn": "Hörde av sig {date}",
       "lastContacted": "Senast kontaktad {date}",
       "lastSendFailed": "senaste utskicket misslyckades",
+      "viewMessage": "Visa meddelande",
+      "messageModal": {
+        "title": "Meddelande",
+        "close": "Stäng"
+      },
       "composeEmail": "Skriv e-post",
       "markConverted": "Markera som konverterad",
       "dismiss": "Avfärda"
