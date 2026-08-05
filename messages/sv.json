@@ -47,6 +47,60 @@
     "latestFromSocial": "Senaste från sociala medier",
     "demoNotice": "© {year} {siteName}. Demoversion — inte en riktig klinik."
   },
+  "assistant": {
+    "trigger": "Sök eller ställ en fråga",
+    "panelTitle": "Hur kan vi hjälpa dig?",
+    "close": "Stäng",
+    "pages": {
+      "home": {
+        "title": "Hem",
+        "keywords": "hem välkommen"
+      },
+      "services": {
+        "keywords": "behandlingar tjänster vård"
+      },
+      "pricing": {
+        "keywords": "pris priser kostnad avgifter medlemskap plan månadsvis"
+      },
+      "about": {
+        "keywords": "om oss team personal klinik"
+      },
+      "faq": {
+        "keywords": "vanliga frågor hjälp"
+      },
+      "contact": {
+        "keywords": "kontakt telefon email adress öppettider"
+      },
+      "book": {
+        "keywords": "boka bokning tid besök"
+      }
+    },
+    "tabs": {
+      "quickLinks": "Snabblänkar",
+      "askAi": "Fråga AI"
+    },
+    "search": {
+      "placeholder": "Sök tjänster, priser, FAQ…",
+      "noResults": "Inga träffar än — prova ett annat ord.",
+      "prompt": "Börja skriva för att hitta en sida."
+    },
+    "chat": {
+      "emptyTitle": "Fråga vad som helst om kliniken",
+      "emptyBody": "Öppettider, priser, bokning, tjänster — jag guidar dig till rätt sida.",
+      "examples": [
+        "Vad kostar det att kastrera en katt?",
+        "Vilka är era öppettider?",
+        "Hur bokar jag en tid?",
+        "Vilka medlemskap erbjuder ni?"
+      ],
+      "placeholder": "Ställ en fråga…",
+      "send": "Skicka",
+      "loading": "Tänker…",
+      "goTo": "Gå till {label} →",
+      "errorGeneric": "Något gick fel. Försök igen.",
+      "notConfigured": "Fråga AI är inte konfigurerat än — prova Snabblänkar istället, eller ring oss direkt."
+    }
+  },
   "home": {
     "badge": "Boka online nu, dygnet runt",
     "heroBody": "Från hälsokontroller till akutvård kombinerar {siteName} modern medicin med en medlemsportal som samlar alla besök, journaler och påminnelser på ett ställe.",

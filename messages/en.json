@@ -47,6 +47,60 @@
     "latestFromSocial": "Latest from social",
     "demoNotice": "© {year} {siteName}. Demo build — not a real clinic."
   },
+  "assistant": {
+    "trigger": "Search or ask a question",
+    "panelTitle": "How can we help?",
+    "close": "Close",
+    "pages": {
+      "home": {
+        "title": "Home",
+        "keywords": "home welcome"
+      },
+      "services": {
+        "keywords": "treatments procedures care"
+      },
+      "pricing": {
+        "keywords": "pricing price cost fees membership plans monthly"
+      },
+      "about": {
+        "keywords": "about team staff clinic story"
+      },
+      "faq": {
+        "keywords": "faq questions help"
+      },
+      "contact": {
+        "keywords": "contact phone email address hours location"
+      },
+      "book": {
+        "keywords": "book booking appointment schedule visit"
+      }
+    },
+    "tabs": {
+      "quickLinks": "Quick links",
+      "askAi": "Ask AI"
+    },
+    "search": {
+      "placeholder": "Search services, pricing, FAQ…",
+      "noResults": "No matches yet — try a different word.",
+      "prompt": "Start typing to find a page."
+    },
+    "chat": {
+      "emptyTitle": "Ask anything about the clinic",
+      "emptyBody": "Hours, pricing, booking, services — I'll point you to the right page.",
+      "examples": [
+        "How much is a cat neuter?",
+        "What are your opening hours?",
+        "How do I book an appointment?",
+        "What membership plans do you offer?"
+      ],
+      "placeholder": "Ask a question…",
+      "send": "Send",
+      "loading": "Thinking…",
+      "goTo": "Go to {label} →",
+      "errorGeneric": "Something went wrong. Please try again.",
+      "notConfigured": "Ask AI isn't set up yet — try Quick links instead, or call us directly."
+    }
+  },
   "home": {
     "badge": "Now booking online, 24/7",
     "heroBody": "From wellness checks to emergency care, {siteName} pairs modern medicine with a member portal that keeps every appointment, pet record, and reminder in one place.",
