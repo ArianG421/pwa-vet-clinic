@@ -3,13 +3,15 @@ import { Link } from "@/lib/i18n/navigation";
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Clock } from "lucide-react";
-import { getServiceCategory, getServiceRichContent, serviceCategoryFacts } from "@/lib/data/services";
+import { getServiceCategory, getServiceRichContent, serviceCategoryFacts, withDbServicePrices } from "@/lib/data/services";
 import { formatKr } from "@/lib/currency";
 import { CategoryIcon } from "@/components/category-icon";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { ServiceRichContentBlock } from "@/components/service-rich-content";
 import { StickyPricingCta } from "@/components/sticky-pricing-cta";
 import { routing } from "@/lib/i18n/routing";
+import { isSupabaseConfigured } from "@/lib/supabase/config";
+import { createClient } from "@/lib/supabase/server";
 
 export function generateStaticParams() {
   return routing.locales.flatMap((locale) =>
@@ -41,6 +43,16 @@ export default async function ServiceCategoryPage({
   const cat = getServiceCategory((key) => tServices(key), category);
   if (!cat) notFound();
   const richContent = getServiceRichContent((key) => tServices.raw(key), category);
+
+  let services = cat.services;
+  if (isSupabaseConfigured) {
+    const supabase = await createClient();
+    const { data } = await supabase
+      .from("services")
+      .select("slug, price_from, price_to, service_categories!inner(slug)")
+      .eq("service_categories.slug", category);
+    if (data) services = withDbServicePrices(cat.services, data as { slug: string | null; price_from: number; price_to: number }[]);
+  }
 
   function formatPrice(from: number, to: number) {
     if (from === 0 && to === 0) return t("priceIncluded");
@@ -80,7 +92,7 @@ export default async function ServiceCategoryPage({
         {t("pricingHeading")}
       </h2>
       <div className="mt-4 divide-y divide-black/5 rounded-2xl border border-black/5 bg-surface">
-        {cat.services.map((service) => (
+        {services.map((service) => (
           <div key={service.slug} className="flex flex-col gap-3 p-5 sm:flex-row sm:items-center sm:justify-between">
             <div>
               <p className="font-semibold text-ink">{service.name}</p>

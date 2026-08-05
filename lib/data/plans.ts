@@ -45,3 +45,17 @@ export function getPlanText(
     return { name: fallback.name, tagline: fallback.tagline ?? "", features: fallback.features };
   }
 }
+
+// Same overlay pattern as withDbServicePrices in lib/data/services.ts —
+// staff-edited subscription_tiers.price_monthly overlays the hardcoded fact
+// by slug, untouched if there's no matching DB row.
+export function withDbTierPrices<T extends { slug: string; priceMonthly: number }>(
+  tiers: T[],
+  dbRows: { slug: string; price_monthly: number }[]
+): T[] {
+  const bySlug = new Map(dbRows.map((r) => [r.slug, r]));
+  return tiers.map((tier) => {
+    const dbRow = bySlug.get(tier.slug);
+    return dbRow ? { ...tier, priceMonthly: dbRow.price_monthly } : tier;
+  });
+}

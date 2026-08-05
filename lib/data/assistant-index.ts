@@ -1,9 +1,11 @@
 import { getTranslations } from "next-intl/server";
-import { getServiceCategories } from "@/lib/data/services";
+import { getServiceCategories, withDbServicePrices } from "@/lib/data/services";
 import { getFaqItems } from "@/lib/data/faq";
-import { getPlanTiers } from "@/lib/data/plans";
+import { getPlanTiers, withDbTierPrices } from "@/lib/data/plans";
 import { site } from "@/lib/site";
 import { formatKr } from "@/lib/currency";
+import { isSupabaseConfigured } from "@/lib/supabase/config";
+import { createClient } from "@/lib/supabase/server";
 
 // One shared index for both the free instant-search tier and the Ask AI
 // tier's system-prompt context, so the two never drift out of sync. Every
@@ -40,6 +42,15 @@ export function getAssistantIndex(locale: string): Promise<AssistantIndexEntry[]
   return cached;
 }
 
+// Staff can edit prices from /crm/pricing — without this, an edit would
+// show correctly on the (uncached) marketing pages but stay stale here
+// until the server process restarts. Called from hooks/use-crm-pricing.ts
+// via /api/assistant/invalidate after a successful price update.
+export function invalidateAssistantIndex(locale?: string) {
+  if (locale) indexCache.delete(locale);
+  else indexCache.clear();
+}
+
 async function computeAssistantIndex(locale: string): Promise<AssistantIndexEntry[]> {
   const [tAssistant, tNav, tSite, tServicesPage, tServices, tPricing, tPlans, tAbout, tFaq, tContact, tBook] =
     await Promise.all([
@@ -55,6 +66,18 @@ async function computeAssistantIndex(locale: string): Promise<AssistantIndexEntr
       getTranslations({ locale, namespace: "contact" }),
       getTranslations({ locale, namespace: "book" }),
     ]);
+
+  let dbServices: { slug: string | null; price_from: number; price_to: number }[] = [];
+  let dbTiers: { slug: string; price_monthly: number }[] = [];
+  if (isSupabaseConfigured) {
+    const supabase = await createClient();
+    const [{ data: serviceRows }, { data: tierRows }] = await Promise.all([
+      supabase.from("services").select("slug, price_from, price_to"),
+      supabase.from("subscription_tiers").select("slug, price_monthly"),
+    ]);
+    dbServices = serviceRows ?? [];
+    dbTiers = tierRows ?? [];
+  }
 
   const entries: AssistantIndexEntry[] = [
     { id: "page-home", title: tAssistant("pages.home.title"), description: tSite("tagline"), path: "/", keywords: tAssistant("pages.home.keywords") },
@@ -75,7 +98,7 @@ async function computeAssistantIndex(locale: string): Promise<AssistantIndexEntr
       description: category.summary,
       path: `/services/${category.slug}`,
     });
-    for (const service of category.services) {
+    for (const service of withDbServicePrices(category.services, dbServices)) {
       // Prices are real facts, not marketing copy — folding them into the
       // description is what lets both Quick-links and the AI actually
       // answer "how much does X cost" instead of pointing away from it.
@@ -92,7 +115,11 @@ async function computeAssistantIndex(locale: string): Promise<AssistantIndexEntr
     }
   }
 
-  for (const tier of getPlanTiers((key) => tPlans(key), (key) => tPlans.raw(key) as unknown as string[])) {
+  const planTiers = withDbTierPrices(
+    getPlanTiers((key) => tPlans(key), (key) => tPlans.raw(key) as unknown as string[]),
+    dbTiers
+  );
+  for (const tier of planTiers) {
     entries.push({
       id: `plan-${tier.slug}`,
       title: tier.name,

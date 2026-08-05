@@ -646,7 +646,8 @@
       "crmSuffix": "Personal",
       "dashboard": "Översikt",
       "customers": "Kunder",
-      "leads": "Leads"
+      "leads": "Leads",
+      "pricing": "Priser"
     },
     "layout": {
       "staffTools": "Personalverktyg — synligt endast för personalkonton"
@@ -739,6 +740,17 @@
           "body": "Hej {{name}},\n\nVi skulle gärna se dig som medlem i vårt medlemsprogram — rutinvård, prioriterad bokning och förutsägbara månadspriser, allt i ett paket.\n\nAnmäl dig den här månaden så bjuder vi på första månadens avgift.\n\nVarma hälsningar,\nTeamet på Öresunds Veterinärklinik"
         }
       }
+    },
+    "pricing": {
+      "eyebrow": "Personal-CRM",
+      "title": "Priser",
+      "subtitle": "Redigera priser för tjänster och medlemskap — ändringar syns direkt på webbplatsen.",
+      "servicesHeading": "Tjänster",
+      "plansHeading": "Medlemskap",
+      "save": "Spara",
+      "cancel": "Avbryt",
+      "invalidPrice": "Ange ett giltigt pris (\"till\" måste vara minst \"från\").",
+      "perMonth": "/månad"
     }
   },
   "services": {

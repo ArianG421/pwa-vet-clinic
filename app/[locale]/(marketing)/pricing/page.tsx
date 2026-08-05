@@ -2,9 +2,11 @@ import { Link } from "@/lib/i18n/navigation";
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Check } from "lucide-react";
-import { getPlanTiers } from "@/lib/data/plans";
+import { getPlanTiers, withDbTierPrices } from "@/lib/data/plans";
 import { formatKr } from "@/lib/currency";
 import { routing } from "@/lib/i18n/routing";
+import { isSupabaseConfigured } from "@/lib/supabase/config";
+import { createClient } from "@/lib/supabase/server";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -25,10 +27,16 @@ export default async function PricingPage({ params }: { params: Promise<{ locale
   setRequestLocale(locale);
   const t = await getTranslations("pricing");
   const tPlans = await getTranslations("plans");
-  const planTiers = getPlanTiers(
+  let planTiers = getPlanTiers(
     (key) => tPlans(key),
     (key) => tPlans.raw(key) as unknown as string[]
   );
+
+  if (isSupabaseConfigured) {
+    const supabase = await createClient();
+    const { data } = await supabase.from("subscription_tiers").select("slug, price_monthly");
+    if (data) planTiers = withDbTierPrices(planTiers, data);
+  }
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">

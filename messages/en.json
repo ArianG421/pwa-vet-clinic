@@ -646,7 +646,8 @@
       "crmSuffix": "Staff",
       "dashboard": "Dashboard",
       "customers": "Customers",
-      "leads": "Leads"
+      "leads": "Leads",
+      "pricing": "Pricing"
     },
     "layout": {
       "staffTools": "Staff tools — visible to staff accounts only"
@@ -739,6 +740,17 @@
           "body": "Hi {{name}},\n\nWe'd love to have you join our membership program — routine care, priority booking, and predictable monthly pricing, all in one plan.\n\nSign up this month and we'll waive the first month's fee.\n\nWarmly,\nThe Öresunds Veterinärklinik Team"
         }
       }
+    },
+    "pricing": {
+      "eyebrow": "Staff CRM",
+      "title": "Pricing",
+      "subtitle": "Edit service and membership prices — changes go live on the site immediately.",
+      "servicesHeading": "Services",
+      "plansHeading": "Membership plans",
+      "save": "Save",
+      "cancel": "Cancel",
+      "invalidPrice": "Enter a valid price (\"to\" must be at least \"from\").",
+      "perMonth": "/month"
     }
   },
   "services": {

@@ -175,3 +175,19 @@ export function getServiceBySlug(t: (key: string) => string, slug: string | null
   }
   return undefined;
 }
+
+// Staff can edit prices in the CRM (services.price_from/price_to in
+// Supabase) — this overlays those live values onto the hardcoded facts by
+// slug, so pages display whatever staff last set instead of the seed
+// figures. Services with no matching DB row (e.g. Supabase not configured)
+// keep their hardcoded price untouched.
+export function withDbServicePrices<T extends { slug: string; priceFrom: number; priceTo: number }>(
+  services: T[],
+  dbRows: { slug: string | null; price_from: number; price_to: number }[]
+): T[] {
+  const bySlug = new Map(dbRows.filter((r) => r.slug).map((r) => [r.slug as string, r]));
+  return services.map((service) => {
+    const dbRow = bySlug.get(service.slug);
+    return dbRow ? { ...service, priceFrom: dbRow.price_from, priceTo: dbRow.price_to } : service;
+  });
+}

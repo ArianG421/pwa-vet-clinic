@@ -2,13 +2,14 @@
 
 import { Link, usePathname } from "@/lib/i18n/navigation";
 import { useTranslations } from "next-intl";
-import { LayoutDashboard, Users, Target, ArrowLeft } from "lucide-react";
+import { LayoutDashboard, Users, Target, DollarSign, ArrowLeft } from "lucide-react";
 import { site } from "@/lib/site";
 
 const CRM_NAV = [
   { href: "/crm", key: "dashboard", icon: LayoutDashboard },
   { href: "/crm/customers", key: "customers", icon: Users },
   { href: "/crm/leads", key: "leads", icon: Target },
+  { href: "/crm/pricing", key: "pricing", icon: DollarSign },
 ] as const;
 
 export function CrmNav() {
