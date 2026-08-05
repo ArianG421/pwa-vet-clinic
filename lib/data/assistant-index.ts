@@ -3,6 +3,7 @@ import { getServiceCategories } from "@/lib/data/services";
 import { getFaqItems } from "@/lib/data/faq";
 import { getPlanTiers } from "@/lib/data/plans";
 import { site } from "@/lib/site";
+import { formatKr } from "@/lib/currency";
 
 // One shared index for both the free instant-search tier and the Ask AI
 // tier's system-prompt context, so the two never drift out of sync. Every
@@ -47,6 +48,8 @@ export async function getAssistantIndex(locale: string): Promise<AssistantIndexE
     { id: "page-book", title: tNav("bookVisit"), description: tBook("body"), path: "/book", keywords: tAssistant("pages.book.keywords") },
   ];
 
+  const perMonth = locale === "sv" ? "/månad" : "/month";
+
   for (const category of getServiceCategories((key) => tServices(key))) {
     entries.push({
       id: `service-category-${category.slug}`,
@@ -55,10 +58,17 @@ export async function getAssistantIndex(locale: string): Promise<AssistantIndexE
       path: `/services/${category.slug}`,
     });
     for (const service of category.services) {
+      // Prices are real facts, not marketing copy — folding them into the
+      // description is what lets both Quick-links and the AI actually
+      // answer "how much does X cost" instead of pointing away from it.
+      const priceLabel =
+        service.priceFrom === service.priceTo
+          ? formatKr(service.priceFrom)
+          : `${formatKr(service.priceFrom)}–${formatKr(service.priceTo)}`;
       entries.push({
         id: `service-${service.slug}`,
         title: service.name,
-        description: service.description,
+        description: `${service.description} (${priceLabel})`,
         path: `/services/${category.slug}`,
       });
     }
@@ -68,7 +78,7 @@ export async function getAssistantIndex(locale: string): Promise<AssistantIndexE
     entries.push({
       id: `plan-${tier.slug}`,
       title: tier.name,
-      description: tier.tagline,
+      description: `${tier.tagline} (${formatKr(tier.priceMonthly)}${perMonth})`,
       path: "/pricing",
     });
   }
