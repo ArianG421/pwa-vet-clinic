@@ -73,6 +73,10 @@
       },
       "book": {
         "keywords": "book booking appointment schedule visit"
+      },
+      "login": {
+        "title": "Log in or create account",
+        "keywords": "login log in sign up create account member portal client account register"
       }
     },
     "tabs": {
@@ -104,6 +108,7 @@
   "home": {
     "badge": "Now booking online, 24/7",
     "heroBody": "From wellness checks to emergency care, {siteName} pairs modern medicine with a member portal that keeps every appointment, pet record, and reminder in one place.",
+    "loginOrCreateAccount": "Log in or create account",
     "bookAppointment": "Book an appointment",
     "exploreServices": "Explore services",
     "features": {
@@ -394,8 +399,8 @@
     "home": "Home"
   },
   "login": {
-    "title": "Sign in",
-    "subtitle": "Enter your email and we'll send you a magic link — no password to remember.",
+    "title": "Log in or create an account",
+    "subtitle": "Enter your email and we'll send a magic link — no password needed. New or returning, it's the same simple step.",
     "email": "Email",
     "rememberMe": "Keep me signed in on this device",
     "sendLink": "Send magic link",

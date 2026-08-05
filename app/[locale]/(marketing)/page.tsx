@@ -43,7 +43,13 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
             <p className="mt-4 max-w-lg text-base text-brand-100 sm:text-lg">
               {t("heroBody", { siteName: site.name })}
             </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-8 flex flex-col flex-wrap gap-3 sm:flex-row">
+              <Link
+                href="/login"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-brand-800 shadow-sm transition-colors hover:bg-brand-50"
+              >
+                {t("loginOrCreateAccount")} <ArrowRight className="h-4 w-4" />
+              </Link>
               <Link
                 href="/book"
                 className="cta-bounce inline-flex items-center justify-center gap-2 rounded-full bg-accent-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-accent-900/20 transition-colors hover:bg-accent-600"

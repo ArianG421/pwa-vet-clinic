@@ -73,6 +73,10 @@
       },
       "book": {
         "keywords": "boka bokning tid besök"
+      },
+      "login": {
+        "title": "Logga in eller skapa konto",
+        "keywords": "logga in skapa konto medlem portal kundkonto registrera"
       }
     },
     "tabs": {
@@ -104,6 +108,7 @@
   "home": {
     "badge": "Boka online nu, dygnet runt",
     "heroBody": "Från hälsokontroller till akutvård kombinerar {siteName} modern medicin med en medlemsportal som samlar alla besök, journaler och påminnelser på ett ställe.",
+    "loginOrCreateAccount": "Logga in eller skapa konto",
     "bookAppointment": "Boka en tid",
     "exploreServices": "Utforska tjänster",
     "features": {
@@ -394,8 +399,8 @@
     "home": "Hem"
   },
   "login": {
-    "title": "Logga in",
-    "subtitle": "Ange din e-postadress så skickar vi en inloggningslänk — inget lösenord att komma ihåg.",
+    "title": "Logga in eller skapa ett konto",
+    "subtitle": "Ange din e-post så skickar vi en magisk länk — inget lösenord behövs. Ny eller återkommande kund, det är samma enkla steg.",
     "email": "E-post",
     "rememberMe": "Håll mig inloggad på den här enheten",
     "sendLink": "Skicka inloggningslänk",

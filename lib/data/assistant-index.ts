@@ -52,7 +52,7 @@ export function invalidateAssistantIndex(locale?: string) {
 }
 
 async function computeAssistantIndex(locale: string): Promise<AssistantIndexEntry[]> {
-  const [tAssistant, tNav, tSite, tServicesPage, tServices, tPricing, tPlans, tAbout, tFaq, tContact, tBook] =
+  const [tAssistant, tNav, tSite, tServicesPage, tServices, tPricing, tPlans, tAbout, tFaq, tContact, tBook, tLogin] =
     await Promise.all([
       getTranslations({ locale, namespace: "assistant" }),
       getTranslations({ locale, namespace: "nav" }),
@@ -65,6 +65,7 @@ async function computeAssistantIndex(locale: string): Promise<AssistantIndexEntr
       getTranslations({ locale, namespace: "faq" }),
       getTranslations({ locale, namespace: "contact" }),
       getTranslations({ locale, namespace: "book" }),
+      getTranslations({ locale, namespace: "login" }),
     ]);
 
   let dbServices: { slug: string | null; price_from: number; price_to: number }[] = [];
@@ -87,6 +88,7 @@ async function computeAssistantIndex(locale: string): Promise<AssistantIndexEntr
     { id: "page-faq", title: tNav("faq"), description: tFaq("body"), path: "/faq", keywords: tAssistant("pages.faq.keywords") },
     { id: "page-contact", title: tNav("contact"), description: tContact("body"), path: "/contact", keywords: tAssistant("pages.contact.keywords") },
     { id: "page-book", title: tNav("bookVisit"), description: tBook("body"), path: "/book", keywords: tAssistant("pages.book.keywords") },
+    { id: "page-login", title: tAssistant("pages.login.title"), description: tLogin("subtitle"), path: "/login", keywords: tAssistant("pages.login.keywords") },
   ];
 
   const perMonth = locale === "sv" ? "/månad" : "/month";
